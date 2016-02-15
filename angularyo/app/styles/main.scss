@@ -11,21 +11,34 @@ html > * {
       }
       nav ul {
         list-style: none;
-        li{
+        li {
           display: inline-block;
           margin:0px;
           padding:5px 20px;
         }
-        li:before{
-          content:"» ";
+        li:before {
+          content:" ";
         }
         li a{
           text-decoration: none;
         }
       }
     }
-    .content{
-      section.posts{
+    .content {
+      section.post{
+        article {
+          text-align: center;
+          margin:70px;
+          max-width: 900px;
+          min-width: 400px;
+          h1,
+          .header,
+          .content {
+            text-align: justify;
+          } 
+        }
+      }
+      section.posts {
         text-align: center;
         margin:70px;
         max-width: 900px;
@@ -119,8 +132,6 @@ html > * {
           }
           .wiiu {
             background-color:#088;
-          }
-          article .article {
           }
         }
       }

@@ -1,7 +1,7 @@
 <section class="post" ng-controller="PostViewCtrl">
 	<article id="{{post.id}}" class="post">
 		<h1 ng-bind="post.title"></h1>
-		<div class="header" ng-bind="post.header"></div>
-		<div class="content" ng-bind="post.content"></div>
+		<div class="header" ng-bind-html="post.header"></div>
+		<div class="content" ng-bind-html="post.content"></div>
 	</article>	
 </section>

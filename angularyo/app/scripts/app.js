@@ -10,6 +10,7 @@
  */
 angular
   .module('angularyoApp', [
+    'ngSanitize',
     'ngAnimate',
     'ngCookies',
     'ngResource',
