@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo CSS</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body ng-app="demo">
+	<div class="page"><!-- header -->
+		<header id="header" class="theme">
+			<h1>DaGames</h1>
+			<nav>
+				<ul>
+					<li><a href="#/" title="Go Home !">Home</a></li>
+					<li><a href="#/posts/game" title="Show all games">Games</a></li>
+					<li><a href="#/posts/movie" title="View movie news">Movies</a></li>
+				</ul>
+			</nav>
+		</header><!-- /header -->
+		<!-- content -->
+		<div class="content">
+			<ng-view></ng-view>
+		</div>	
+		<!-- /content -->
+		<!-- footer -->
+		<footer id="footer" class="theme">
+			<p>&copy; 2016 » <a href="mailto:frederic.delorme@gmail.com?subject=feedback" "email me" title="Please, let me some comments">Frédéric Delorme</a> » <a href="http://web-context.github.io/" title="go to home of web dev !">web-context.github.io</a></p>
+		</footer><!-- /footer -->
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js" type="text/javascript"></script>
+	<script src="js/app/app.js" type="text/javascript"></script>
+	<script src="js/app/postCtrl.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+html > * {
+	margin:0px;
+	padding:0px;
+}
+.page header.theme{
+	margin:0px;
+	padding:0px;
+}
+.page header.theme h1{
+	margin-left: 40px;
+	font-size:36pt;
+}
+.page header.theme nav ul {
+	list-style: none;
+}
+.page header.theme nav ul li{
+	display: inline-block;
+	margin:0px;
+	padding:5px 20px;
+}
+.page header.theme nav ul li:before{
+	content:"» ";
+}
+.page header.theme nav ul li a{
+	text-decoration: none;
+}
+.posts{
+	text-align: center;
+	margin:70px;
+	max-width: 900px;
+}
+.posts article .article {
+	min-height:250px;
+}
+.posts article .article ul.tags {
+	list-style: none;
+	padding:0px;
+	margin:0px;
+	margin-left: 10px;
+}
+.posts article .article ul.tags li {
+	display:inline-block;
+	padding:0px;
+	margin:0px;
+}
+.posts article .article ul.tags li:before{
+	content:", ";
+}
+.posts article .article ul.tags li:first-child:before{
+	content:"";
+}
+.posts article .cover{
+	width:80px;
+	float:right;
+	margin-top: 70px;
+	margin-left:20px;
+	margin-bottom:5px;
+	box-shadow: 4px 4px 8px #000;
+}
+.posts article .createdAt {
+	float:left;
+	border-radius:32px;
+	width:64px;
+	height:64px;
+	color:#fff;
+	font-size:8pt;
+	box-shadow: 0px 0px 17px #333;
+}
+.posts article .x360 {
+	background-color:#090;
+}
+.posts article .ps3 {
+	background-color:#009;
+}
+.posts article .xone {
+	background-color:#090;
+}
+.posts article .ps4 {
+	background-color:#009;
+}
+.posts article .wii {
+	background-color:#eee;
+}
+.posts article .wiiu {
+	background-color:#088;
+}
+.posts article .createdAt p{
+	margin-top:20px;
+	margin-left:0px;
+	padding:0px;
+	text-align: center;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+.posts article .article {
+	left:80px;
+	border:0px;
+	margin:0px;
+	padding:0px;
+	padding-left:48px;
+	margin-left:32px;
+	margin-right:90px;
+
+	border-left:2px dotted #666;
+	text-align: justify;
+}
+.posts article .article a {
+	text-decoration: none;
+	color:#999;
+}
+.posts article .article a h1{
+	margin:0px;
+	padding:10px;
+	font-size:1.4em;
+}
+.posts article .article a:hover h1 {
+	text-shadow:4px 4px 8px #000;
+}
+.posts article .article .header{
+	margin:0px;
+	padding:10px;
+}
+
+.page footer {
+	margin-top:0px;
+	padding:20px;
+	border-top: 1px dotted #000;
+	text-align: right;
+}
