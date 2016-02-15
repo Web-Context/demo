@@ -1,89 +1,138 @@
-// bower:scss
-// endbower
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-body {
-  padding: 0;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+html > * {
+  margin:0px;
+  padding:0px;
+  .page {
+    header.theme {
+      margin:0px;
+      padding:0px;
+      h1{
+        margin-left: 40px;
+        font-size:36pt;
+      }
+      nav ul {
+        list-style: none;
+        li{
+          display: inline-block;
+          margin:0px;
+          padding:5px 20px;
+        }
+        li:before{
+          content:"» ";
+        }
+        li a{
+          text-decoration: none;
+        }
+      }
+    }
+    .content{
+      section.posts{
+        text-align: center;
+        margin:70px;
+        max-width: 900px;
+        min-width: 400px;
+        article.post {
+          .article {
+            min-height:250px;
+            left:80px;
+            border:0px;
+            margin:0px;
+            padding:0px;
+            padding-left:48px;
+            margin-left:32px;
+            margin-right:90px;
+            border-left:2px dotted #666;
+            text-align: justify;
+            a {
+              text-decoration: none;
+              color:#999;
+              h1{
+                margin:0px;
+                padding:10px;
+                font-size:1.4em;
+              }
+              h1:hover {
+                text-shadow:0px 0px 8px #000;
+                color:#fff;
+              }
+            }
+            .header{
+              margin:0px;
+              padding:10px;
+            }
+            ul.tags {
+              list-style: none;
+              padding:0px;
+              margin:0px;
+              margin-left: 10px;
+              li {
+                display:inline-block;
+                padding:0px;
+                margin:0px;
+              }
+              li:before{
+                content:", ";
+              }
+              li:first-child:before{
+                content:"";
+              }
+            }
+          }
+          .cover{
+            width:80px;
+            float:right;
+            margin-top: 70px;
+            margin-left:20px;
+            margin-bottom:5px;
+            box-shadow: 4px 4px 8px #000;
+          }
+          .createdAt {
+            float:left;
+            border-radius:32px;
+            width:64px;
+            height:64px;
+            color:#fff;
+            font-size:8pt;
+            box-shadow: 0px 0px 17px #333;
+            p{
+              margin-top:20px;
+              margin-left:0px;
+              padding:0px;
+              text-align: center;
+              font-variant: small-caps;
+              font-weight: bold;
+            }
+          }
+          .x360 {
+            background-color:#090;
+          }
+          .ps3 {
+            background-color:#009;
+          }
+          .xone {
+            background-color:#090;
+          }
+          .ps4 {
+            background-color:#009;
+          }
+          .wii {
+            background-color:#eee;
+          }
+          .wiiu {
+            background-color:#088;
+          }
+          article .article {
+          }
+        }
+      }
+    }
+    footer {
+      margin-top:0px;
+      padding:20px;
+      border-top: 1px dotted #000;
+      text-align: right;
+      .logo {
+        float:left;
+      }
+    }
   }
 }
