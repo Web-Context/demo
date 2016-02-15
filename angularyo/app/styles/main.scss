@@ -1,20 +1,29 @@
-html > * {
+html {
   margin:0px;
   padding:0px;
   .page {
+    font-family: sans-serif;
     header.theme {
       margin:0px;
       padding:0px;
       h1{
         margin-left: 40px;
         font-size:36pt;
+        font-family: fantasy;
+        margin:0px;
+        padding:5px 20px;
+        background-color:#000;
+        border-radius: 0px 40px 40px 0px;
+        color:#fff;
       }
       nav ul {
         list-style: none;
+        margin:0px;
+        padding:5px 10px;
         li {
           display: inline-block;
           margin:0px;
-          padding:5px 20px;
+          padding:5px 10px;
         }
         li:before {
           content:" ";
@@ -28,7 +37,7 @@ html > * {
       section.post{
         article {
           text-align: center;
-          margin:70px;
+          margin:0px;
           max-width: 900px;
           min-width: 400px;
           h1,
@@ -62,6 +71,8 @@ html > * {
                 margin:0px;
                 padding:10px;
                 font-size:1.4em;
+                font-family: fantasy;
+                font-weight: normal;
               }
               h1:hover {
                 text-shadow:0px 0px 8px #000;
@@ -71,16 +82,53 @@ html > * {
             .header{
               margin:0px;
               padding:10px;
+              font-family: sans-serif;
+              font-size:10pt;
             }
             ul.tags {
               list-style: none;
               padding:0px;
               margin:0px;
               margin-left: 10px;
+              font-size:9pt;
               li {
                 display:inline-block;
                 padding:0px;
                 margin:0px;
+              }
+              li a {
+                text-transform:capitalize;
+              }
+              li a:hover {
+                color:#666;
+                text-decoration: underline;
+              }
+              li:before{
+                content:", ";
+              }
+              li:first-child:before{
+                content:"";
+              }
+            }
+            ul.platforms {
+              list-style: none;
+              padding:0px;
+              margin:0px;
+              margin-left: 10px;
+              text-transform:uppercase;
+              font-size:8pt;
+              li {
+                display:inline-block;
+                padding:0px;
+                margin:0px;
+              }
+              li a:hover {
+                color:#666;
+                text-decoration: underline;
+              }
+              li.select a {
+                font-weight: bolder;
+                color:#333;
               }
               li:before{
                 content:", ";
