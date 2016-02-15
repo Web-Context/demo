@@ -113,8 +113,9 @@ html > * {
 	padding:10px;
 	font-size:1.4em;
 }
-.posts article .article a:hover h1 {
-	text-shadow:4px 4px 8px #000;
+.posts article .article a h1:hover {
+	text-shadow:0px 0px 8px #000;
+	color:#fff;
 }
 .posts article .article .header{
 	margin:0px;
