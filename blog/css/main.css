@@ -128,3 +128,6 @@ html > * {
 	border-top: 1px dotted #000;
 	text-align: right;
 }
+.page footer .logo {
+	float:left;
+}
