@@ -8,15 +8,10 @@
  * Controller of the angularyoApp
  */
 angular.module('angularyoApp')
- .controller('PostViewCtrl', ['$scope', '$routeParams','$http',
- 	function($scope, $routeParams,$http) {
+ .controller('PostViewCtrl', ['$scope', '$routeParams','$http','Post',
+ 	function($scope, $routeParams,$http,Post) {
  		var id = parseInt($routeParams.id);
  		$http.get('rest/posts.json').success(function(data) {
- 			for (var i = 0; i < data.length; i++) {
- 				if(data[i].id==id){
- 					$scope.post = data[i];
- 					break;
- 				}
- 			}
+ 			$scope.post = Post.findById(data,id);
  		});
  	}]);

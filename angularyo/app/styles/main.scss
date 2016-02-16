@@ -154,13 +154,34 @@ html {
             color:#fff;
             font-size:8pt;
             box-shadow: 0px 0px 17px #333;
-            p{
-              margin-top:20px;
+            .date{
+              margin-top:10px;
               margin-left:0px;
               padding:0px;
               text-align: center;
               font-variant: small-caps;
               font-weight: bold;
+              margin:0px;
+              padding:5px;
+              .day {
+                margin:0px;
+                padding:0px;
+                font-size:16pt;
+                font-family: fantasy;
+                font-weight: normal;
+              }
+              .month {
+                margin:0px;
+                margin-top:-6px;
+                padding:0px;
+                font-size:11pt;
+                font-variant: normal;
+                font-weight: normal;
+              }
+              .year {
+                margin-top:-4px;
+                font-size:9pt;
+              }
             }
           }
           .x360 {

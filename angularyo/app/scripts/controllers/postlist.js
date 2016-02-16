@@ -8,11 +8,10 @@
  * Controller of the angularyoApp
  */
 angular.module('angularyoApp')
- .controller('PostListCtrl', ['$scope', '$http',
- 	function ($scope, $http) {
- 		$http.get('rest/posts.json').success(function(data) {
- 			$scope.posts = data;
+ .controller('PostListCtrl', ['$scope', '$http', 'Post',
+ 	function ($scope, $http, Post) {
+ 		$http.get('rest/posts.json')
+ 			.success(function(response) {
+				$scope.posts = Post.formatData(response);
  		});
-
- 		$scope.orderProp = 'age';
  	}]);
