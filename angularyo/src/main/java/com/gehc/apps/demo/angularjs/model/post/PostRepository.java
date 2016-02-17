@@ -1,11 +1,9 @@
 /**
  * 
  */
-package com.gehc.apps.demo.angularyo.services;
+package com.gehc.apps.demo.angularjs.model.post;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
-
-import com.gehc.apps.demo.angularjs.model.Post;
 
 /**
  * Basic repository for Post entity.

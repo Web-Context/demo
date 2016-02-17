@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.gehc.apps.demo.angularjs.model;
+package com.gehc.apps.demo.angularjs.model.post;
 
 import java.util.Date;
 import java.util.Map;

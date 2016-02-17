@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 
 import com.gehc.apps.demo.angularjs.AngularYoApp;
-import com.gehc.apps.demo.angularjs.model.Post;
-import com.gehc.apps.demo.angularyo.services.PostRepository;
+import com.gehc.apps.demo.angularjs.model.post.Post;
+import com.gehc.apps.demo.angularjs.model.post.PostRepository;
 
 /**
  * @author 'Frederic
