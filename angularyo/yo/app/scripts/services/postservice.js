@@ -8,7 +8,7 @@
  * Service in the angularyoApp.
  */
  angular.module('angularyoApp')
- .factory('Post', function($http,$q) {
+ .factory('Post', function() {
  	return {
  		formatData : function(response){
  			var data = [];
@@ -23,7 +23,7 @@
  		findById: function(data,id){
 			var post = {};
 			for (var i = 0; i < data.length; i++) {
-				if(data[i].id==id){
+				if(data[i].id===id){
 					post = data[i];
 					break;
 				}
@@ -32,14 +32,13 @@
 
  		},
  		findByType: function(data,type){
- 			var posts = [];
 			var posts = [];
 			for (var i = 0; i < data.length; i++) {
-				if(data[i].type==type){
+				if(data[i].type===type){
 					posts.push(data[i]);
 				}
 			}
  			return posts; 
  		}
- 	}
+ 	};
  });

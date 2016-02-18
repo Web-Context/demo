@@ -1,16 +1,22 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.gehc.apps.demo</groupId>
-  <artifactId>parent</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>AngularSpringMavenProjectDemo</name>
-  <description>A bundle of demo on how to integrate front and back end development on AngularJS and Spring-Boot stack.
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.gehc.apps.demo</groupId>
+	<artifactId>parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>AngularSpringMavenProjectDemo</name>
+	<description>A bundle of demo on how to integrate front and back end development on AngularJS and Spring-Boot stack.
   	Use also Github and travis ci as CI services.</description>
-  	<modules>
-  		<!--module>blog</module-->
-  		<module>angularyo</module>
-  	</modules>
+	<modules>
+		<!--module>blog</module -->
+		<module>angularyo</module>
+	</modules>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.3.2.RELEASE</version>
+	</parent>
+
 </project>
