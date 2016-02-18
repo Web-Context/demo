@@ -8,6 +8,10 @@
 <body ng-app="demo">
 	<div class="page"><!-- header -->
 		<header id="header" class="theme">
+			<div class="avatar">
+				<div class="user"><a href="#/profile/mcgivrer">Frédéric Delorme</a></div>
+				<img src="https://trello-avatars.s3.amazonaws.com/372550260169a4891d0c419fb7af6b87/170.png" title="Fred's avatar" >
+			</div>
 			<h1>DaGames</h1>
 			<nav>
 				<ul>
@@ -17,20 +21,24 @@
 				</ul>
 			</nav>
 		</header><!-- /header -->
-		<!-- content -->
-		<div class="content">
-			<ng-view></ng-view>
-		</div>	
-		<!-- /content -->
-		<!-- footer -->
-		<footer id="footer" class="theme">
-			<a href="http://web-context.github.io/" title="Go and visit official web site"><img src="https://avatars1.githubusercontent.com/u/7290957?s=32" class="logo"></a>
-			<p>&copy; 2016 » <a href="mailto:frederic.delorme@gmail.com?subject=feedback" "email me" title="Please, let me some comments">Frédéric Delorme</a> » <a href="http://web-context.github.io/" title="go to home of web dev !">web-context.github.io</a></p>
-		</footer><!-- /footer -->
-	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js" type="text/javascript"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js" type="text/javascript"></script>
-	<script src="js/app/app.js" type="text/javascript"></script>
-	<script src="js/app/postCtrl.js" type="text/javascript"></script>
-</body>
-</html>
+			<!-- content -->
+			<div class="content">
+				<ng-view></ng-view>
+			</div>	
+			<!-- /content -->
+			<!-- footer -->
+			<footer id="footer" class="theme">
+				<a href="http://web-context.github.io/" title="Go and visit official web site"><img src="https://avatars1.githubusercontent.com/u/7290957?s=32" class="logo"></a>
+				<p>&copy; 2016 » <a href="mailto:frederic.delorme@gmail.com?subject=feedback" "email me" title="Please, let me some comments">Frédéric Delorme</a> » <a href="http://web-context.github.io/" title="go to home of web dev !">web-context.github.io</a></p>
+			</footer><!-- /footer -->
+		</div>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-sanitize.min.js"></script>
+
+		<script src="js/app/app.js" type="text/javascript"></script>
+		<script src="js/app/services.js" type="text/javascript"></script>
+		<script src="js/app/postCtrl.js" type="text/javascript"></script>
+	</body>
+	</html>

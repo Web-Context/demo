@@ -1,14 +1,20 @@
 <section class="posts" ng-controller="PostListCtrl">
-	<article id="1" class="post" ng-repeat="post in posts | orderBy:'post.createdAt':revese">
-		<div class="createdAt {{post.metadata.platform}}"><p>{{post.createdAt | date:'dd/MM/yyyy'}}</p></div>
+	<article id="1" class="post" ng-repeat="post in posts | orderBy : ['createdAt','title'] : reverse">
+		<div class="createdAt {{post.metadata.platform}}">
+		<div class="date"><div class="day">{{post.createdAt | date:'dd'}}</div>
+		<div class="month">{{post.createdAt | date:'MMMM'}}</div>
+		<div class="year">{{post.createdAt | date:'yyyy'}}</div></div>
+		</div>
 		<img class="cover" src="{{post.metadata.cover}}" alt="box cover for {{post.title}}">
-		<div class="rated">{{post.metadata.rated}}</div>
 		<div class="article">
-			<a href="#/post/{{post.id}}" title="view full post '{{post.title}}'"><h1 ng-bind="post.title"></h1></a>
+			<a href="#/post/{{post.id}}" title="view full post '{{post.title}}'"><h1 ng-bind-html="post.title"></h1></a>
 			<ul class="tags">
 				<li ng-repeat="tag in post.metadata.tags"><a href="tag/{{tag}}" title="view all post with tag {{tag}}">{{tag}}</a></li>
 			</ul>
-			<div class="header">{{post.header}}</div>
+			<ul class="platforms">
+				<li ng-class="(post.metadata.platform==pf?'select':'')" ng-repeat="pf in post.metadata.platforms"><a href="platform/{{pf}}" title="view all post for platform {{pf}}">{{pf}}</a></li>
+			</ul>			
+			<div class="header" ng-bind-html="post.header"></div>
 		</div>
 	</article>	
 </section>

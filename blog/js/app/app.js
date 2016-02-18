@@ -1,26 +1,28 @@
 'use strict';
 
-var app=angular.module('demo',['ngRoute']);
+var app=angular.module('demo',[
+    'ngRoute',
+    'ngSanitize'
+  ]);
 
-app.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/post', {
+app.config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
         templateUrl: 'views/post-list.html',
         controller: 'PostListCtrl',
         controllerAs: 'postList'
-      }).
-      when('/post/:postId', {
+      })
+      .when('/post/:id', {
         templateUrl: 'views/post-view.html',
         controller: 'PostViewCtrl',
         controllerAs: 'postView'
-      }).
-      when('/posts/:type', {
+      })
+      .when('/posts/:type', {
         templateUrl: 'views/post-list.html',
         controller: 'PostFilterCtrl',
         controllerAs: 'postFilter'
-      }).
-      otherwise({
-        redirectTo: '/post'
+      })
+      .otherwise({
+        redirectTo: '/'
       });
-  }]);
+  });

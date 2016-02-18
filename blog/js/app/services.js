@@ -1,14 +1,4 @@
-'use strict';
-
-/**
- * @ngdoc service
- * @name angularyoApp.PostService
- * @description
- * # PostService
- * Service in the angularyoApp.
- */
- angular.module('app')
- .factory('Post', function() {
+app.factory('Post', function() {
  	return {
  		formatData : function(response){
  			var data = [];

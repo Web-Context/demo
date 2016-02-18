@@ -1,39 +1,30 @@
 'use strict';
 
-app.controller('PostListCtrl', ['$scope', '$http',
-	function ($scope, $http) {
-		$http.get('rest/posts.json').success(function(data) {
-			$scope.posts = data;
-		});
+'use strict';
 
-		$scope.orderProp = 'age';
-	}]);
 
-app.controller('PostViewCtrl', ['$scope', '$routeParams','$http',
-	function($scope, $routeParams,$http) {
-		$scope.id = $routeParams.postId;
-		$http.get('rest/posts.json').success(function(data) {
-			for (var i = 0; i < data.length; i++) {
-				if(data[i].id==$scope.id){
-					$scope.post = data;
-					break;
-				}
-			}
-		});
-	}]);
+app.controller('PostListCtrl', ['$scope', '$http', 'Post',
+ 	function ($scope, $http, Post) {
+ 		$http.get('rest/posts.json')
+ 			.success(function(response) {
+				$scope.posts = Post.formatData(response);
+ 		});
+ 	}]);
 
-app.controller('PostFilterCtrl', ['$scope', '$routeParams','$http',
-	function($scope, $routeParams,$http) {
+app.controller('PostViewCtrl', ['$scope', '$routeParams','$http','Post',
+ 	function($scope, $routeParams,$http,Post) {
+ 		var id = parseInt($routeParams.id);
+ 		$http.get('rest/posts.json').success(function(data) {
+ 			$scope.post = Post.findById(data,id);
+ 		});
+ 	}]);
+
+app.controller('PostFilterCtrl', ['$scope', '$routeParams','$http','Post',
+	function($scope, $routeParams,$http,Post) {
 		var type     = $routeParams.type;
-		var posts    = new Array();
 		$scope.type  = type;
 		$scope.posts = [];
 		$http.get('rest/posts.json').success(function(data) {
-			for (var i = 0; i < data.length; i++) {
-				if(data[i].type==type){
-					posts.push(data[i]);
-				}
-			}
-			$scope.posts=posts;
+			$scope.posts=Post.findByType(data,type);
 		});
 	}]);
