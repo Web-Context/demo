@@ -35,6 +35,11 @@ angular
         controller: 'PostFilterCtrl',
         controllerAs: 'postFilter'
       })
+      .when('/game/platform/:code', {
+        templateUrl: 'views/post-list.html',
+        controller: 'PostFilterCtrl',
+        controllerAs: 'postFilter'
+      })
       .otherwise({
         redirectTo: '/'
       });

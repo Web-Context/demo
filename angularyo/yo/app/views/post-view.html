@@ -1,7 +1,30 @@
 <section class="post" ng-controller="PostViewCtrl">
 	<article id="{{post.id}}" class="post">
-		<h1 ng-bind="post.title"></h1>
-		<div class="header" ng-bind-html="post.header"></div>
-		<div class="content" ng-bind-html="post.content"></div>
+		
+		<div class="info">
+			<img class="cover" src="{{post.metadata.cover}}" alt="box cover for {{post.title}}">
+			<ul>
+				<li><strong>Published</strong><br/>{{post.publishedAt | date:'MMM-yyyy' }}</li>
+				<li><strong>Editor</strong><br/>{{post.metadata.editor}}</li>
+				<li><strong>Studio</strong><br/>{{post.metadata.studio}}</li>
+				<li><strong>Publisher</strong><br/>{{post.metadata.publisher}}</li>
+				<li><strong>Rated</strong><br/>{{post.metadata.rated}}</li>
+				<li><strong>Score</strong><br/>{{post.metadata.rate}}</li>
+
+			</ul>
+		</div>
+		<div class="article">
+			<h1 ng-bind="post.title"></h1>
+			<div class="header" ng-bind-html="post.header"></div>
+			<div class="content" ng-bind-html="post.content"></div>
+			<div class="balance">
+				<div class="plus">
+					<ul><li ng-repeat="(key,item) in post.metadata.plus">{{item}}</li></ul>
+				</div>
+				<div class="minus">
+					<ul><li ng-repeat="(key,item) in post.metadata.minus">{{item}}</li></ul>
+				</div>
+			</div>
+		</div>
 	</article>	
 </section>

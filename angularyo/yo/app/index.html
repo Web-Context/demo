@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>DaGames</title>
+    <title>DaBlog</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -17,12 +17,19 @@
   <body ng-app="angularyoApp">
     <div class="page"><!-- header -->
       <header id="header" class="theme">
-        <h1>DaGames</h1>
-        <nav>
+        <div class="avatar"><div class="user"><a href="#/profile/mcgivrer">Frédéric Delorme</a></div>
+        <img src="https://trello-avatars.s3.amazonaws.com/372550260169a4891d0c419fb7af6b87/170.png" title="Fred's avatar" >
+      </div>        <h1>DaBlog</h1>
+        <nav class="mainMenu">
           <ul>
             <li><a href="#/" title="Go Home !">Home</a></li>
             <li><a href="#/posts/game" title="Show all games">Games</a></li>
             <li><a href="#/posts/movie" title="View movie news">Movies</a></li>
+          </ul>
+        </nav>
+        <nav class="subMenu" ng-show="type=='game'">
+          <ul>
+            <li ng-repeat="pf in platforms"><a href="#/game/platform/{{pf.code}}" title="{{pf.name}}">{{pf.code}}</a></li>
           </ul>
         </nav>
       </header><!-- /header -->
@@ -65,6 +72,7 @@
    <script src="scripts/controllers/postlist.js"></script>
    <script src="scripts/controllers/postview.js"></script>
    <script src="scripts/services/postservice.js"></script>
+   <script src="scripts/services/platformservice.js"></script>
    <script src="scripts/controllers/postfilter.js"></script>
    <!-- endbuild -->
   </body>

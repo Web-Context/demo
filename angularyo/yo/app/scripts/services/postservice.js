@@ -7,7 +7,7 @@
  * # PostService
  * Service in the angularyoApp.
  */
- angular.module('app')
+ angular.module('angularyoApp')
  .factory('Post', function() {
  	return {
  		formatData : function(response){
@@ -20,12 +20,19 @@
 			}
  			return data;
  		},
+ 		formatItem:function (post){
+				post.createdAt=new Date(post.createdAt);
+				post.publishedAt=new Date(post.publishedAt);
+			return post; 			
+ 		},
  		findById: function(data,id){
 			var post = {};
 			for (var i = 0; i < data.length; i++) {
-				if(data[i].id===id){
+				if(data[i].id===id){	
 					post = data[i];
-					break;
+					post.createdAt=new Date(post.createdAt);
+					post.publishedAt=new Date(post.publishedAt);
+				break;
 				}
 			}
  			return post;
@@ -35,7 +42,10 @@
 			var posts = [];
 			for (var i = 0; i < data.length; i++) {
 				if(data[i].type===type){
-					posts.push(data[i]);
+					var post =  data[i];
+					post.createdAt=new Date(post.createdAt);
+					post.publishedAt=new Date(post.publishedAt);
+					posts.push(post);
 				}
 			}
  			return posts; 

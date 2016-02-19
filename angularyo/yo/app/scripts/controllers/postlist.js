@@ -10,7 +10,7 @@
 angular.module('angularyoApp')
  .controller('PostListCtrl', ['$scope', '$http', 'Post',
  	function ($scope, $http, Post) {
- 		$http.get('rest/posts.json')
+ 		$http.get('rest/posts.json?all')
  			.success(function(response) {
 				$scope.posts = Post.formatData(response);
  		});
