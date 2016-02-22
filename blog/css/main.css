@@ -6,7 +6,8 @@ html {
     font-family: sans-serif; }
     html .page header.theme {
       margin: 0px;
-      padding: 0px; }
+      padding: 0px;
+      border-bottom: 1px solid #000; }
       html .page header.theme h1 {
         margin-left: 40px;
         font-size: 36pt;
@@ -22,12 +23,17 @@ html {
         padding: 5px 10px; }
         html .page header.theme nav ul li {
           display: inline-block;
-          margin: 0px;
-          padding: 5px 10px; }
+          margin: 0px; }
+          html .page header.theme nav ul li a {
+            text-decoration: none;
+            display: block;
+            margin: 0px;
+            padding: 5px 10px; }
+        html .page header.theme nav ul li:hover a {
+          background-color: #000;
+          color: #999; }
         html .page header.theme nav ul li:before {
           content: " "; }
-        html .page header.theme nav ul li a {
-          text-decoration: none; }
       html .page header.theme .avatar {
         top: 0px;
         float: right;
@@ -110,7 +116,7 @@ html {
           font-family: Comfortaa; }
     html .page .content section.posts {
       text-align: center;
-      margin: 70px;
+      margin: 24px 64px;
       max-width: 900px;
       min-width: 400px; }
       html .page .content section.posts article.post .article {

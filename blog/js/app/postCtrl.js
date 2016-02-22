@@ -2,6 +2,14 @@
 
 'use strict';
 
+app.controller('HomeCtrl', ['$scope', '$routeParams', function($scope,$routeParams){
+	$scope.menuItems = [
+		{id:'1',url:'#/',label:'Home',accesskey:'H',tooltip:'Back to home'},
+		{id:'2',url:'#/posts/game',label:'Games',accesskey:'G',tooltip:'Show me all games'},
+		{id:'3',url:'#/posts/movie',label:'Movies',accesskey:'M',tooltip:'View movies news'}
+	];
+	$scope.menuItem = $routeParams.item;
+}]);
 
 app.controller('PostListCtrl', ['$scope', '$http', 'Post',
  	function ($scope, $http, Post) {

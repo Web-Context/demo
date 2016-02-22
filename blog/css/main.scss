@@ -7,6 +7,7 @@ html {
     header.theme {
       margin:0px;
       padding:0px;
+      border-bottom:1px solid #000;
       h1{
         margin-left: 40px;
         font-size:36pt;
@@ -24,13 +25,19 @@ html {
         li {
           display: inline-block;
           margin:0px;
-          padding:5px 10px;
+          a {
+            text-decoration: none;
+            display:block;
+            margin:0px;
+            padding:5px 10px;
+          }
+        }
+        li:hover a{
+          background-color:#000;
+          color:#999;
         }
         li:before {
           content:" ";
-        }
-        li a{
-          text-decoration: none;
         }
       }
       .avatar {
@@ -137,7 +144,7 @@ html {
       }
       section.posts {
         text-align: center;
-        margin:70px;
+        margin:24px 64px;
         max-width: 900px;
         min-width: 400px;
         article.post {

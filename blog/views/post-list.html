@@ -1,5 +1,5 @@
 <section class="posts"> 
-	<article id="1" class="post" ng-repeat="post in posts | orderBy : ['createdAt','title'] : reverse">
+	<article id="{{post.id}}" class="post" ng-repeat="post in posts | orderBy : ['publicationAt','title'] : reverse">
 		<div class="createdAt {{post.metadata.platform}}">
 		<div class="date"><div class="day">{{post.createdAt | date:'dd'}}</div>
 		<div class="month">{{post.createdAt | date:'MMMM'}}</div>
