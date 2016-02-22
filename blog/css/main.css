@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Passion+One:400,700,900|Comfortaa|Special+Elite|Overlock:400,700,900);
 html {
   margin: 0px;
   padding: 0px; }
@@ -9,7 +10,7 @@ html {
       html .page header.theme h1 {
         margin-left: 40px;
         font-size: 36pt;
-        font-family: fantasy;
+        font-family: Passion One;
         margin: 0px;
         padding: 5px 20px;
         background-color: #000;
@@ -31,7 +32,7 @@ html {
         top: 0px;
         float: right;
         margin: 10px;
-        width: 120px; }
+        width: 140px; }
         html .page header.theme .avatar div.user a {
           float: left;
           color: #fff;
@@ -39,20 +40,74 @@ html {
           text-align: right;
           margin: 5px;
           height: 24px;
-          width: 60px; }
+          width: 60px;
+          font-family: cursive;
+          text-decoration: none; }
         html .page header.theme .avatar img {
           float: right;
           width: 48px;
+          margin: 0px 8px 0px 8px;
           border-radius: 24px; }
     html .page .content section.post article {
       text-align: center;
-      margin: 0px;
+      margin: 20px;
       max-width: 900px;
-      min-width: 400px; }
-      html .page .content section.post article h1,
-      html .page .content section.post article .header,
-      html .page .content section.post article .content {
-        text-align: justify; }
+      min-height: 550px; }
+      html .page .content section.post article .info {
+        float: left;
+        text-align: left;
+        width: 150px;
+        margin: 0px;
+        font-size: 10pt;
+        margin-right: 20px;
+        margin-bottom: 10px; }
+        html .page .content section.post article .info img.cover {
+          display: block;
+          float: left;
+          width: 140px;
+          margin-bottom: 20px; }
+        html .page .content section.post article .info ul {
+          background-color: #eee;
+          float: left;
+          display: block;
+          list-style: none;
+          margin: 10px 0px 0px 0px;
+          padding: 10px;
+          width: 120px; }
+          html .page .content section.post article .info ul li {
+            margin: 0px;
+            padding: 4px 8px; }
+            html .page .content section.post article .info ul li em {
+              display: block; }
+            html .page .content section.post article .info ul li .rated {
+              text-align: center;
+              width: 32px;
+              font-size: 36px;
+              font-family: Passion One;
+              color: #fff;
+              background: #000;
+              padding: 10px;
+              margin-left: 20px;
+              text-shadow: -1px -1px 2px #333; }
+            html .page .content section.post article .info ul li .rate {
+              text-align: center;
+              width: 32px;
+              font-size: 36px;
+              font-family: Passion One;
+              color: #fff;
+              background: #000;
+              padding: 10px;
+              margin-left: 20px;
+              text-shadow: -1px -1px 2px #333; }
+      html .page .content section.post article .article {
+        margin-left: 160px;
+        min-height: 390px; }
+        html .page .content section.post article .article h1,
+        html .page .content section.post article .article .header,
+        html .page .content section.post article .article .content {
+          text-align: justify; }
+        html .page .content section.post article .article h1, html .page .content section.post article .article h2, html .page .content section.post article .article h3 {
+          font-family: Comfortaa; }
     html .page .content section.posts {
       text-align: center;
       margin: 70px;
@@ -67,7 +122,7 @@ html {
         padding-left: 48px;
         margin-left: 32px;
         margin-right: 90px;
-        border-left: 2px dotted #666;
+        border-left: 2px dotted #000;
         text-align: justify; }
         html .page .content section.posts article.post .article a {
           text-decoration: none;
@@ -76,7 +131,7 @@ html {
             margin: 0px;
             padding: 10px;
             font-size: 1.4em;
-            font-family: fantasy;
+            font-family: Comfortaa;
             font-weight: normal; }
           html .page .content section.posts article.post .article a h1:hover {
             text-shadow: 0px 0px 8px #000;
@@ -129,7 +184,7 @@ html {
       html .page .content section.posts article.post .cover {
         width: 80px;
         float: right;
-        margin-top: 70px;
+        margin-top: 84px;
         margin-left: 20px;
         margin-bottom: 5px;
         box-shadow: 4px 4px 8px #000; }
@@ -160,14 +215,14 @@ html {
             margin: 0px;
             margin-top: -6px;
             padding: 0px;
-            font-size: 11pt;
+            font-size: 9pt;
             font-variant: normal;
-            font-weight: normal; }
+            font-weight: bold; }
           html .page .content section.posts article.post .createdAt .date .year {
             margin-top: -4px;
-            font-size: 9pt; }
+            font-size: 12pt; }
       html .page .content section.posts article.post .movie {
-        background-color: #006; }
+        background-color: #000; }
       html .page .content section.posts article.post .x360 {
         background-color: #090; }
       html .page .content section.posts article.post .ps3 {
@@ -180,13 +235,14 @@ html {
         background-color: #eee; }
       html .page .content section.posts article.post .wiiu {
         background-color: #088; }
+      html .page .content section.posts article.post .post:last-child {
+        border-color: linear-gradient(black, white); }
     html .page footer {
       margin-top: 0px;
       padding: 20px;
       border-top: 1px dotted #000;
       text-align: right; }
       html .page footer .logo {
-        float: left;
-        margin: 10px; }
+        float: left; }
 
 /*# sourceMappingURL=main.css.map */

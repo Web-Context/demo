@@ -15,7 +15,8 @@ app.factory('Post', function() {
 			for (var i = 0; i < data.length; i++) {
 				if(data[i].id===id){
 					post = data[i];
-					break;
+					post.createdAt=new Date(post.createdAt);
+					post.publishedAt=new Date(post.publishedAt);					break;
 				}
 			}
  			return post;
@@ -25,7 +26,10 @@ app.factory('Post', function() {
 			var posts = [];
 			for (var i = 0; i < data.length; i++) {
 				if(data[i].type===type){
-					posts.push(data[i]);
+					var post = data[i];
+					post.createdAt=new Date(post.createdAt);
+					post.publishedAt=new Date(post.publishedAt);
+					posts.push(post);
 				}
 			}
  			return posts; 

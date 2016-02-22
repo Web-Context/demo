@@ -1,4 +1,4 @@
-<section class="posts" ng-controller="PostListCtrl">
+<section class="posts"> 
 	<article id="1" class="post" ng-repeat="post in posts | orderBy : ['createdAt','title'] : reverse">
 		<div class="createdAt {{post.metadata.platform}}">
 		<div class="date"><div class="day">{{post.createdAt | date:'dd'}}</div>

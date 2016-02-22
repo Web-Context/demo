@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Passion+One:400,700,900|Comfortaa|Special+Elite|Overlock:400,700,900);
 html {
   margin:0px;
   padding:0px;
@@ -9,7 +10,7 @@ html {
       h1{
         margin-left: 40px;
         font-size:36pt;
-        font-family: fantasy;
+        font-family: Passion One;
         margin:0px;
         padding:5px 20px;
         background-color:#000;
@@ -36,7 +37,7 @@ html {
         top:0px;
         float:right;
         margin:10px;
-        width:120px;
+        width:140px;
         div.user a{
           float:left;
           color:#fff;
@@ -45,26 +46,93 @@ html {
           margin:5px;
           height:24px;
           width:60px;
+          font-family: cursive;
+          text-decoration: none;
         }
         img{
           float:right;
           width:48px;
+          margin: 0px 8px 0px 8px;
           border-radius:24px;
         }
       } 
-    }
+   }
     .content {
       section.post{
         article {
           text-align: center;
-          margin:0px;
+          margin:20px;
           max-width: 900px;
-          min-width: 400px;
-          h1,
-          .header,
-          .content {
-            text-align: justify;
-          } 
+          min-height: 550px;
+          .info {
+            float:left;
+            text-align:left;
+            width:150px;
+            margin:0px;
+            font-size:10pt;
+            margin-right:20px;
+            margin-bottom: 10px;      
+            img.cover{
+              display:block;
+              float:left;
+              width:140px;
+              margin-bottom:20px;
+            }
+            ul {
+              background-color:#eee;
+              float:left;
+              display:block;
+              list-style: none;
+              margin:10px 0px 0px 0px;
+              padding:10px;
+              width:120px;
+              li {
+                margin:0px;
+                padding:4px 8px;
+                em {
+                  display:block;
+                }
+                .rated{
+                  text-align:center;
+                  width:32px;
+                  font-size:36px;
+                  font-family: Passion One;
+                  color:#fff;
+                  background:#000;
+                  padding:10px;
+                  margin-left: 20px;
+                  text-shadow:-1px -1px 2px #333;
+                }
+                .rate {
+                  text-align:center;
+                  width:32px;
+                  font-size:36px;
+                  font-family: Passion One;
+                  color:#fff;
+                  background:#000;
+                  padding:10px;
+                  margin-left: 20px;
+                  text-shadow:-1px -1px 2px #333;
+                }
+
+              }
+            }
+          }
+          .article {
+            margin-left:160px;
+            min-height: 390px;
+            h1,
+            .header,
+            .content {
+              text-align: justify;
+            } 
+            h1,h2,h3{
+              font-family: Comfortaa;
+            }
+          }
+        }
+        .movie {
+
         }
       }
       section.posts {
@@ -82,7 +150,7 @@ html {
             padding-left:48px;
             margin-left:32px;
             margin-right:90px;
-            border-left:2px dotted #666;
+            border-left:2px dotted #000;
             text-align: justify;
             a {
               text-decoration: none;
@@ -91,7 +159,7 @@ html {
                 margin:0px;
                 padding:10px;
                 font-size:1.4em;
-                font-family: fantasy;
+                font-family: Comfortaa;
                 font-weight: normal;
               }
               h1:hover {
@@ -161,7 +229,7 @@ html {
           .cover{
             width:80px;
             float:right;
-            margin-top: 70px;
+            margin-top: 84px;
             margin-left:20px;
             margin-bottom:5px;
             box-shadow: 4px 4px 8px #000;
@@ -194,18 +262,18 @@ html {
                 margin:0px;
                 margin-top:-6px;
                 padding:0px;
-                font-size:11pt;
+                font-size:9pt;
                 font-variant: normal;
-                font-weight: normal;
+                font-weight: bold;
               }
               .year {
                 margin-top:-4px;
-                font-size:9pt;
+                font-size:12pt;
               }
             }
           }
           .movie {
-            background-color:#006;
+            background-color:#000;
           }
           .x360 {
             background-color:#090;
@@ -217,13 +285,16 @@ html {
             background-color:#090;
           }
           .ps4 {
-            background-color:#009; 
+            background-color:#009;
           }
           .wii {
             background-color:#eee;
           }
           .wiiu {
             background-color:#088;
+          }
+          .post:last-child {
+          border-color:linear-gradient(black, white);
           }
         }
       }
@@ -235,7 +306,6 @@ html {
       text-align: right;
       .logo {
         float:left;
-        margin:10px;
       }
     }
   }
