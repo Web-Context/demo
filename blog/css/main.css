@@ -23,17 +23,30 @@ html {
         padding: 5px 10px; }
         html .page header.theme nav ul li {
           display: inline-block;
-          margin: 0px; }
+          margin: 5px; }
           html .page header.theme nav ul li a {
             text-decoration: none;
             display: block;
             margin: 0px;
             padding: 5px 10px; }
+          html .page header.theme nav ul li input.search {
+            margin: 10px;
+            padding: 2px;
+            margin-right: 0px;
+            font-family: Passion One; }
+          html .page header.theme nav ul li button {
+            margin: 10px;
+            margin-top: 11px;
+            padding: 2px;
+            margin-left: 0px; }
         html .page header.theme nav ul li:hover a {
           background-color: #000;
           color: #999; }
         html .page header.theme nav ul li:before {
           content: " "; }
+        html .page header.theme nav ul li.right {
+          float: right;
+          margin-bottom: 10px; }
       html .page header.theme .avatar {
         top: 0px;
         float: right;
@@ -65,13 +78,14 @@ html {
         width: 150px;
         margin: 0px;
         font-size: 10pt;
-        margin-right: 20px;
+        margin-right: 10px;
         margin-bottom: 10px; }
         html .page .content section.post article .info img.cover {
           display: block;
           float: left;
           width: 140px;
-          margin-bottom: 20px; }
+          margin-bottom: 20px;
+          box-shadow: 2px 2px 5px #333; }
         html .page .content section.post article .info ul {
           background-color: #eee;
           float: left;
@@ -85,25 +99,19 @@ html {
             padding: 4px 8px; }
             html .page .content section.post article .info ul li em {
               display: block; }
-            html .page .content section.post article .info ul li .rated {
+            html .page .content section.post article .info ul li .score {
               text-align: center;
-              width: 32px;
+              /* vertical-align: middle; */
+              width: 42px;
+              height: 42px;
+              padding: 4px;
+              margin: 0px;
+              margin-left: 0px;
+              border: 0px;
               font-size: 36px;
               font-family: Passion One;
               color: #fff;
-              background: #000;
-              padding: 10px;
-              margin-left: 20px;
-              text-shadow: -1px -1px 2px #333; }
-            html .page .content section.post article .info ul li .rate {
-              text-align: center;
-              width: 32px;
-              font-size: 36px;
-              font-family: Passion One;
-              color: #fff;
-              background: #000;
-              padding: 10px;
-              margin-left: 20px;
+              background: #666;
               text-shadow: -1px -1px 2px #333; }
       html .page .content section.post article .article {
         margin-left: 160px;
@@ -147,46 +155,6 @@ html {
           padding: 10px;
           font-family: sans-serif;
           font-size: 10pt; }
-        html .page .content section.posts article.post .article ul.tags {
-          list-style: none;
-          padding: 0px;
-          margin: 0px;
-          margin-left: 10px;
-          font-size: 9pt; }
-          html .page .content section.posts article.post .article ul.tags li {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px; }
-          html .page .content section.posts article.post .article ul.tags li a {
-            text-transform: capitalize; }
-          html .page .content section.posts article.post .article ul.tags li a:hover {
-            color: #666;
-            text-decoration: underline; }
-          html .page .content section.posts article.post .article ul.tags li:before {
-            content: ", "; }
-          html .page .content section.posts article.post .article ul.tags li:first-child:before {
-            content: ""; }
-        html .page .content section.posts article.post .article ul.platforms {
-          list-style: none;
-          padding: 0px;
-          margin: 0px;
-          margin-left: 10px;
-          text-transform: uppercase;
-          font-size: 8pt; }
-          html .page .content section.posts article.post .article ul.platforms li {
-            display: inline-block;
-            padding: 0px;
-            margin: 0px; }
-          html .page .content section.posts article.post .article ul.platforms li a:hover {
-            color: #666;
-            text-decoration: underline; }
-          html .page .content section.posts article.post .article ul.platforms li.select a {
-            font-weight: bolder;
-            color: #333; }
-          html .page .content section.posts article.post .article ul.platforms li:before {
-            content: ", "; }
-          html .page .content section.posts article.post .article ul.platforms li:first-child:before {
-            content: ""; }
       html .page .content section.posts article.post .cover {
         width: 80px;
         float: right;
@@ -250,5 +218,116 @@ html {
       text-align: right; }
       html .page footer .logo {
         float: left; }
+  html .pegi {
+    padding: 20px 120px;
+    width: 48px;
+    height: 48px;
+    background-size: 48px;
+    background-repeat: no-repeat; }
+  html .pegi_bad_language {
+    background-image: url("http://www.pegi.info/fr/img/descriptors/bad_language.gif"); }
+  html .pegi_discrimination {
+    background-image: url("http://www.pegi.info/fr/img/descriptors/discrimination.gif"); }
+  html .pegi_drugs {
+    background-image: url("http://www.pegi.info/fr/img/descriptors/drugs.gif"); }
+  html .pegi_fear {
+    background-image: url("http://www.pegi.info/fr/img/descriptors/fear.gif"); }
+  html .pegi_gambling {
+    background-image: url("http://www.pegi.info/fr/img/descriptors/gambling.gif"); }
+  html .pegi_online {
+    background-image: url("http://www.pegi.info/fr/img/descriptors/violence.gif"); }
+  html .pegi_violence {
+    background-image: url("http://www.pegi.info/fr/img/descriptors/online.gif"); }
+  html .pegi_sex {
+    background-image: url("http://www.pegi.info/fr/img/descriptors/sex.gif"); }
+  html .pegi_3 {
+    background-image: url("http://www.pegi.info/fr/index/id/75/media/img/320.gif"); }
+  html .pegi_7 {
+    background-image: url("http://www.pegi.info/fr/index/id/75/media/img/321.gif"); }
+  html .pegi_12 {
+    background-image: url("http://www.pegi.info/fr/index/id/75/media/img/322.gif"); }
+  html .pegi_16 {
+    background-image: url("http://www.pegi.info/fr/index/id/75/media/img/323.gif"); }
+  html .pegi_18 {
+    background-image: url("http://www.pegi.info/fr/index/id/75/media/img/324.gif"); }
+
+ul.tags {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  font-size: 9pt; }
+  ul.tags li {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px; }
+  ul.tags li a {
+    text-transform: capitalize; }
+  ul.tags li a:hover {
+    color: #666;
+    text-decoration: underline; }
+  ul.tags li:before {
+    content: ", "; }
+  ul.tags li:first-child:before {
+    content: ""; }
+
+ul.platforms {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-size: 8pt; }
+  ul.platforms li {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px; }
+  ul.platforms li a:hover {
+    color: #666;
+    text-decoration: underline; }
+  ul.platforms li.select a {
+    font-weight: bolder;
+    color: #333; }
+  ul.platforms li:before {
+    content: ", "; }
+  ul.platforms li:first-child:before {
+    content: ""; }
+
+.balance {
+  display: block;
+  width: 100%;
+  font-size: 9pt; }
+
+.balance div h6 {
+  display: block;
+  font-weight: bolder;
+  text-align: center;
+  padding: 2px;
+  margin: 0px;
+  font-size: 32px; }
+
+.plus {
+  display: inline-block;
+  text-align: left;
+  width: 40%;
+  background-color: lightgreen;
+  color: darkgreen;
+  margin-right: 5%;
+  vertical-align: top; }
+  .plus h6 {
+    background-color: darkgreen;
+    color: lightgreen; }
+
+.minus {
+  display: inline-block;
+  text-align: left;
+  width: 40%;
+  background-color: pink;
+  color: red;
+  margin-left: 5%;
+  vertical-align: top; }
+  .minus h6 {
+    background-color: red;
+    color: pink; }
 
 /*# sourceMappingURL=main.css.map */

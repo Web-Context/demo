@@ -17,6 +17,11 @@ app.config(function ($routeProvider) {
         controller: 'PostViewCtrl',
         controllerAs: 'postView'
       })
+      .when('/search', {
+        templateUrl: 'views/post-list.html',
+        controller: 'HomeCtrl',
+        controllerAs: 'searchList'
+      })
       .when('/posts/:type', {
         templateUrl: 'views/post-list.html',
         controller: 'PostFilterCtrl',

@@ -22,10 +22,22 @@ app.factory('Post', function() {
  			return post;
 
  		},
- 		findByType: function(data,type){
+		findByType: function(data,type){
 			var posts = [];
 			for (var i = 0; i < data.length; i++) {
 				if(data[i].type===type){
+					var post = data[i];
+					post.createdAt=new Date(post.createdAt);
+					post.publishedAt=new Date(post.publishedAt);
+					posts.push(post);
+				}
+			}
+ 			return posts; 
+ 		},
+ 		findByTitle: function(data,title){
+			var posts = [];
+			for (var i = 0; i < data.length; i++) {
+				if((""+data[i].title).toLowerCase().indexOf((""+title).toLowerCase()) > -1){
 					var post = data[i];
 					post.createdAt=new Date(post.createdAt);
 					post.publishedAt=new Date(post.publishedAt);
