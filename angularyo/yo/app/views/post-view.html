@@ -2,26 +2,34 @@
 	<article id="{{post.id}}" class="post">
 		
 		<div class="info">
-			<img class="cover" src="{{post.metadata.cover}}" alt="box cover for {{post.title}}">
+			<a href="{{post.metadata.cover}}" rel=""><img class="cover" src="{{post.metadata.cover}}" alt="box cover for {{post.title}}"></a>
 			<ul>
-				<li><strong>Published</strong><br/>{{post.publishedAt | date:'MMM-yyyy' }}</li>
-				<li><strong>Editor</strong><br/>{{post.metadata.editor}}</li>
-				<li><strong>Studio</strong><br/>{{post.metadata.studio}}</li>
-				<li><strong>Publisher</strong><br/>{{post.metadata.publisher}}</li>
-				<li><strong>Rated</strong><br/>{{post.metadata.rated}}</li>
-				<li><strong>Score</strong><br/>{{post.metadata.rate}}</li>
+				<li><strong>Published</strong><br/><em>{{post.publishedAt | date:'MMM-yyyy' }}</em></li>
+				<li><strong>Editor</strong><br/><em>{{post.metadata.editor}}</em></li>
+				<li><strong>Studio</strong><br/><em>{{post.metadata.studio}}</em></li>
+				<li><strong>Publisher</strong><br/><em>{{post.metadata.publisher}}</em></li>
+				<li><strong>Rated</strong><em class="pegi pegi_{{post.metadata.rated}}">&nbsp;</em></li>
+				<li><strong>Score</strong><em class="score">{{post.metadata.rate}}</em></li>
 
 			</ul>
 		</div>
 		<div class="article">
 			<h1 ng-bind="post.title"></h1>
+			<ul class="tags">
+				<li ng-repeat="tag in post.metadata.tags"><a href="tag/{{tag}}" title="view all post with tag {{tag}}">{{tag}}</a></li>
+			</ul>
+			<ul class="platforms">
+				<li ng-class="(post.metadata.platform==pf?'select':'')" ng-repeat="pf in post.metadata.platforms"><a href="platform/{{pf}}" title="view all post for platform {{pf}}">{{pf}}</a></li>
+			</ul>	
 			<div class="header" ng-bind-html="post.header"></div>
 			<div class="content" ng-bind-html="post.content"></div>
 			<div class="balance">
 				<div class="plus">
+					<h6>+</h6>
 					<ul><li ng-repeat="(key,item) in post.metadata.plus">{{item}}</li></ul>
 				</div>
 				<div class="minus">
+					<h6>&ndash;</h6>
 					<ul><li ng-repeat="(key,item) in post.metadata.minus">{{item}}</li></ul>
 				</div>
 			</div>
