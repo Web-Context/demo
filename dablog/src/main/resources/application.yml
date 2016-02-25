@@ -1,8 +1,11 @@
-spring
-  data
-    mongodb
+spring:
+  data:
+    rest:
+      base-path: api/v1/rest
+    mongodb:
       host: 127.0.0.1
       port: 27017
-  jpa
-    hibernate
+  jpa:
+    hibernate:
       ddl-auto: create-drop
+      

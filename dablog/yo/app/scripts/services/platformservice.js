@@ -1,4 +1,4 @@
-angular.module('angularyoApp')
+angular.module('dablogApp')
  .factory('Platform', function() {
  	return {
  		formatData : function(response){

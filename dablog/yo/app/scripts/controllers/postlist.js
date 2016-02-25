@@ -2,16 +2,16 @@
 
 /**
  * @ngdoc function
- * @name angularyoApp.controller:PostlistctrlCtrl
+ * @name dablogApp.controller:PostlistctrlCtrl
  * @description
  * # PostlistctrlCtrl
- * Controller of the angularyoApp
+ * Controller of the dablogApp
  */
-angular.module('angularyoApp')
+angular.module('dablogApp')
  .controller('PostListCtrl', ['$scope', '$http', 'Post',
  	function ($scope, $http, Post) {
- 		$http.get('rest/posts.json?all')
+ 		$http.get('api/posts')
  			.success(function(response) {
-				$scope.posts = Post.formatData(response);
+				$scope.posts = Post.formatData(response._embedded.posts);
  		});
  	}]);

@@ -2,24 +2,24 @@
 
 /**
  * @ngdoc function
- * @name angularyoApp.controller:PostfilterCtrl
+ * @name dablogApp.controller:PostfilterCtrl
  * @description
  * # PostfilterCtrl
- * Controller of the angularyoApp
+ * Controller of the dablogApp
  */
-angular.module('angularyoApp')
+angular.module('dablogApp')
   .controller('PostFilterCtrl', ['$scope', '$routeParams','$http','Post','Platform',
 	function($scope, $routeParams,$http,Post,Platform) {
 		var type     = $routeParams.type;
 		$scope.type  = type;
 		$scope.posts = [];
-		$http.get('rest/posts.json?'+type).success(function(data) {
-			$scope.posts=Post.findByType(data,type);
+		$http.get('api/posts/search/findByType?type='+type).success(function(data) {
+			$scope.posts=Post.findByType(data._embedded.posts,type);
 		});
 
 		if(type==="game"){
-			$http.get('rest/platforms.json?all').success(function(data) {
-				$scope.platforms=Platform.formatData(data);
+			$http.get('api/posts/search/findByType?type='+type).success(function(data) {
+				$scope.platforms=Platform.formatData(data._embedded.posts);
 			});
 		}
 

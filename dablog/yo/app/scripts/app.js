@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('angularyoApp', [
+  .module('dablogApp', [
     'ngSanitize',
     'ngAnimate',
     'ngCookies',

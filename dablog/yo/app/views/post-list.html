@@ -1,13 +1,14 @@
 <section class="posts">
 	<article id="{{post.id}}" class="post {{post.type}}" ng-repeat="post in posts | orderBy : 'id' : reverse">
 		<div class="createdAt {{post.metadata.platform}}">
+		{{post.publishedAt}}
 		<div class="date"><div class="day">{{post.publishedAt | date:'dd'}}</div>
 		<div class="month">{{post.publishedAt | date:'MMMM'}}</div>
 		<div class="year">{{post.publishedAt | date:'yyyy'}}</div></div>
 		</div>
 		<img class="cover" src="{{post.metadata.cover}}" alt="box cover for {{post.title}}">
 		<div class="article">
-			<a href="#/post/{{post.id}}" title="view full post '{{post.title}}'"><h1 ng-bind-html="post.title"></h1></a>
+			<a href="#/post/{{post._id}}" title="view full post '{{post.title}}'"><h1 ng-bind-html="post.title"></h1></a>
 			<ul class="tags">
 				<li ng-repeat="tag in post.metadata.tags"><a href="tag/{{tag}}" title="view all post with tag {{tag}}">{{tag}}</a></li>
 			</ul>

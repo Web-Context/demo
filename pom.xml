@@ -10,7 +10,8 @@
   	Use also Github and travis ci as CI services.</description>
 	<modules>
 		<!--module>blog</module -->
-		<module>angularyo</module>
+		
+		<module>dablog</module>
 	</modules>
 	
 	<parent>

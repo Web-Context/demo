@@ -2,18 +2,19 @@
 
 /**
  * @ngdoc service
- * @name angularyoApp.PostService
+ * @name dablogApp
  * @description
  * # PostService
- * Service in the angularyoApp.
+ * Service in the dablogApp.
  */
- angular.module('angularyoApp')
+ angular.module('dablogApp')
  .factory('Post', function() {
  	return {
  		formatData : function(response){
  			var data = [];
  			for(var i=0;i<response.length;i++){
 				var post = response[i];
+				
 				post.createdAt=new Date(post.createdAt);
 				post.publishedAt=new Date(post.publishedAt);
 				data.push(post);

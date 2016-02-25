@@ -24,7 +24,9 @@ module.exports = function (grunt) {
     app: require('./bower.json').appPath || 'app',
     dist: 'dist'
   };
-
+  //load proxy plugin
+  grunt.loadNpmTasks('grunt-connect-proxy');
+  
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -73,13 +75,23 @@ module.exports = function (grunt) {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
-        livereload: 35729
+        livereload: 35728
       },
+      proxies: [{
+    	    context: '/api', // the context of the data service
+    	    host: 'localhost', // wherever the data service is running
+    	    port: 8080, // the port that the data service is running on
+    	    https: false,
+			changeOrigin: true,
+			rewrite: {
+			  '^/api': '/api/v1/rest'
+			}
+      }],
       livereload: {
         options: {
           open: true,
           middleware: function (connect) {
-            return [
+            var middlewares = [
               connect.static('.tmp'),
               connect().use(
                 '/bower_components',
@@ -89,8 +101,11 @@ module.exports = function (grunt) {
                 '/app/styles',
                 connect.static('./app/styles')
               ),
-              connect.static(appConfig.app)
+              connect.static(appConfig.app),
+              
             ];
+            middlewares.push(require('grunt-connect-proxy/lib/utils').proxyRequest);
+            return middlewares;
           }
         }
       },
@@ -303,31 +318,31 @@ module.exports = function (grunt) {
       }
     },
 
-    // The following *-min tasks will produce minified files in the dist folder
-    // By default, your `index.html`'s <!-- Usemin block --> will take care of
-    // minification. These next options are pre-configured if you do not wish
-    // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
+//     The following *-min tasks will produce minified files in the dist folder
+//     By default, your `index.html`'s <!-- Usemin block --> will take care of
+//     minification. These next options are pre-configured if you do not wish
+//     to use the Usemin blocks.
+     cssmin: {
+       dist: {
+         files: {
+           '<%= yeoman.dist %>/styles/main.css': [
+             '.tmp/styles/{,*/}*.css'
+           ]
+         }
+       }
+     },
+     uglify: {
+       dist: {
+         files: {
+           '<%= yeoman.dist %>/scripts/scripts.js': [
+             '<%= yeoman.dist %>/scripts/scripts.js'
+           ]
+         }
+       }
+     },
+     concat: {
+       dist: {}
+     },
 
     imagemin: {
       dist: {
@@ -371,7 +386,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       dist: {
         options: {
-          module: 'angularyoApp',
+          module: 'dablogApp',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
@@ -465,6 +480,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'postcss:server',
+      'configureProxies:server',
       'connect:livereload',
       'watch'
     ]);
