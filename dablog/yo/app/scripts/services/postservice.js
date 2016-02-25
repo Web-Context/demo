@@ -16,14 +16,14 @@
 				var post = response[i];
 				
 				post.createdAt=new Date(post.createdAt);
-				post.publishedAt=new Date(post.publishedAt);
+				post.publicationAt=new Date(post.publicationAt);
 				data.push(post);
 			}
  			return data;
  		},
  		formatItem:function (post){
 				post.createdAt=new Date(post.createdAt);
-				post.publishedAt=new Date(post.publishedAt);
+				post.publicationAt=new Date(post.publicationAt);
 			return post; 			
  		},
  		findById: function(data,id){
@@ -32,7 +32,7 @@
 				if(data[i].id===id){	
 					post = data[i];
 					post.createdAt=new Date(post.createdAt);
-					post.publishedAt=new Date(post.publishedAt);
+					post.publicationAt=new Date(post.publicationAt);
 				break;
 				}
 			}
