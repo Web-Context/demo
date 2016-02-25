@@ -3,7 +3,7 @@
 describe('Service: PostService', function () {
 
   // load the service's module
-  beforeEach(module('angularyoApp'));
+  beforeEach(module('dablogApp'));
 
   // instantiate service
   var PostService;
