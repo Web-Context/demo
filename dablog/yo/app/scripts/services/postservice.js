@@ -45,7 +45,7 @@
 				if(data[i].type===type){
 					var post =  data[i];
 					post.createdAt=new Date(post.createdAt);
-					post.publishedAt=new Date(post.publishedAt);
+					post.publicationAt=new Date(post.publicationAt);
 					posts.push(post);
 				}
 			}
