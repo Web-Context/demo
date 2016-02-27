@@ -22,6 +22,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  */
 public class Post {
 	@Id
+	@NotNull
 	private String id;
 
 	@NotNull
