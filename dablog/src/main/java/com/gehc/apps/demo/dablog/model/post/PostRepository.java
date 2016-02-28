@@ -17,6 +17,14 @@ import org.springframework.data.repository.query.Param;
 public interface PostRepository extends MongoRepository<Post, String> {
 
 	/**
+	 * Retrieve a post on its unique Id.
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public Post findById(@Param("id") String id);
+
+	/**
 	 * Find all {@link Post} on there type.
 	 * 
 	 * @param type

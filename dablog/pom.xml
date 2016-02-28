@@ -131,10 +131,10 @@
 				<directory>src/main/resources</directory>
 				<targetPath>./</targetPath>
 			</resource>
-			<resource>
+			<!-- resource>
 				<directory>yo/dist</directory>
 				<targetPath>public</targetPath>
-			</resource>
+			</resource -->
 		</resources>
 	</build>
 
