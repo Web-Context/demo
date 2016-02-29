@@ -80,12 +80,6 @@
 			<artifactId>gson</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-		</dependency>
-
-
 		<!-- JPA + H2 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -94,13 +88,6 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-		</dependency>
-
-		<!-- MongoDB instance manager -->
-		<dependency>
-			<groupId>de.flapdoodle.embed</groupId>
-			<artifactId>de.flapdoodle.embed.mongo</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 
 		<!-- Unit testing -->
@@ -141,13 +128,24 @@
 		<resources>
 			<!-- Distribution packaging -->
 			<resource>
-				<directory>dist</directory>
-				<targetPath>public</targetPath>
+				<directory>src/main/resources</directory>
+				<targetPath>./</targetPath>
 			</resource>
 		</resources>
 	</build>
 
 	<profiles>
+		<profile>
+			<id>prod</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>yo/dist</directory>
+						<targetPath>public</targetPath>
+					</resource>
+				</resources>
+			</build>
+		</profile>
 		<profile>
 			<id>frontend</id>
 			<build>
@@ -213,6 +211,21 @@
 					</resource>
 				</resources>
 			</build>
+		</profile>
+		<profile>
+			<id>mongodb</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<dependencies>
+
+				<!-- MongoDB instance manager -->
+				<dependency>
+					<groupId>de.flapdoodle.embed</groupId>
+					<artifactId>de.flapdoodle.embed.mongo</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+			</dependencies>
 		</profile>
 	</profiles>
 </project>

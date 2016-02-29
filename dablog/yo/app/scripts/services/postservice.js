@@ -26,16 +26,9 @@
 				post.publicationAt=new Date(post.publicationAt);
 			return post; 			
  		},
- 		findById: function(data,id){
-			var post = {};
-			for (var i = 0; i < data.length; i++) {
-				if(data[i].id===id){	
-					post = data[i];
-					post.createdAt=new Date(post.createdAt);
-					post.publicationAt=new Date(post.publicationAt);
-				break;
-				}
-			}
+ 		findById: function(post,id){
+			post.createdAt=new Date(post.createdAt);
+			post.publicationAt=new Date(post.publicationAt);
  			return post;
 
  		},

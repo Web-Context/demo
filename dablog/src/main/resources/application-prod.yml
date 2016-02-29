@@ -1,10 +1,10 @@
 spring:
   data:
     rest:
-      base-path: api
+      base-path: api/v1/rest
     mongodb:
       host: 127.0.0.1
-      port: 27019
+      port: 27017
   jpa:
     hibernate:
       ddl-auto: create-drop

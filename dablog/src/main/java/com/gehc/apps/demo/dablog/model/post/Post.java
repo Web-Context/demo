@@ -22,7 +22,10 @@ import org.springframework.format.annotation.DateTimeFormat;
  */
 public class Post {
 	@Id
+	@NotNull
 	private String id;
+
+	private String uiid;
 
 	@NotNull
 	@Size(min = 1, max = 100)
@@ -63,10 +66,10 @@ public class Post {
 	 * @param createdBy
 	 * @param publicationAt
 	 */
-	public Post(String id, String title, String type, String header, String content, Date createdAt, String createdBy,
+	public Post(String uiid, String title, String type, String header, String content, Date createdAt, String createdBy,
 			Date publicationAt) {
 		super();
-		this.id = id;
+		this.uiid = uiid;
 		this.title = title;
 		this.type = type;
 		this.header = header;
@@ -89,6 +92,21 @@ public class Post {
 	 */
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	/**
+	 * @return the uiid
+	 */
+	public String getUiid() {
+		return uiid;
+	}
+
+	/**
+	 * @param uiid
+	 *            the uiid to set
+	 */
+	public void setUiid(String uiid) {
+		this.uiid = uiid;
 	}
 
 	/**
@@ -260,6 +278,11 @@ public class Post {
 		if (getClass() != obj.getClass())
 			return false;
 		Post other = (Post) obj;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
 		if (content == null) {
 			if (other.content != null)
 				return false;
