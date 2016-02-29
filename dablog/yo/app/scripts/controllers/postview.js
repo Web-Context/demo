@@ -13,6 +13,5 @@ angular.module('dablogApp')
  		var id = parseInt($routeParams.id);
  		$http.get('api/posts/search/findByUiid?uiid='+id).success(function(data) {
  			$scope.post = Post.findById(data,id);
- 			alert($scope.post);
  		});
  	}]);
