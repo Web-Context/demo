@@ -7,3 +7,6 @@ install:
   - npm install grunt
 jdk:
   - oraclejdk8
+script:
+  - mvn clean install -Pmongodb,prod
+
