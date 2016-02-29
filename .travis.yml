@@ -7,4 +7,3 @@ install:
   - npm install grunt
 jdk:
   - oraclejdk8
-  - oraclejdk7

@@ -1,23 +1,23 @@
 'use strict';
 
-describe('Controller: PostviewctrlCtrl', function () {
+describe('Controller: PostViewCtrl', function () {
 
   // load the controller's module
   beforeEach(module('dablogApp'));
 
-  var PostviewctrlCtrl,
+  var PostViewCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    PostviewctrlCtrl = $controller('PostViewCtrl', {
+    PostViewCtrl = $controller('PostViewCtrl', {
       $scope: scope
       // place here mocked dependencies
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    //TODO expect(PostViewCtrl.awesomeThings.length).toBe(3);
+  it('should retrieve a lot of game for type "game"', function () {
+    expect(PostViewCtrl.findByType('game').length).toBe(9);
   });
 });
