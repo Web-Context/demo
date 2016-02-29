@@ -17,7 +17,7 @@ angular.module('dablogApp')
 			$scope.posts=Post.findByType(data._embedded.posts,type);
 		});
 
-		if(type==="game"){
+		if(type==='game'){
 			$http.get('api/posts/search/findByType?type='+type).success(function(data) {
 				$scope.platforms=Platform.formatData(data._embedded.posts);
 			});

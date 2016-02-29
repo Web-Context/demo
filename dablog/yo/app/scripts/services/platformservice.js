@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('dablogApp')
  .factory('Platform', function() {
  	return {
@@ -15,7 +17,7 @@ angular.module('dablogApp')
 			var platform = {};
 			for (var i = 0; i < data.length; i++) {
 				if(data[i].id===id){
-					var platform = data[i];
+					platform = data[i];
 					platform.availabilityDate=new Date(platform.availabilityDate);
 					platform.createdAt=new Date(platform.createdAt);
 					break;

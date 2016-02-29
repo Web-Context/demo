@@ -1,0 +1,61 @@
+[
+	{
+		"id":9999,
+		"type" : "game",
+		"title" : "",
+		"header" : "",
+		"content" : "",
+ 		"createdBy" : "McGivrer",
+		"createdAt" : "2016/02/27 01:31:00",
+		"publicationAt" : "2015/03/19 00:00:00",
+		"metadata" : {
+			"cover" : "xx._SL240_.jpg",
+			"lang" : "fr",
+			"rated" : "3/7/12/16/18",
+			"platform" : "x360",
+			"platforms" : [ "android", "ds","3ds", "ios", "pc", "ps2", "ps3", "ps4", "psp", "shield", "wii", "wiiu","x360", "xone"],
+			"rate" : 99,
+			"rates" : {
+				"sound" : 99,
+				"gfx" : 18,
+				"music" : 15,
+				"feeling" : 16
+			},
+			"tags" : [ "fps", "enquete" ],
+			"plus" : [  ],
+			"minus" : [ ],
+			"studio" : "Visceral Games",
+			"editor" : "Electronic Arts",
+			"publisher" : ""
+		}
+	},
+	{
+		"id":8999,
+		"type" : "movie",
+		"title" : "",
+		"header" : "",
+		"content" : "",
+		"author" : "McGivrer",
+		"createdAt" : "2016/02/17 00:00:00",
+		"publicationAt" : "2016/02/17 00:00:00",
+		"status" : "PUBLISHED",
+		"metadata" : {
+			"lang" : "fr",
+			"originalTitle":"",
+			"originalLang":"d/en/es/fr/gb/us",
+			"rated":"6",
+			"cover" : "",
+			"rate" : 16,
+			"platform" : "movie",
+			"tags" : [ "animation", "3D", "romance", "sf", "action", "adventure"],
+			"plus" : [ "",
+					"" ],
+			"minus" : [ "", 
+					"" ],
+			"studio" : "",
+			"production" : "",
+			"distributor" : ""
+			}
+		}
+	}
+]
