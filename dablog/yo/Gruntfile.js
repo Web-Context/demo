@@ -84,7 +84,7 @@ module.exports = function (grunt) {
     	    https: false,
 			changeOrigin: true,
 			rewrite: {
-			  '^/api': '/api/v1/rest'
+			  '^/api': '/api'
 			}
       }],
       livereload: {

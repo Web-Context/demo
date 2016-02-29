@@ -131,14 +131,21 @@
 				<directory>src/main/resources</directory>
 				<targetPath>./</targetPath>
 			</resource>
-			<!-- resource>
-				<directory>yo/dist</directory>
-				<targetPath>public</targetPath>
-			</resource -->
 		</resources>
 	</build>
 
 	<profiles>
+		<profile>
+			<id>prod</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>yo/dist</directory>
+						<targetPath>public</targetPath>
+					</resource>
+				</resources>
+			</build>
+		</profile>
 		<profile>
 			<id>frontend</id>
 			<build>
