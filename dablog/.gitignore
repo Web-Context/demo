@@ -5,4 +5,4 @@
 /.tern-project
 /node
 /node_modules
-
+/start.log

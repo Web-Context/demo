@@ -26,7 +26,7 @@
 				post.publicationAt=new Date(post.publicationAt);
 			return post; 			
  		},
- 		findById: function(post,id){
+ 		findById: function(post){
 			post.createdAt=new Date(post.createdAt);
 			post.publicationAt=new Date(post.publicationAt);
  			return post;

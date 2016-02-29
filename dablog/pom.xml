@@ -200,6 +200,9 @@
 								<goals>
 									<goal>grunt</goal>
 								</goals>
+								<configuration>
+									<testArgs>--force</testArgs>
+								</configuration>
 							</execution>
 						</executions>
 					</plugin>
