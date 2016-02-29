@@ -214,6 +214,9 @@
 		</profile>
 		<profile>
 			<id>mongodb</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<dependencies>
 
 				<!-- MongoDB instance manager -->
