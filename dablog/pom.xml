@@ -92,8 +92,8 @@
 
 		<!-- Unit testing -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
@@ -231,4 +231,5 @@
 			</dependencies>
 		</profile>
 	</profiles>
+	<url>https://github.com/web-context/demo</url>
 </project>
