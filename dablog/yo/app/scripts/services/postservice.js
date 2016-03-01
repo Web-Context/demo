@@ -35,6 +35,7 @@
 			},
 			'findByUiid':{
 				method : 'GET',
+				action : 'findByUiid',
 				params: {uiid:'@uiid'},
 				transformRequest : function(data) {
 					return angular.toJson(data);

@@ -1,16 +1,16 @@
 'use strict';
 
 angular.module('dablogApp')
-.factory('PostFilterByTypeService',['$resource',function($resource) {
+.factory('PostFilterByUiidService',['$resource',function($resource) {
     return $resource(
-        '/api/posts/search/findByType?type=:type',
+        '/api/posts/search/findByUiid?uiid=:uiid',
         {
-          type : '@type'
+        	uiid : '@uiid'
         }, {
-            'findByType' : {
+            'findByUiid' : {
               method : 'GET',
-              action : 'findByType',
-              params: {type:'@type'},
+              action : 'findByUiid',
+              params: {uiid:'@uiid'},
               isArray: false,
               transformResponse : function(data) {
                   return angular.fromJson(data);

@@ -25,15 +25,15 @@ angular
         controller: 'HomeCtrl',
         controllerAs: 'home'
       })
-      .when('/post/:id', {
+      .when('/post/:uiid', {
         templateUrl: 'views/post-view.html',
         controller: 'PostViewCtrl',
         controllerAs: 'postView'
       })
       .when('/posts/:type', {
         templateUrl: 'views/post-list.html',
-        controller: 'PostListCtrl',
-        controllerAs: 'search'
+        controller: 'PostFilterCtrl',
+        controllerAs: 'postFilter'
       })
       .when('/game/platform/:code', {
         templateUrl: 'views/post-list.html',

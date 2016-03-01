@@ -8,10 +8,10 @@
  * Controller of the dablogApp
  */
 angular.module('dablogApp')
- .controller('PostViewCtrl', ['$scope', '$routeParams','PostService',
- 	function($scope, $routeParams,PostService) {
+ .controller('PostViewCtrl', ['$scope', '$routeParams','PostFilterByUiidService',
+ 	function($scope, $routeParams,PostFilterByUiidService) {
  		var uiid = $routeParams.uiid;
- 		PostService.findByUiid({'uiid':uiid},function(response){
+ 		PostFilterByUiidService.findByUiid({'uiid':uiid},function(response){
  			$scope.post = response;
  		});
  	}]);

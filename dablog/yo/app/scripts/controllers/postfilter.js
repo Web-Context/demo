@@ -8,7 +8,7 @@
  * Controller of the dablogApp
  */
 angular.module('dablogApp')
-.controller('PostListCtrl', ['$scope', '$routeParams','PostFilterByTypeService',
+.controller('PostFilterCtrl', ['$scope', '$routeParams','PostFilterByTypeService',
  function ($scope, $routeParams, PostFilterByTypeService) {
 	var type = $routeParams.type;
     PostFilterByTypeService.findByType(
@@ -16,7 +16,7 @@ angular.module('dablogApp')
     			'type' : type
     		},
     		function(response) {
-    			$scope.posts = response.embedded.posts ? response.embedded.posts
+    			$scope.posts = response._embedded.posts ? response._embedded.posts
     					: [];
     		});
 }]);

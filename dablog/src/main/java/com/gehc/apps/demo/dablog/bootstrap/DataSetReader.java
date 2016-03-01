@@ -2,7 +2,6 @@ package com.gehc.apps.demo.dablog.bootstrap;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.nio.charset.Charset;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -43,14 +42,18 @@ public class DataSetReader<T, D> {
 				String datasetPath = getClass().getResource("/" + filename).getPath();
 				logger.info(String.format("dataset for class %s path: %s", clazz.getCanonicalName(), datasetPath));
 				BufferedReader in = new BufferedReader(
-						new InputStreamReader(this.getClass().getClassLoader().getResourceAsStream(filename),"utf-8"));
+						new InputStreamReader(this.getClass().getClassLoader().getResourceAsStream(filename), "utf-8"));
 				reader = new JsonReader(in);
 				List<T> list = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").create().fromJson(reader,
 						new TypeToken<List<T>>() {
 						}.getType());
 				for (T item : list) {
 					repo.insert(item);
-					logger.debug("insert data: " + item.toString().trim().substring(0, (item.toString().length()>100?120:item.toString().length())-1)+"...}");
+					logger.debug(
+							"insert data: "
+									+ item.toString().trim().substring(0,
+											(item.toString().length() > 100 ? 120 : item.toString().length()) - 1)
+							+ "...}");
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
