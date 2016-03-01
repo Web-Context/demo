@@ -22,8 +22,8 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/post-list.html',
-        controller: 'PostListCtrl',
-        controllerAs: 'postList'
+        controller: 'HomeCtrl',
+        controllerAs: 'home'
       })
       .when('/post/:id', {
         templateUrl: 'views/post-view.html',
@@ -32,13 +32,13 @@ angular
       })
       .when('/posts/:type', {
         templateUrl: 'views/post-list.html',
-        controller: 'PostFilterCtrl',
-        controllerAs: 'postFilter'
+        controller: 'PostListCtrl',
+        controllerAs: 'search'
       })
       .when('/game/platform/:code', {
         templateUrl: 'views/post-list.html',
-        controller: 'PostFilterCtrl',
-        controllerAs: 'postFilter'
+        controller: 'PostSearchCtrl',
+        controllerAs: 'postSearchFilter'
       })
       .otherwise({
         redirectTo: '/'

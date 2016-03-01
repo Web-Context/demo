@@ -8,10 +8,15 @@
  * Controller of the dablogApp
  */
 angular.module('dablogApp')
- .controller('PostListCtrl', ['$scope', '$http', 'Post',
- 	function ($scope, $http, Post) {
- 		$http.get('api/posts')
- 			.success(function(response) {
-				$scope.posts = Post.formatData(response._embedded.posts);
- 		});
- 	}]);
+.controller('PostListCtrl', ['$scope', '$routeParams','PostFilterByTypeService',
+ function ($scope, $routeParams, PostFilterByTypeService) {
+	var type = $routeParams.type;
+    PostFilterByTypeService.findByType(
+    		{
+    			'type' : type
+    		},
+    		function(response) {
+    			$scope.posts = response.embedded.posts ? response.embedded.posts
+    					: [];
+    		});
+}]);
