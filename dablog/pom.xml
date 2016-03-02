@@ -152,6 +152,24 @@
 		<profile>
 			<id>prod</id>
 			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.9.1</version>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>2.2.1</version>
+					</plugin> 
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-release-plugin</artifactId>
+						<version>2.5</version>
+					</plugin> 
+				</plugins>
+
 				<resources>
 					<resource>
 						<directory>yo/dist</directory>
@@ -204,46 +222,46 @@
 									<!-- optional: The default argument is actually "install", so unless 
 										you need to run some other bower command, you can remove this whole <configuration> 
 										section. -->
-									<!--arguments>install</arguments -->
-								</configuration>
-							</execution>
+										<!--arguments>install</arguments -->
+									</configuration>
+								</execution>
 
-							<execution>
-								<id>grunt build</id>
-								<phase>generate-resources</phase>
-								<goals>
-									<goal>grunt</goal>
-								</goals>
-								<configuration>
-									<testArgs>--force</testArgs>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-				<resources>
-					<!-- Frontend package -->
-					<resource>
-						<directory>yo</directory>
-					</resource>
-				</resources>
-			</build>
-		</profile>
-		<profile>
-			<id>mongodb</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<dependencies>
+								<execution>
+									<id>grunt build</id>
+									<phase>generate-resources</phase>
+									<goals>
+										<goal>grunt</goal>
+									</goals>
+									<configuration>
+										<testArgs>--force</testArgs>
+									</configuration>
+								</execution>
+							</executions>
+						</plugin>
+					</plugins>
+					<resources>
+						<!-- Frontend package -->
+						<resource>
+							<directory>yo</directory>
+						</resource>
+					</resources>
+				</build>
+			</profile>
+			<profile>
+				<id>mongodb</id>
+				<activation>
+					<activeByDefault>true</activeByDefault>
+				</activation>
+				<dependencies>
 
-				<!-- MongoDB instance manager -->
-				<dependency>
-					<groupId>de.flapdoodle.embed</groupId>
-					<artifactId>de.flapdoodle.embed.mongo</artifactId>
-					<scope>runtime</scope>
-				</dependency>
-			</dependencies>
-		</profile>
-	</profiles>
-	<url>https://github.com/web-context/demo</url>
-</project>
+					<!-- MongoDB instance manager -->
+					<dependency>
+						<groupId>de.flapdoodle.embed</groupId>
+						<artifactId>de.flapdoodle.embed.mongo</artifactId>
+						<scope>runtime</scope>
+					</dependency>
+				</dependencies>
+			</profile>
+		</profiles>
+		<url>https://github.com/web-context/demo</url>
+	</project>
