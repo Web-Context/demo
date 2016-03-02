@@ -7,11 +7,14 @@
 	<name>DaBlog</name>
 	<description>An Angular Yeoman generated demo application build with Maven.</description>
 
+
 	<parent>
 		<groupId>com.gehc.apps.demo</groupId>
 		<artifactId>parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-	</parent>	
+	</parent>
+
+	
 
 	<!-- External dependencies -->
 	<dependencies>

@@ -60,9 +60,16 @@
 	<distributionManagement>
 		<repository>
 			<id>bintray-mcgivrer-maven</id>
-			<name>mcgivrer-maven</name>
-			<url>https://api.bintray.com/maven/mcgivrer/maven/Demo/;publish=1</url>
+			<name>bintray</name>
+			<url>http://dl.bintray.com/mcgivrer/maven</url>
 		</repository>
+		<snapshotRepository>
+			<id>bintray-mcgivrer-maven</id>
+			<name>bintray</name>
+			<url>http://dl.bintray.com/mcgivrer/maven</url>
+			<uniqueVersion>true</uniqueVersion>
+		</snapshotRepository>
 	</distributionManagement>
+
 
 </project>
