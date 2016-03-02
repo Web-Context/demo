@@ -9,7 +9,7 @@
 
 	<parent>
 		<groupId>com.gehc.apps.demo</groupId>
-		<artifactId>parent</artifactId>
+		<artifactId>demos-springboot</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>	
 
