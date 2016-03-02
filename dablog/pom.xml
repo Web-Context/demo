@@ -50,6 +50,20 @@
 		<url>https://travis-ci.org/Web-Context/demo</url>
 	</ciManagement>
 
+	<distributionManagement>
+		<repository>
+			<id>bintray-mcgivrer-maven</id>
+			<name>bintray</name>
+			<url>http://dl.bintray.com/mcgivrer/maven</url>
+		</repository>
+		<snapshotRepository>
+			<id>bintray-mcgivrer-maven</id>
+			<name>bintray</name>
+			<url>http://dl.bintray.com/mcgivrer/maven</url>
+			<uniqueVersion>true</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<!-- External dependencies -->
 	<dependencies>
 		<!-- Spring Boot -->

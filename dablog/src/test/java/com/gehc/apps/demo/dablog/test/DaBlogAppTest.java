@@ -72,21 +72,21 @@ public class DaBlogAppTest {
 	}
 
 	@Test
-	public void test_2_restPostRepositoryForTypeMovie() {
+	public void test_3_restPostRepositoryForTypeMovie() {
 		List<Post> posts = postRepository.findByType("movie");
 		Assert.assertEquals("Not movie post was found.", 1, posts.size());
 
 	}
 
 	@Test
-	public void test_3_restPostRepositoryForTypeGame() {
+	public void test_4_restPostRepositoryForTypeGame() {
 		List<Post> posts = postRepository.findByType("game");
 		Assert.assertEquals("Not game post was found.", 1, posts.size());
 
 	}
 
 	@Test
-	public void test_4_restPostRepositoryForTypeGameAndTitleLike() {
+	public void test_5_restPostRepositoryForTypeGameAndTitleLike() {
 		List<Post> posts = postRepository.findByTypeAndTitleLikeIgnoreCase("game", "title");
 		Assert.assertEquals("Not game post was found for title='title'.", 1, posts.size());
 

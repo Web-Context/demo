@@ -30,7 +30,7 @@ public interface PostRepository extends MongoRepository<Post, String> {
 	 * @param id
 	 * @return
 	 */
-	public Post findByUiid(@Param("id") String uiid);
+	public Post findByUiid(@Param("uiid") String uiid);
 
 	/**
 	 * Find all {@link Post} on there type.
