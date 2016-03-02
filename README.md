@@ -1,3 +1,8 @@
+[![DockUnit (linux) Build status](http://dockunit.io/svg/Web-Context/demo?master&1456922703149)](https://dockunit.io/projects/Web-Context/demo)
+[![AppVeyor (win23) Build status](https://ci.appveyor.com/api/projects/status/vxbccc1t9ceadhi9)](https://ci.appveyor.com/project/Web-Context/demo)
+[![travis (linux) Build Status](https://travis-ci.org/Web-Context/demo.png?branch=master)](https://travis-ci.org/Web-Context/demo)
+
+
 DEMO
 ====
 
