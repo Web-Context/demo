@@ -33,7 +33,13 @@ html {
               display:block;
               margin:0px;
               padding:5px 10px;
+
             }
+            a.selected {
+              background-color:#000;
+              color:#999;           
+            }
+
             input.search {
               margin:10px;
               padding:2px;
@@ -47,8 +53,8 @@ html {
               margin-left:0px;
             }
           }
-          li:hover a{
-            background-color:#000;
+          li:hover a {
+            background-color:#666;
             color:#999;
           }
           li:before {
@@ -85,6 +91,10 @@ html {
       } 
    }
     .content {
+      display:block;
+      overflow-x: hidden; /*for hiding horizontal scroll bar*/
+      overflow-y: auto; 
+      height:700px;
       section.post{
         article {
           text-align: center;

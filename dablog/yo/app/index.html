@@ -20,11 +20,11 @@
         <div class="avatar"><div class="user"><a href="#/profile/mcgivrer">Frédéric Delorme</a></div>
         <img src="https://trello-avatars.s3.amazonaws.com/372550260169a4891d0c419fb7af6b87/170.png" title="Fred's avatar" >
       </div>        <h1>DaBlog</h1>
-        <nav class="mainMenu">
+        <nav class="mainMenu" ng-controller="MenuCtrl">
           <ul>
-            <li><a href="#/" title="Go Home !">Home</a></li>
-            <li><a href="#/posts/game" title="Show all games">Games</a></li>
-            <li><a href="#/posts/movie" title="View movie news">Movies</a></li>
+            <li><a href="#/" class="{{selectedClass('/')}}" title="Go Home !">Home</a></li>
+            <li><a href="#/posts/game" class="{{selectedClass('/posts/game')}}" title="Show all games">Games</a></li>
+            <li><a href="#/posts/movie" class="{{selectedClass('/posts/movie')}}" title="View movie news">Movies</a></li>
           </ul>
         </nav>
         <nav class="subMenu" ng-show="type=='game'">
@@ -78,6 +78,7 @@
    <script src="scripts/services/platformservice.js"></script>
    <script src="scripts/controllers/postsearch.js"></script>
    <script src="scripts/controllers/home.js"></script>
+   <script src="scripts/controllers/menu.js"></script>
    <!-- endbuild -->
   </body>
 </html>

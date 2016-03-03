@@ -17,7 +17,7 @@ describe('Controller: HomeCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(HomeCtrl.awesomeThings.length).toBe(3);
+  it('should retrieve a list of post to the scope', function () {
+    expect(HomeCtrl.posts.length).toBe(9);
   });
 });
