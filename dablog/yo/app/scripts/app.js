@@ -40,6 +40,12 @@ angular
         controller: 'PostSearchCtrl',
         controllerAs: 'postSearchFilter'
       })
+      .when('/admin/user', {
+        templateUrl: 'views/admin/user-list.html',
+        controller: 'UserCtrl',
+        controllerAs: 'userList'
+      })
+
       .otherwise({
         redirectTo: '/'
       });

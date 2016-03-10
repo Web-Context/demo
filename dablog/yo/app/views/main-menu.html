@@ -1,0 +1,6 @@
+<ul>
+	<li ng-repeat="item in menuItems | orderBy:'priority'" >
+		<a class="{{selectedClass(item.url)}}" href="/#{{item.url}}" title="{{item.tooltip}}" accesskey="{{item.accesskey}}">{{item.label}}</a>
+	</li>
+</ul>
+

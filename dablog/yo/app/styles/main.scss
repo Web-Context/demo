@@ -66,26 +66,32 @@ html {
           }
         }
       }
-      .avatar {
-        top:0px;
+      div.user {
         float:right;
-        margin:10px;
         width:140px;
-        div.user a{
-          float:left;
-          color:#fff;
-          font-size:9pt;
-          text-align: right;
-          margin:5px;
-          height:24px;
-          width:60px;
-          font-family: cursive;
-          text-decoration: none;
+        nav.infos {
+          ul {
+            margin:2px;
+            padding:0px;
+            li {
+              list-style: none;
+              margin:0px;
+              padding:0px;
+              a {
+                color:#fff;
+                margin:0px;
+                padding:0px;
+                font-size:9pt;
+                text-decoration: none;
+              }
+            }
+          }
         }
-        img{
+        .avatar {
+          top:0px;
           float:right;
           width:48px;
-          margin: 0px 8px 0px 8px;
+          margin:8 px;
           border-radius:24px;
         }
       } 
@@ -153,8 +159,8 @@ html {
             margin-left:160px;
             min-height: 390px;
             h1,
-            .header,
-            .content {
+            .post-header,
+            .post-content {
               text-align: justify;
             } 
             h1,h2,h3{
