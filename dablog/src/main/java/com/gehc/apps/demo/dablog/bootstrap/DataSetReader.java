@@ -20,7 +20,7 @@ import com.google.gson.stream.JsonReader;
  *
  */
 @Component
-public class DataSetReader<T, D> {
+public class DataSetReader<T> {
 
 	private final static Logger logger = Logger.getLogger(DataSetReader.class);
 
