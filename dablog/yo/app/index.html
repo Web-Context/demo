@@ -17,72 +17,65 @@
 <body ng-app="dablogApp">
   <div class="page"><!-- header -->
     <header id="header" class="theme" ng-controller="MenuCtrl">
-      <div class="user">
-        <img class="avatar" src="{{user.avatar}}" title="{{user.title}}" />
-        <nav class="infos"><ul>
-          <li><a href="#/{{user.url}}">{{user.username}}</a></li>
-          <li><a href="#/profile/logout">Logout</a></li>
-          <li><a href="#/profile/prefs">Preferences</a></li>
-          </ul>
-        </nav>
-      </div>        
+      <div ng-include="'/views/user.html'"></div>
       <h1>DaBlog</h1>
       <nav class="mainMenu">
-        <div ng-model="menuItems" ng-include"'/views/main-menu.html'"></div>
-        <nav class="subMenu" ng-show="type==='game'">
-          <ul>
-            <li ng-repeat="pf in platforms"><a href="#/game/platform/{{pf.code}}" title="{{pf.name}}">{{pf.code}}</a></li>
-          </ul>
-        </nav>
-      </header><!-- /header -->
-      <!-- content -->
-      <div class="content">
-        <ng-view></ng-view>
-      </div>  
-      <!-- /content -->
-      <!-- footer -->
-      <footer id="footer" class="theme">
-        <a href="http://web-context.github.io/" title="Go and visit official web site"><img src="https://avatars1.githubusercontent.com/u/7290957?s=32" class="logo"></a>
-        <p>&copy; 2016 » <a href="mailto:frederic.delorme@gmail.com?subject=feedback" "email me" title="Please, let me some comments">Frédéric Delorme</a> » <a href="http://web-context.github.io/" title="go to home of web dev !">web-context.github.io</a></p>
-      </footer><!-- /footer -->
-    </div>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-     !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-     }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        <ul>
+          <li ng-repeat="item in menuItems | orderBy:'priority'" >
+            <a class="{{selectedClass(item.url)}}" href="/#{{item.url}}" title="{{item.tooltip}}" accesskey="{{item.accesskey}}">{{item.label}}</a>
+          </li>
+        </ul>
+      </nav>
+      <div ng-include"'/views/main-menu.html'"></div>
+    </header><!-- /header -->
+    <!-- content -->
+    <div class="content">
+      <ng-view></ng-view>
+    </div>  
+    <!-- /content -->
+    <!-- footer -->
+    <footer id="footer" class="theme">
+      <a href="http://web-context.github.io/" title="Go and visit official web site"><img src="https://avatars1.githubusercontent.com/u/7290957?s=32" class="logo"></a>
+      <p>&copy; 2016 » <a href="mailto:frederic.delorme@gmail.com?subject=feedback" "email me" title="Please, let me some comments">Frédéric Delorme</a> » <a href="http://web-context.github.io/" title="go to home of web dev !">web-context.github.io</a></p>
+    </footer><!-- /footer -->
+  </div>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+   !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+     (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+     r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+   }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-     ga('create', 'UA-XXXXX-X');
-     ga('send', 'pageview');
-   </script>
+   ga('create', 'UA-XXXXX-X');
+   ga('send', 'pageview');
+ </script>
 
-   <!-- build:js(.) scripts/vendor.js -->
-   <!-- bower:js -->
-   <script src="bower_components/angular/angular.js"></script>
-   <script src="bower_components/angular-animate/angular-animate.js"></script>
-   <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-   <script src="bower_components/angular-resource/angular-resource.js"></script>
-   <script src="bower_components/angular-route/angular-route.js"></script>
-   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-   <script src="bower_components/angular-touch/angular-touch.js"></script>
-   <!-- endbower -->
-   <!-- endbuild -->
+ <!-- build:js(.) scripts/vendor.js -->
+ <!-- bower:js -->
+ <script src="bower_components/angular/angular.js"></script>
+ <script src="bower_components/angular-animate/angular-animate.js"></script>
+ <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+ <script src="bower_components/angular-resource/angular-resource.js"></script>
+ <script src="bower_components/angular-route/angular-route.js"></script>
+ <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+ <script src="bower_components/angular-touch/angular-touch.js"></script>
+ <!-- endbower -->
+ <!-- endbuild -->
 
-   <!-- build:js({.tmp,app}) scripts/scripts.js -->
-   <script src="scripts/app.js"></script>
-   <script src="scripts/controllers/postfilter.js"></script>
-   <script src="scripts/controllers/postview.js"></script>
-   <script src="scripts/controllers/postsearch.js"></script>
-   <script src="scripts/controllers/home.js"></script>
-   <script src="scripts/controllers/menu.js"></script>
-   <script src="scripts/controllers/admin/user.js"></script>
-   <script src="scripts/services/postservice.js"></script>
-   <script src="scripts/services/postsearchservice.js"></script>
-   <script src="scripts/services/postfilterbytypeservice.js"></script>
-   <script src="scripts/services/postfilterbyuiidservice.js"></script>
-   <script src="scripts/services/platformservice.js"></script>
-   <script src="scripts/services/userservice.js"></script>
-   <!-- endbuild -->
- </body>
- </html>
+ <!-- build:js({.tmp,app}) scripts/scripts.js -->
+ <script src="scripts/app.js"></script>
+ <script src="scripts/controllers/postfilter.js"></script>
+ <script src="scripts/controllers/postview.js"></script>
+ <script src="scripts/controllers/postsearch.js"></script>
+ <script src="scripts/controllers/home.js"></script>
+ <script src="scripts/controllers/menu.js"></script>
+ <script src="scripts/controllers/admin/user.js"></script>
+ <script src="scripts/services/postservice.js"></script>
+ <script src="scripts/services/postsearchservice.js"></script>
+ <script src="scripts/services/postfilterbytypeservice.js"></script>
+ <script src="scripts/services/postfilterbyuiidservice.js"></script>
+ <script src="scripts/services/platformservice.js"></script>
+ <script src="scripts/services/userservice.js"></script>
+ <!-- endbuild -->
+</body>
+</html>

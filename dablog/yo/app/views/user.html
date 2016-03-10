@@ -1,0 +1,13 @@
+<div class="user">
+	<img  ng-if="user" class="avatar" src="{{user.avatar}}" title="{{user.title}}" />
+	<div  ng-if="!user" class="avatar" >&nbsp;</div>
+	<nav class="infos">
+		<ul>
+			<li ng-if="user"><a href="#/{{user.url}}">{{user.username}}</a></li>
+			<li ng-if="user"><a href="#/profile/logout" ng-click="logout();">Logout</a></li>
+			<li ng-if="user"><a href="#/profile/prefs" ng-click="preferences()">Preferences</a></li>
+			<li ng-if="!user"><a href="#/profile/login" ng-click="login();">Login</a></li>
+			<li ng-if="!user"><a href="#/profile/register" ng-click="register();">Register</a></li>
+		</ul>
+	</nav>
+</div>        
