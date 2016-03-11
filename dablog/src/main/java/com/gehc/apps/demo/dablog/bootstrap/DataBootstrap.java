@@ -24,7 +24,7 @@ public class DataBootstrap {
 	@PostConstruct
 	public void inject() {
 
-		pfDataset.importData("dataset/platform.json", Platform.class, true);
-		postDataset.importData("dataset/post.json", Post.class, true);
+		pfDataset.importData("dataset/platform.json", Platform.class, true,true);
+		postDataset.importData("dataset/post.json", Post.class, true,true);
 	}
 }

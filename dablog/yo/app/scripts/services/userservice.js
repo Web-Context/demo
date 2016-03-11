@@ -8,7 +8,7 @@
  * Service in the dablogApp.
  */
  angular.module('dablogApp')
- .factory('UserService', ['$http',function ($http) {
+ .factory('UserService', ['$resource',function ($resource) {
     return $resource('/api/users/:username', {
         username : '@username'
     }, {

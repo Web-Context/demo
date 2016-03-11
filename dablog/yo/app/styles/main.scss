@@ -160,10 +160,19 @@ html {
           .article {
             margin-left:160px;
             min-height: 390px;
+            .bandeau {
+              width:100%;
+              height:120px;
+              background:url(attr(data-src));
+              background-repeat: no-repeat;
+              background-position: middle;
+              content:" ";
+            }
             h1,
             .post-header,
             .post-content {
               text-align: justify;
+              
             } 
             h1,h2,h3{
               font-family: Comfortaa;
