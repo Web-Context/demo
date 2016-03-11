@@ -19,6 +19,7 @@ import com.google.gson.stream.JsonReader;
  * Read data set and inject into corresponding repository.
  * 
  * @author Frédéric Delorme
+ * @author Nicolas Grussenmeyer
  *
  */
 @Component
@@ -36,11 +37,14 @@ public class DataSetReader<T> {
 	 * @param clazz
 	 */
 	@SuppressWarnings("serial")
-	public void importData(String filename, Class<T> clazz, boolean emptyOnly) {
+	public void importData(String filename, Class<T> clazz, boolean ifEmptyOnly, boolean dropData) {
 
 		MongoRepository repo = getRepoForClass(clazz);
 
-		if ((emptyOnly && repo.count() == 0) || (!emptyOnly)) {
+		if ((ifEmptyOnly && repo.count() == 0) || (!ifEmptyOnly)|| dropData) {
+			if(dropData){
+				repo.deleteAll();
+			}
 			try {
 				JsonReader reader;
 				String datasetPath = getClass().getResource("/" + filename).getPath();

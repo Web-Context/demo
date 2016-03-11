@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.gehc.apps.demo.dablog.model.platform;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
@@ -22,6 +19,12 @@ public interface PlatformRepository extends MongoRepository<Platform, String> {
 	 */
 	public Platform findById(@Param("id") String id);
 
+	/**
+	 * Retrieve Platform on its code.
+	 * 
+	 * @param code
+	 * @return
+	 */
 	public Platform findByCode(@Param("code") String code);
-	
+
 }

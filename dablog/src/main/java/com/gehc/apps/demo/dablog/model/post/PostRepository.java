@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.gehc.apps.demo.dablog.model.post;
 
 import java.util.List;

@@ -31,17 +31,17 @@ angular.module('dablogApp')
             'avatar':'https://trello-avatars.s3.amazonaws.com/372550260169a4891d0c419fb7af6b87/170.png',
         };
 
-    }
+    };
 
     $scope.logout = function(){
         $scope.user=null;
-    }
+    };
 
     $scope.preferences = function(){
         alert("display preference dialog !");
-    }
+    };
     $scope.register = function(){
         alert("display register dialog !");
-    }
+    };
 
   }]);
