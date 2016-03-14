@@ -174,8 +174,8 @@
 					path -->
 				<resources>
 					<resource>
-						<directory>yo/dist</directory>
-						<targetPath>public</targetPath>
+						<directory>/yo/dist</directory>
+						<targetPath>/</targetPath>
 					</resource>
 				</resources>
 			</build>
@@ -255,7 +255,6 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<dependencies>
-
 				<!-- MongoDB instance manager -->
 				<dependency>
 					<groupId>de.flapdoodle.embed</groupId>
