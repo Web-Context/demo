@@ -40,6 +40,16 @@ angular
         controller: 'PostSearchCtrl',
         controllerAs: 'postSearchFilter'
       })
+      .when('/tag/:type/:tag', {
+        templateUrl: 'views/search-results.html',
+        controller: 'TagSearchCtrl',
+        controllerAs: 'tagSearchFilter'
+      })  
+      .when('/platform/:type/:platform', {
+          templateUrl: 'views/search-results.html',
+          controller: 'PlatformSearchCtrl',
+          controllerAs: 'platformSearchFilter'
+        })
       .when('/admin/user', {
         templateUrl: 'views/admin/user-list.html',
         controller: 'UserCtrl',

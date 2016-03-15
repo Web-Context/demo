@@ -19,6 +19,7 @@ import com.google.gson.stream.JsonReader;
  * Read data set and inject into corresponding repository.
  * 
  * @author Frédéric Delorme
+ * @author Nicolas Grussenmeyer
  *
  */
 @Component
