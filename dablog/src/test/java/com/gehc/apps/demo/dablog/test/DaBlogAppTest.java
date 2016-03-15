@@ -62,15 +62,15 @@ public class DaBlogAppTest {
 	@Test
 	public void test_1_PostRepositoryFindAll() {
 		for (Post post : postRepository.findAll()) {
-			log.info("Hello " + post.toString());
+			log.info("post: " + post.getTitle());
 			assertNotNull("", post.getId());
 		}
 	}
 
 	@Test
 	public void test_2_restPostRepositoryForUiid() {
-		Post post = postRepository.findByUiid("1");
-		Assert.assertEquals("Post with uiid='1' was not found.", "1", post.getUiid());
+		Post post = postRepository.findByUiid("uuid1");
+		Assert.assertEquals("Post with uiid='uuid1' was not found.", "uuid1", post.getUiid());
 
 	}
 
