@@ -1,0 +1,418 @@
+@import url(https://fonts.googleapis.com/css?family=Passion+One:400,700,900|Comfortaa|Special+Elite|Overlock:400,700,900);
+html {
+  margin:0px;
+  padding:0px;
+  .page {
+    font-family: sans-serif;
+    header.theme {
+      margin:0px;
+      padding:0px;
+      border-bottom:1px solid #000;
+      h1{
+        margin-left: 40px;
+        font-size:36pt;
+        font-family: Passion One;
+        margin:0px;
+        padding:5px 20px;
+        background-color:#000;
+        border-radius: 0px 40px 40px 0px;
+        color:#fff;
+      }
+      nav {
+        ul {
+          list-style: none;
+          margin:0px;
+          padding:5px 10px;
+          li {
+            display: inline-block;
+            margin:5px;
+            a {
+              text-decoration: none;
+              display:block;
+              margin:0px;
+              padding:5px 10px;
+            }
+            input.search {
+              margin:10px;
+              padding:2px;
+              margin-right:0px;
+              font-family: Passion One;
+            }
+            button {
+              margin:10px;
+              margin-top:11px;
+              padding:2px;
+              margin-left:0px;
+            }
+          }
+          li:hover a{
+            background-color:#000;
+            color:#999;
+          }
+          li:before {
+            content:" ";
+          }
+          li.right{
+            float:right;
+            margin-bottom:10px;
+          }
+        }
+      }
+      .avatar {
+        top:0px;
+        float:right;
+        margin:10px;
+        width:140px;
+        div.user a{
+          float:left;
+          color:#fff;
+          font-size:9pt;
+          text-align: right;
+          margin:5px;
+          height:24px;
+          width:60px;
+          font-family: cursive;
+          text-decoration: none;
+        }
+        img{
+          float:right;
+          width:48px;
+          margin: 0px 8px 0px 8px;
+          border-radius:24px;
+        }
+      } 
+   }
+    .content {
+      section.post{
+        article {
+          text-align: center;
+          margin:20px;
+          max-width: 900px;
+          min-height: 550px;
+          .info {
+            float:left;
+            text-align:left;
+            width:150px;
+            margin:0px;
+            font-size:10pt;
+            margin-right:10px;
+            margin-bottom: 10px;      
+            img.cover{
+              display:block;
+              float:left;
+              width:140px;
+              margin-bottom:20px;
+              box-shadow:2px 2px 5px #333;
+            }
+            ul {
+              background-color:#eee;
+              float:left;
+              display:block;
+              list-style: none;
+              margin:10px 0px 0px 0px;
+              padding:10px;
+              width:120px;
+              li {
+                margin:0px;
+                padding:4px 8px;
+                em {
+                  display:block;
+                }
+                .score {
+                  text-align: center;
+                  /* vertical-align: middle; */
+                  width: 42px;
+                  height: 42px;
+                  padding: 4px;
+                  margin: 0px;
+                  margin-left: 0px;
+                  border: 0px;
+                  font-size: 36px;
+                  font-family: Passion One;
+                  color: #fff;
+                  background: #666;
+                  text-shadow: -1px -1px 2px #333;
+                }
+
+              }
+            }
+          }
+          .article {
+            margin-left:160px;
+            min-height: 390px;
+            h1,
+            .header,
+            .content {
+              text-align: justify;
+            } 
+            h1,h2,h3{
+              font-family: Comfortaa;
+            }
+          }
+        }
+        .movie {
+
+        }
+      }
+      section.posts {
+        text-align: center;
+        margin:24px 64px;
+        max-width: 900px;
+        min-width: 400px;
+        article.post {
+          .article {
+            min-height:250px;
+            left:80px;
+            border:0px;
+            margin:0px;
+            padding:0px;
+            padding-left:48px;
+            margin-left:32px;
+            margin-right:90px;
+            border-left:2px dotted #000;
+            text-align: justify;
+            a {
+              text-decoration: none;
+              color:#999;
+              h1{
+                margin:0px;
+                padding:10px;
+                font-size:1.4em;
+                font-family: Comfortaa;
+                font-weight: normal;
+              }
+              h1:hover {
+                text-shadow:0px 0px 8px #000;
+                color:#fff;
+              }
+            }
+            .header{
+              margin:0px;
+              padding:10px;
+              font-family: sans-serif;
+              font-size:10pt;
+            }
+          }
+          .cover{
+            width:80px;
+            float:right;
+            margin-top: 84px;
+            margin-left:20px;
+            margin-bottom:5px;
+            box-shadow: 4px 4px 8px #000;
+          }
+          .createdAt {
+            float:left;
+            border-radius:32px;
+            width:64px;
+            height:64px;
+            color:#fff;
+            font-size:8pt;
+            box-shadow: 0px 0px 17px #333;
+            .date{
+              margin-top:10px;
+              margin-left:0px;
+              padding:0px;
+              text-align: center;
+              font-variant: small-caps;
+              font-weight: bold;
+              margin:0px;
+              padding:5px;
+              .day {
+                margin:0px;
+                padding:0px;
+                font-size:16pt;
+                font-family: fantasy;
+                font-weight: normal;
+              }
+              .month {
+                margin:0px;
+                margin-top:-6px;
+                padding:0px;
+                font-size:9pt;
+                font-variant: normal;
+                font-weight: bold;
+              }
+              .year {
+                margin-top:-4px;
+                font-size:12pt;
+              }
+            }
+          }
+          .movie {
+            background-color:#000;
+          }
+          .x360 {
+            background-color:#090;
+          }
+          .ps3 {
+            background-color:#009;
+          }
+          .xone {
+            background-color:#090;
+          }
+          .ps4 {
+            background-color:#009;
+          }
+          .wii {
+            background-color:#eee;
+          }
+          .wiiu {
+            background-color:#088;
+          }
+          .post:last-child {
+          border-color:linear-gradient(black, white);
+          }
+        }
+      }
+    }
+    footer {
+      margin-top:0px;
+      padding:20px;
+      border-top: 1px dotted #000;
+      text-align: right;
+      .logo {
+        float:left;
+      }
+    }
+  }
+  .pegi {
+    padding:20px 120px;
+    width: 48px;
+    height: 48px;
+    background-size: 48px;
+    background-repeat: no-repeat;
+  }
+  .pegi_bad_language{
+    background-image: url('http://www.pegi.info/fr/img/descriptors/bad_language.gif');
+  }
+  .pegi_discrimination{
+    background-image: url('http://www.pegi.info/fr/img/descriptors/discrimination.gif');
+  }
+  .pegi_drugs{
+    background-image: url('http://www.pegi.info/fr/img/descriptors/drugs.gif');
+  }
+  .pegi_fear{
+    background-image: url('http://www.pegi.info/fr/img/descriptors/fear.gif');
+  }
+  .pegi_gambling{
+    background-image: url('http://www.pegi.info/fr/img/descriptors/gambling.gif');
+  }
+  .pegi_online{
+    background-image: url('http://www.pegi.info/fr/img/descriptors/violence.gif');
+  }
+  .pegi_violence{
+    background-image: url('http://www.pegi.info/fr/img/descriptors/online.gif');
+  }
+  .pegi_sex{
+    background-image: url('http://www.pegi.info/fr/img/descriptors/sex.gif');
+  }
+  .pegi_3 {
+    background-image: url('http://www.pegi.info/fr/index/id/75/media/img/320.gif');
+  }
+  .pegi_7 {
+    background-image: url('http://www.pegi.info/fr/index/id/75/media/img/321.gif');
+  }
+  .pegi_12 {
+    background-image: url('http://www.pegi.info/fr/index/id/75/media/img/322.gif');
+  }
+  .pegi_16 {
+    background-image: url('http://www.pegi.info/fr/index/id/75/media/img/323.gif');
+  }
+  .pegi_18 {
+    background-image: url('http://www.pegi.info/fr/index/id/75/media/img/324.gif');
+  }
+}
+
+ul.tags {
+  list-style: none;
+  padding:0px;
+  margin:0px;
+  margin-left: 10px;
+  font-size:9pt;
+  li {
+    display:inline-block;
+    padding:0px;
+    margin:0px;
+  }
+  li a {
+    text-transform:capitalize;
+  }
+  li a:hover {
+    color:#666;
+    text-decoration: underline;
+  }
+  li:before{
+    content:", ";
+  }
+  li:first-child:before{
+    content:"";
+  }
+}
+ul.platforms {
+  list-style: none;
+  padding:0px;
+  margin:0px;
+  margin-left: 10px;
+  text-transform:uppercase;
+  font-size:8pt;
+  li {
+    display:inline-block;
+    padding:0px;
+    margin:0px;
+  }
+  li a:hover {
+    color:#666;
+    text-decoration: underline;
+  }
+  li.select a {
+    font-weight: bolder;
+    color:#333;
+  }
+  li:before{
+    content:", ";
+  }
+  li:first-child:before{
+    content:"";
+  }
+}
+
+.balance {
+  display:block;
+  width: 100%;
+  font-size: 9pt;
+}
+.balance div h6 {
+  display:block;
+  font-weight: bolder;
+  text-align:center;
+  padding:2px;
+  margin:0px;
+  font-size:32px;
+}
+.plus {
+  display:inline-block;
+  text-align:left;
+  width:40%;
+  background-color:lightgreen;
+  color:darkgreen;
+  margin-right:5%;
+  vertical-align:top;
+  h6{
+    background-color:darkgreen;
+    color:lightgreen;
+  }
+}
+.minus {
+  display:inline-block;
+  text-align:left;
+  width:40%;
+  background-color:pink;
+  color:red;
+  margin-left:5%;
+  vertical-align:top;
+  h6{
+    background-color:red;
+    color:pink;    
+  }
+}

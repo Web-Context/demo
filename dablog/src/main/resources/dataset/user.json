@@ -1,0 +1,14 @@
+[
+	{ 
+		"username":"admin",
+		"password":"nimda",
+		"roles":["ADMINISTRATOR","PUBLISHER","USER"],
+		"firstname":"Admin",
+		"lastname":"Istrator",
+		"email":"admin@local.net",
+		"createdAt":"2016/03/13 00:00:00",
+		"active":true,
+		"lastConnection":"2016/03/13 00:00:10",
+		"connectionAttemptCount":0
+	}
+]
