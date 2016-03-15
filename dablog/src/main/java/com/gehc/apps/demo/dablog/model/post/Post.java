@@ -14,13 +14,19 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import lombok.Data;
+import lombok.ToString;
+
 /**
  * This is a class to manage Post to be published on the Blog.
  * 
  * @author Frederic Delorme
  *
  */
+@Data
+@ToString(includeFieldNames = true)
 public class Post {
+
 	@Id
 	@NotNull
 	private String id;
@@ -53,11 +59,12 @@ public class Post {
 	private Map<String, Object> metadata;
 
 	public Post() {
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * 
 	 * @param id
+	 * @param uiid
 	 * @param title
 	 * @param type
 	 * @param header
@@ -65,10 +72,13 @@ public class Post {
 	 * @param createdAt
 	 * @param createdBy
 	 * @param publicationAt
+	 * @param state
+	 * @param metadata
 	 */
-	public Post(String uiid, String title, String type, String header, String content, Date createdAt, String createdBy,
-			Date publicationAt) {
+	public Post(String id, String uiid, String title, String type, String header, String content, Date createdAt,
+			String createdBy, Date publicationAt, PublicationState state) {
 		super();
+		this.id = id;
 		this.uiid = uiid;
 		this.title = title;
 		this.type = type;
@@ -77,6 +87,7 @@ public class Post {
 		this.createdAt = createdAt;
 		this.createdBy = createdBy;
 		this.publicationAt = publicationAt;
+		this.state = state;
 	}
 
 	/**
@@ -200,21 +211,6 @@ public class Post {
 	}
 
 	/**
-	 * @return the metadata
-	 */
-	public Map<String, Object> getMetadata() {
-		return metadata;
-	}
-
-	/**
-	 * @param metadata
-	 *            the metadata to set
-	 */
-	public void setMetadata(Map<String, Object> metadata) {
-		this.metadata = metadata;
-	}
-
-	/**
 	 * @return the publicationAt
 	 */
 	public Date getPublicationAt() {
@@ -244,6 +240,37 @@ public class Post {
 		this.state = state;
 	}
 
+	/**
+	 * @return the metadata
+	 */
+	public Map<String, Object> getMetadata() {
+		return metadata;
+	}
+
+	/**
+	 * @param metadata
+	 *            the metadata to set
+	 */
+	public void setMetadata(Map<String, Object> metadata) {
+		this.metadata = metadata;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Post [id=").append(id).append(", uiid=").append(uiid).append(", title=").append(title)
+				.append(", type=").append(type).append(", header=").append(header).append(", content=").append(content)
+				.append(", createdAt=").append(createdAt).append(", createdBy=").append(createdBy)
+				.append(", publicationAt=").append(publicationAt).append(", state=").append(state).append(", metadata=")
+				.append(metadata).append("]");
+		return builder.toString();
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -258,9 +285,12 @@ public class Post {
 		result = prime * result + ((createdBy == null) ? 0 : createdBy.hashCode());
 		result = prime * result + ((header == null) ? 0 : header.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((metadata == null) ? 0 : metadata.hashCode());
 		result = prime * result + ((publicationAt == null) ? 0 : publicationAt.hashCode());
+		result = prime * result + ((state == null) ? 0 : state.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
+		result = prime * result + ((uiid == null) ? 0 : uiid.hashCode());
 		return result;
 	}
 
@@ -278,11 +308,6 @@ public class Post {
 		if (getClass() != obj.getClass())
 			return false;
 		Post other = (Post) obj;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
 		if (content == null) {
 			if (other.content != null)
 				return false;
@@ -308,10 +333,17 @@ public class Post {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
+		if (metadata == null) {
+			if (other.metadata != null)
+				return false;
+		} else if (!metadata.equals(other.metadata))
+			return false;
 		if (publicationAt == null) {
 			if (other.publicationAt != null)
 				return false;
 		} else if (!publicationAt.equals(other.publicationAt))
+			return false;
+		if (state != other.state)
 			return false;
 		if (title == null) {
 			if (other.title != null)
@@ -323,22 +355,12 @@ public class Post {
 				return false;
 		} else if (!type.equals(other.type))
 			return false;
+		if (uiid == null) {
+			if (other.uiid != null)
+				return false;
+		} else if (!uiid.equals(other.uiid))
+			return false;
 		return true;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Post [id=").append(id).append(", title=").append(title).append(", type=").append(type)
-				.append(", header=").append(header).append(", content=").append(content).append(", createdAt=")
-				.append(createdAt).append(", createdBy=").append(createdBy).append(", publicationAt=")
-				.append(publicationAt).append("]");
-		return builder.toString();
 	}
 
 }

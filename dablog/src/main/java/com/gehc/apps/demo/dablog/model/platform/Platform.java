@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.gehc.apps.demo.dablog.model.platform;
 
 import java.util.Date;
@@ -18,21 +15,14 @@ import org.springframework.format.annotation.DateTimeFormat;
  * This is a class to manage game execution platform.
  *
  *
- *  here a sample entity from json mongodb doc.
- *	{
- *   "name" : "Microsoft Xbox 360",
- *   "accesskey" : "X",
- *   "availabilityDate" : "2005-11-22 00:00:00",
- *   "manufacturer" : "Flextronics, Wistron, Celestica, Foxconn",
- *   "createdAt" : "2015-07-01 16:48:23",
- *   "code" : "x360",
- *   "developer" : "Microsoft",
- *   "pictures" : {
- *       "big" : "http://ecx.images-amazon.com/images/I/41God7KwSOL._SL1000_.jpg",
- *       "medium" : "http://ecx.images-amazon.com/images/I/41God7KwSOL._SL500_.jpg",
- *       "small" : "http://ecx.images-amazon.com/images/I/41God7KwSOL._SL250_.jpg"
- *   }
- *   
+ * here a sample entity from json mongodb doc. { "name" : "Microsoft Xbox 360",
+ * "accesskey" : "X", "availabilityDate" : "2005-11-22 00:00:00", "manufacturer"
+ * : "Flextronics, Wistron, Celestica, Foxconn", "createdAt" :
+ * "2015-07-01 16:48:23", "code" : "x360", "developer" : "Microsoft", "pictures"
+ * : { "big" : "http://ecx.images-amazon.com/images/I/41God7KwSOL._SL1000_.jpg",
+ * "medium" : "http://ecx.images-amazon.com/images/I/41God7KwSOL._SL500_.jpg",
+ * "small" : "http://ecx.images-amazon.com/images/I/41God7KwSOL._SL250_.jpg" }
+ * 
  * @author Frederic Delorme
  *
  */
@@ -67,14 +57,12 @@ public class Platform {
 
 	private Map<String, String> pictures;
 
-	
 	/**
 	 * Default Constructor
 	 */
 	public Platform() {
 	}
-	
-	
+
 	/**
 	 * @param name
 	 * @param code
@@ -108,7 +96,8 @@ public class Platform {
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param id
+	 *            the id to set
 	 */
 	public void setId(String id) {
 		this.id = id;
@@ -122,7 +111,8 @@ public class Platform {
 	}
 
 	/**
-	 * @param name the name to set
+	 * @param name
+	 *            the name to set
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -136,7 +126,8 @@ public class Platform {
 	}
 
 	/**
-	 * @param code the code to set
+	 * @param code
+	 *            the code to set
 	 */
 	public void setCode(String code) {
 		this.code = code;
@@ -150,7 +141,8 @@ public class Platform {
 	}
 
 	/**
-	 * @param manufacturer the manufacturer to set
+	 * @param manufacturer
+	 *            the manufacturer to set
 	 */
 	public void setManufacturer(String manufacturer) {
 		this.manufacturer = manufacturer;
@@ -164,7 +156,8 @@ public class Platform {
 	}
 
 	/**
-	 * @param developer the developer to set
+	 * @param developer
+	 *            the developer to set
 	 */
 	public void setDeveloper(String developer) {
 		this.developer = developer;
@@ -178,7 +171,8 @@ public class Platform {
 	}
 
 	/**
-	 * @param createdAt the createdAt to set
+	 * @param createdAt
+	 *            the createdAt to set
 	 */
 	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
@@ -192,7 +186,8 @@ public class Platform {
 	}
 
 	/**
-	 * @param availabilityDate the availabilityDate to set
+	 * @param availabilityDate
+	 *            the availabilityDate to set
 	 */
 	public void setAvailabilityDate(Date availabilityDate) {
 		this.availabilityDate = availabilityDate;
@@ -206,7 +201,8 @@ public class Platform {
 	}
 
 	/**
-	 * @param createdBy the createdBy to set
+	 * @param createdBy
+	 *            the createdBy to set
 	 */
 	public void setCreatedBy(String createdBy) {
 		this.createdBy = createdBy;
@@ -220,7 +216,8 @@ public class Platform {
 	}
 
 	/**
-	 * @param publicationAt the publicationAt to set
+	 * @param publicationAt
+	 *            the publicationAt to set
 	 */
 	public void setPublicationAt(Date publicationAt) {
 		this.publicationAt = publicationAt;
@@ -234,13 +231,16 @@ public class Platform {
 	}
 
 	/**
-	 * @param pictures the pictures to set
+	 * @param pictures
+	 *            the pictures to set
 	 */
 	public void setPictures(Map<String, String> pictures) {
 		this.pictures = pictures;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -254,7 +254,9 @@ public class Platform {
 		return builder.toString();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -274,7 +276,9 @@ public class Platform {
 		return result;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
@@ -338,6 +342,5 @@ public class Platform {
 			return false;
 		return true;
 	}
-
 
 }

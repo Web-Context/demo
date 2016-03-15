@@ -26,6 +26,7 @@ import org.springframework.web.client.RestTemplate;
 import com.gehc.apps.demo.dablog.DaBlogApp;
 import com.gehc.apps.demo.dablog.model.post.Post;
 import com.gehc.apps.demo.dablog.model.post.PostRepository;
+import com.gehc.apps.demo.dablog.model.post.PublicationState;
 
 /**
  * @author 'Frederic
@@ -47,8 +48,10 @@ public class DaBlogAppTest {
 
 	@Before
 	public void before() {
-		postRepository.save(new Post("1", "title1", "game", "header1", "content1", new Date(), "user1", new Date()));
-		postRepository.save(new Post("2", "title2", "movie", "header2", "content2", new Date(), "user2", new Date()));
+		postRepository.save(new Post("1", "uuid1", "title1", "game", "header1", "content1", new Date(), "user1",
+				new Date(), PublicationState.PUBLISHED));
+		postRepository.save(new Post("2", "uuid2", "title2", "movie", "header2", "content2", new Date(), "user2",
+				new Date(), PublicationState.PUBLISHED));
 	}
 
 	@After
@@ -59,15 +62,15 @@ public class DaBlogAppTest {
 	@Test
 	public void test_1_PostRepositoryFindAll() {
 		for (Post post : postRepository.findAll()) {
-			log.info("Hello " + post.toString());
+			log.info("post: " + post.getTitle());
 			assertNotNull("", post.getId());
 		}
 	}
 
 	@Test
 	public void test_2_restPostRepositoryForUiid() {
-		Post post = postRepository.findByUiid("1");
-		Assert.assertEquals("Post with uiid='1' was not found.", "1", post.getUiid());
+		Post post = postRepository.findByUiid("uuid1");
+		Assert.assertEquals("Post with uiid='uuid1' was not found.", "uuid1", post.getUiid());
 
 	}
 

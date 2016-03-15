@@ -14,6 +14,52 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
+	<!-- Projects details -->
+	<inceptionYear>2016</inceptionYear>
+	<organization>
+		<name>GE Healthcare DoseWatch</name>
+		<url>http://www3.gehealthcare.com/en/Products/Dose_Management/DoseWatch</url>
+	</organization>
+	<!-- Dev team -->
+	<developers>
+		<developer>
+			<id>McG</id>
+			<name>Frédéric Delorme</name>
+			<email>frederic.delorme@ge.com</email>
+			<organization>GE Healthcare</organization>
+			<organizationUrl>www.gehealthcare.com</organizationUrl>
+			<roles>
+				<role>Software Architect</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<!-- Version System -->
+	<scm>
+		<url>https://github.com/web-context/demo</url>
+		<connection>scm:git:git@github.com:Web-Context/demo.git</connection>
+		<developerConnection>scm:git:git@github.com:Web-Context/demo.git</developerConnection>
+		<tag>dablog-0.0.1</tag>
+	</scm>
+	<!-- Issues tracking tool -->
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/web-context/demo/issues</url>
+	</issueManagement>
+	<!-- Continuous Integration -->
+	<ciManagement>
+		<system>Travis-CI</system>
+		<url>https://travis-ci.org/Web-Context/demo</url>
+	</ciManagement>
+	<!-- Publish artifacts to bintray -->
+	<distributionManagement>
+		<repository>
+			<id>bintray-mcgivrer-maven</id>
+			<name>mcgivrer-maven</name>
+			<url>https://api.bintray.com/maven/mcgivrer/maven/Demo/;publish=1</url>
+		</repository>
+	</distributionManagement>
+
 	<!-- External dependencies -->
 	<dependencies>
 		<!-- Spring Boot -->
@@ -37,6 +83,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.6</version>
 		</dependency>
 
 		<dependency>
@@ -167,7 +218,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-release-plugin</artifactId>
-						<version>3.0-SNAPSHOT</version>
+						<version>2.5</version>
 					</plugin>
 				</plugins>
 				<!-- Embed Front-end built files and copy them to spring-boot public 
