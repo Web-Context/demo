@@ -16,6 +16,7 @@ angular.module('dablogApp')
 	          'title' : $routeParams.title
 	        },
 	        function(response) {
+	        	$scope.search=$routeParams.type + ' / ' + $routeParams.title;
 	            $scope.results = response._embedded.post ? response._embedded.post
 	                : [];
 	        });

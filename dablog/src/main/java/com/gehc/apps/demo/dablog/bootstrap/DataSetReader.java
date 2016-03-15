@@ -2,7 +2,9 @@ package com.gehc.apps.demo.dablog.bootstrap;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,7 @@ import com.google.gson.stream.JsonReader;
  * Read data set and inject into corresponding repository.
  * 
  * @author Frédéric Delorme
+ * @author Nicolas Grussenmeyer
  *
  */
 @Component
@@ -25,7 +28,7 @@ public class DataSetReader<T> {
 	private final static Logger logger = Logger.getLogger(DataSetReader.class);
 
 	@Autowired
-	private MongoRepository<T, ?> repo;
+	private List<MongoRepository> repos;
 
 	/**
 	 * 
@@ -34,9 +37,14 @@ public class DataSetReader<T> {
 	 * @param clazz
 	 */
 	@SuppressWarnings("serial")
-	public void importData(String filename, Class<T> clazz, boolean emptyOnly) {
+	public void importData(String filename, Class<T> clazz, boolean ifEmptyOnly, boolean dropData) {
 
-		if ((emptyOnly && repo.count() == 0) || (!emptyOnly)) {
+		MongoRepository repo = getRepoForClass(clazz);
+
+		if ((ifEmptyOnly && repo.count() == 0) || (!ifEmptyOnly)|| dropData) {
+			if(dropData){
+				repo.deleteAll();
+			}
 			try {
 				JsonReader reader;
 				String datasetPath = getClass().getResource("/" + filename).getPath();
@@ -47,13 +55,15 @@ public class DataSetReader<T> {
 				List<T> list = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").create().fromJson(reader,
 						new TypeToken<List<T>>() {
 						}.getType());
-				for (T item : list) {
+
+				for (Object item : list) {
+
 					repo.insert(item);
 					logger.debug(
 							"insert data: "
 									+ item.toString().trim().substring(0,
 											(item.toString().length() > 100 ? 120 : item.toString().length()) - 1)
-							+ "...}");
+									+ "...}");
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -61,4 +71,14 @@ public class DataSetReader<T> {
 
 		}
 	}
+
+	private MongoRepository getRepoForClass(Class clazz) {
+		Optional<MongoRepository> findFirst = repos.stream().filter(d -> {
+			return ((ParameterizedType) d.getClass().getInterfaces()[0].getGenericInterfaces()[0])
+					.getActualTypeArguments()[0].equals(clazz);
+		}).findFirst();
+
+		return findFirst.get();
+	}
+
 }

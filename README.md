@@ -11,19 +11,21 @@ Some technical demo around multiple technologies.
 
 - Blog: an HTML5+AngularJS smart designed blog with no input page, only reading; just testing some design.
 
-    $> cd blog
-    $> grunt serve
+      $> cd blog
+      $> grunt serve
 
 - DaBlog: another blog but thid time built with the yeoman generator (see [yeoman.io](http://yeoman.io "Visit the home of Sir Yeoman !"))
 
-    $> cd dablog/yo
-    $> grunt serve
-    $> cd ..
-    $> mvn spring-boot:run
+      $> cd dablog/yo
+      $> grunt serve
+      $> cd ..
+      $> mvn spring-boot:run -Pmongodb
+
+Using this "mongodb" maven profile, you will activate an embedded Mongodb database to serve DaBlog application.
 
 Anyway here is the last design for the angularyo project :
 
-<a href="./docs/images/posts_games_preview.png"><img title="First preview of Blog Design" src="./docs/images/posts_games_preview.png" style="width:450px; box-shadow:4px 4px 8px #666;"/></a>
+<a href="./docs/images/posts_games_preview.png"><img title="First preview of Blog Design" src="./docs/images/posts_games_preview.png" style="width:350px; box-shadow:4px 4px 8px #666;"/></a>
 
 Have Fun !
 
