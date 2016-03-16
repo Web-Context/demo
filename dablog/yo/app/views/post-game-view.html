@@ -3,6 +3,7 @@
 	<div class="info">
 		<a href="{{post.metadata.cover}}" rel=""><img class="cover" src="{{post.metadata.cover}}" alt="box cover for {{post.title}}"></a>
 		<ul>
+			<li><strong>Test on</strong><br/><em>{{post.metadata.platform }}</em></li>
 			<li><strong>Published</strong><br/><em>{{post.publicationAt | date:'MMM-yyyy' }}</em></li>
 			<li><strong>Editor</strong><br/><em>{{post.metadata.editor}}</em></li>
 			<li><strong>Studio</strong><br/><em>{{post.metadata.studio}}</em></li>
@@ -32,5 +33,4 @@
 			</div>
 		</div>
 	</div>
-</article>	
-
+</article>
