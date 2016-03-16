@@ -3,9 +3,8 @@
 [![Travis-CI (linux) Build Status](https://travis-ci.org/Web-Context/demo.png?branch=master)](https://travis-ci.org/Web-Context/demo "Travis-CI (linux) Build Status")
 
 
-DEMO
-====
-
+# DEMO
+-------
 
 Some technical demo around multiple technologies.
 
@@ -30,6 +29,23 @@ Using this "mongodb" maven profile, you will activate an embedded Mongodb databa
 Anyway here is the last design for the angularyo project :
 
 <a href="./docs/images/posts_games_preview.png"><img title="First preview of Blog Design" src="./docs/images/posts_games_preview.png" style="width:350px; box-shadow:4px 4px 8px #666;"/></a>
+
+
+------
+
+# IDE Configuration
+
+__Note__
+To be able to import this project into Eclipse or STS, you will need to add some configuration to [`eclipse.ini`](config/eclipse-sample.ini "Download a sample file for Eclipse") or [`STS.ini`](config/STS-sample.ini "download a sample file for Spring Tools Suite"):
+
+```ini
+/skip to keep it readable
+...
+-javaagent:/home/frederic/.m2/repository/org/projectlombok/lombok/1.16.6/lombok-1.16.6.jar
+-Xbootclasspath/a:/home/frederic/.m2/repository/org/projectlombok/lombok/1.16.6/lombok-1.16.6.jar
+```
+
+
 
 Have Fun !
 
