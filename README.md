@@ -6,7 +6,6 @@
 
 
 ## DEMO
--------
 
 Some technical demo around multiple technologies.
 
