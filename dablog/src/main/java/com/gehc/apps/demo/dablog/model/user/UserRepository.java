@@ -3,8 +3,6 @@
  */
 package com.gehc.apps.demo.dablog.model.user;
 
-import javax.ws.rs.HttpMethod;
-
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.Param;
 

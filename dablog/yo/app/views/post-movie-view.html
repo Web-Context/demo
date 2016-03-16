@@ -22,7 +22,7 @@
 	<div class="article">
 		<h1 ng-bind="post.title"></h1>
 		<ul class="tags">
-			<li ng-repeat="tag in post.metadata.tags"><a href="#/tag/{{tag}}" title="view all post with tag {{tag}}">{{tag}}</a></li>
+			<li ng-repeat="tag in post.metadata.tags"><a href="#/tag/{{post.type}}/{{tag}}" title="view all post with tag {{tag}}">{{tag}}</a></li>
 		</ul>
 		<ul class="platforms">
 			<li ng-class="(post.metadata.platform==pf?'select':'')" ng-repeat="pf in post.metadata.platforms"><a href="platform/{{pf}}" title="view all post for platform {{pf}}">{{pf}}</a></li>

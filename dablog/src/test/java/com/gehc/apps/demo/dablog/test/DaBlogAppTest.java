@@ -49,9 +49,9 @@ public class DaBlogAppTest {
 	@Before
 	public void before() {
 		postRepository.save(new Post("1", "uuid1", "title1", "game", "header1", "content1", new Date(), "user1",
-				new Date(), PublicationState.PUBLISHED));
+				new Date(), PublicationState.PUBLISHED, null));
 		postRepository.save(new Post("2", "uuid2", "title2", "movie", "header2", "content2", new Date(), "user2",
-				new Date(), PublicationState.PUBLISHED));
+				new Date(), PublicationState.PUBLISHED, null));
 	}
 
 	@After
