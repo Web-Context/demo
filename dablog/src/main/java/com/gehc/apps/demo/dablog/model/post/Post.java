@@ -17,11 +17,13 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Lombok;
 import lombok.NoArgsConstructor;
 
 /**
  * This is a class to manage Post to be published on the Blog.
  * 
+ * @see Lombok#Lombok()
  * @author Frederic Delorme
  *
  */

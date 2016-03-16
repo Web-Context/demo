@@ -16,9 +16,14 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Lombok;
 import lombok.NoArgsConstructor;
 
 /**
+ * Here is the USer entity to manage user access and authentication in a next
+ * release.
+ * 
+ * @see Lombok#Lombok()
  * @author frederic
  *
  */
