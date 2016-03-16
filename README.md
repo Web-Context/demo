@@ -1,9 +1,11 @@
+# Demo SpringBoot+AngularJS
+
 [![DockUnit (linux) Build status](http://dockunit.io/svg/Web-Context/demo?master)](https://dockunit.io/projects/Web-Context/demo "DockUnit (linux) Build status")
 [![AppVeyor (win32) Build status](https://ci.appveyor.com/api/projects/status/vxbccc1t9ceadhi9)](https://ci.appveyor.com/project/Web-Context/demo "AppVeyor (win32) Build status")
 [![Travis-CI (linux) Build Status](https://travis-ci.org/Web-Context/demo.png?branch=master)](https://travis-ci.org/Web-Context/demo "Travis-CI (linux) Build Status")
 
 
-# DEMO
+## DEMO
 -------
 
 Some technical demo around multiple technologies.
@@ -33,7 +35,7 @@ Anyway here is the last design for the angularyo project :
 
 ------
 
-# IDE Configuration
+## IDE Configuration
 
 __Note__
 To be able to import this project into Eclipse or STS, you will need to add some configuration to [`eclipse.ini`](config/eclipse-sample.ini "Download a sample file for Eclipse") or [`STS.ini`](config/STS-sample.ini "download a sample file for Spring Tools Suite"):
