@@ -1,0 +1,65 @@
+[
+	{
+		"uiid":"67890",
+		"type" : "game",
+		"title" : "Lego La grande aventure",
+		"header" : "<p>Trois mois après la sortie de Marvel Super Heroes, la marque LEGO revient sur le devant de la scène vidéoludique (et cinématographique) avec La Grande Aventure. Mais cette fois-ci, le jeu ne s'inspire pas d'une licence à succès telle que Le Seigneur des Anneaux, Star Wars ou encore Batman, et propose une expérience inédite très proche du long-métrage sorti récemment sur grand écran. Cela suffira-t-il à convaincre le constructeur qui est en vous ? Rien n'est moins sûr...</p>",
+		"content" : "<p>Le maléfique Lord Business s'est emparé du Kragle, une arme permettant de coller les figurines LEGO et entend bien s'en servir pour semer le chaos sur Briquebourg et l'univers tout entier. Tous les espoirs reposent sur Emmet, jeune ouvrier ordinaire, perçu par Vitruvius le sage comme le Spécial, le Maître Constructeur qui sauvera le monde. Pour l'aider dans cette lourde tâche, Emmet pourra également compter sur Cooltag, une femme aussi mystérieuse qu'agile.</p><h3>RÉVEILLEZ L'ÂME DE CONSTRUCTEUR QUI SOMMEILLE EN VOUS</h3><p>Les décors tout entiers sont en LEGO.On retrouve dès les premières minutes de jeu les éléments qui ont contribué au succès de la licence LEGO : univers coloré et délirant, humour omniprésent, personnages loufoques, références diverses et variées à la culture cinématographique (entre autres), etc. Les cinématiques en stop motion / slow motion participent également à l'immersion du joueur. Vous incarnez donc Emmet, un ouvrier tout ce qu'il y a de plus banal, à qui incombe la lourde responsabilité de sauver l'univers grâce à la pièce de résistance. A vous alors de faire preuve d'ingéniosité et d'utiliser les compétences d'Emmet (réparation, construction d'objets, démolition) à bon escient pour progresser dans l'aventure. On vous demandera tantôt de réparer des machines grâce à la clé à molette, de détruire des murs (symbolisés par des parois fissurées) au marteau piqueur ou encore de ramasser des plans d'instructions pour construire des objets et aller de l'avant. Ces phases de construction font d'ailleurs directement référence aux produits LEGO puisque l'écran affiche l'objet en question comme sur une notice de la marque. Il vous appartient de ce fait de trouver la pièce adéquate pour achever votre œuvre. Simple mais efficace.</p><p>Les environnements du jeu sont très variés.Néanmoins, les compétences de notre héros montrent bien vite leurs limites. C'est là qu'entrent en scène ses nombreux compagnons, disposant de capacités propres. La belle Cooltag use de son agilité pour sauter plus haut, rebondir et grimper sur les murs, tandis que Vitruvius se sert de son bâton et de ses pouvoirs pour débloquer des passages. A noter qu'il est également le seul à faire preuve d'un courage sans faille en franchissant les passages les plus étroits (sa cécité lui permettant de ne pas être sujet au vertige). Benny l'astronaute est capable de pirater des ordinateurs, ce qui donne droit à des séquences de jeu rappelant l'illustre Pac-Man ; Batman utilise son Batarang pour assommer des ennemis et son grappin pour s'agripper aux plates-formes, etc. Au total, près d'une centaine de personnages sont disponibles (en comptant les versions alternatives et les différents costumes des héros) parmi lesquels figurent Uni Kitty, Wonder Woman, Shakespeare, Abraham Lincoln... On regrette néanmoins que des figures emblématiques telles que Superman ou Gandalf n'apparaissent qu'à la fin de l'aventure. L'intérêt majeur de cette pléthore de protagonistes réside dans la synergie de leurs compétences, que vous allez devoir bien souvent combiner pour progresser. En outre, vous croiserez çà et là des « énigmes » que vous ne pourrez résoudre qu'avec certains types de personnages, ce qui incite à refaire les niveaux une fois le jeu terminé.</p><h3>UN GAMEPLAY TROP RIGIDE ET UN LEVEL DESIGN DÉFAILLANT</h3><p>Certains éléments ne peuvent être détruits que sous certaines conditions.Si le jeu jouit de plusieurs idées de game design intéressantes, il pèche malheureusement par un level design souvent peu inspiré et trop répétitif ainsi qu'un gameplay rigide (surtout en combat) et imprécis, notamment dans les phases de plates-formes. La première heure est encourageante et les premiers niveaux sont plaisants, mais on finit par s'ennuyer, malgré la variété des environnements. Il ne faudra guère plus de huit heures pour boucler l'aventure en ligne droite, ce qui est relativement peu comparé aux autres productions de la licence. Mais comme expliqué précédemment, la rejouabilité est bien présente, d'autant plus que les mondes fourmillent d'objets à collectionner. N'oublions pas non plus que le titre propose un mode deux joueurs (en local uniquement) fort plaisant, même si le split screen dynamique nuit parfois à la visibilité.</p>",
+ 		"createdBy" : "McGivrer",
+		"createdAt" : "2016/03/12 01:42:00",
+		"publicationAt" : "2014/02/19 00:00:00",
+		"metadata" : {
+			"cover" : "http://ecx.images-amazon.com/images/I/812K9DMt30L._SL240_.jpg",
+			"lang" : "fr",
+			"rated" : "14",
+			"platform" : "x360",
+			"platforms" : [ "pc", "ps3", "ps4", "x360", "xone"],
+			"rate" : 16,
+			"rates" : {
+				"sound" : 14,
+				"gfx" : 14,
+				"music" : 15,
+				"feeling" : 13
+			},
+			"tags" : [ "rpg", "action" ],
+			"plus" : [  "L'univers LEGO bien retranscrit et la variété des environnements.",
+						"L'humour omniprésent.",
+						"La synergie des compétences des personnages."],
+			"minus" : [ "Un gameplay trop rigide et imprécis.",
+						"Un level design peu inspiré et répétitif.",
+						"Des niveaux ennuyeux."],
+			"studio" : "Visceral Games",
+			"editor" : "Electronic Arts",
+			"publisher" : ""
+		}
+	},
+	{
+		"uiid":"1233",
+		"type" : "movie",
+		"title" : "Zootopie",
+		"header" : "<div class=\"bandeau\" data-src=\"http://ia.media-imdb.com/images/M/MV5BMjEyNjQzOTI5OF5BMl5BanBnXkFtZTgwMTAxMzIyODE@._V1_SX640_SY720_.jpg\">&nbsp;</div><p>Zootopia est une ville qui ne ressemble à aucune autre : seuls les animaux y habitent ! On y trouve des quartiers résidentiels élégants comme le très chic Sahara Square, et d’autres moins hospitaliers comme le glacial Tundratown. Dans cette incroyable métropole, chaque espèce animale cohabite avec les autres. Qu’on soit un immense éléphant ou une minuscule souris, tout le monde a sa place à Zootopia !Lorsque Judy Hopps fait son entrée dans la police, elle découvre qu’il est bien difficile de s’imposer chez les gros durs en uniforme, surtout quand on est une adorable lapine. Bien décidée à faire ses preuves, Judy s’attaque à une épineuse affaire, même si cela l’oblige à faire équipe avec Nick Wilde, un renard à la langue bien pendue et véritable virtuose de l’arnaque …</p>",
+		"content" : "",
+		"author" : "McGivrer",
+		"createdAt" : "2016/02/17 00:00:00",
+		"publicationAt" : "2016/02/17 00:00:00",
+		"status" : "PUBLISHED",
+		"metadata" : {
+			"lang" : "fr",
+			"originalTitle":"Zootopia",
+			"originalLang":"us",
+			"rated":"6",
+			"cover" : "http://fr.web.img3.acsta.net/pictures/15/12/11/14/34/280851.jpg",
+			"rate" : 16,
+			"platform" : "movie",
+			"tags" : [ "animation", "3D" ],
+			"plus" : [ "",
+					"" ],
+			"minus" : [ "", 
+					"" ],
+			"studio" : "Disney",
+			"production" : "Walt Disney Animation Studio",
+			"distributor" : "The Walt Disney Company France",
+			"sound":"Dolby 5.1"
+		}
+	}
+]

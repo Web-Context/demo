@@ -16,17 +16,19 @@
 </head>
 <body ng-app="dablogApp">
   <div class="page"><!-- header -->
-    <header id="header" class="theme" ng-controller="MenuCtrl">
+    <header id="header" class="theme fixed" ng-controller="MenuCtrl">
       <div ng-include="'/views/user.html'"></div>
       <h1>DaBlog</h1>
       <nav class="mainMenu">
         <ul>
-          <li ng-repeat="item in menuItems | orderBy:'priority'" >
-            <a class="{{selectedClass(item.url)}}" href="/#{{item.url}}" title="{{item.tooltip}}" accesskey="{{item.accesskey}}">{{item.label}}</a>
+          <li ng-repeat="item in menuItems | orderBy:'priority'">
+            <a class="{{selectedClass(item.url)}}" 
+               href="/#{{item.url}}" 
+               title="{{item.tooltip}}" 
+               accesskey="{{item.accesskey}}">{{item.label}}</a>
           </li>
         </ul>
       </nav>
-      <div ng-include"'/views/main-menu.html'"></div>
     </header><!-- /header -->
     <!-- content -->
     <div class="content">
@@ -63,6 +65,7 @@
  <!-- endbuild -->
 
  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+ <script src="scripts/lib/gravatar.js"></script>
  <script src="scripts/app.js"></script>
  <script src="scripts/controllers/postfilter.js"></script>
  <script src="scripts/controllers/postview.js"></script>

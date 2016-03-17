@@ -99,7 +99,7 @@ function gravatar(email, options) {
     }
 
     function md51(e) {
-        txt = "";
+        var txt = "";
         var t = e.length,
             n = [1732584193, -271733879, -1732584194, 271733878],
             r;

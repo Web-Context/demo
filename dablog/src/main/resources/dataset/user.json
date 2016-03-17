@@ -5,10 +5,11 @@
 		"roles":["ADMINISTRATOR","PUBLISHER","USER"],
 		"firstname":"Admin",
 		"lastname":"Istrator",
-		"email":"admin@local.net",
+		"email":"frederic.delorme@web-context.com",
 		"createdAt":"2016/03/13 00:00:00",
 		"active":true,
 		"lastConnection":"2016/03/13 00:00:10",
+		"avatar": "gravatar",
 		"connectionAttemptCount":0
 	}
 ]

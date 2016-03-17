@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import com.gehc.apps.demo.dablog.model.platform.Platform;
 import com.gehc.apps.demo.dablog.model.post.Post;
 import com.gehc.apps.demo.dablog.model.user.User;
+import com.gehc.apps.demo.dablog.services.DataSetReader;
 
 /**
  * Auto inject data to Post collection
@@ -15,7 +16,7 @@ import com.gehc.apps.demo.dablog.model.user.User;
  * @author Frédéric Delorme
  *
  */
-@Component 
+@Component
 public class DataBootstrap {
 	@Autowired
 	DataSetReader<Post> postDataset;
@@ -27,8 +28,8 @@ public class DataBootstrap {
 	@PostConstruct
 	public void inject() {
 
-		pfDataset.importData("dataset/platform.json", Platform.class, true,true);
-		postDataset.importData("dataset/post.json", Post.class, true,true);
-		userDataset.importData("dataset/user.json", User.class, true,true);
+		pfDataset.importData("dataset/platform.json", Platform.class, true, true);
+		postDataset.importData("dataset/post.json", Post.class, true, true);
+		userDataset.importData("dataset/user.json", User.class, true, true);
 	}
 }
