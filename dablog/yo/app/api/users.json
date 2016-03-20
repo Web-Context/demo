@@ -1,0 +1,3 @@
+[
+	{ "username":"admin","firstname":"Frédéric","lastname":"Delorme","email":"frederic.delorme@web-context.com","avatar":"gravatar", "roles":["ADMIN","USER"]}
+]

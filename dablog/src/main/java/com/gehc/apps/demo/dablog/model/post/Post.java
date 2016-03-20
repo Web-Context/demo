@@ -12,19 +12,25 @@ import javax.validation.constraints.Size;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.ToString;
+import lombok.Lombok;
+import lombok.NoArgsConstructor;
 
 /**
  * This is a class to manage Post to be published on the Blog.
  * 
+ * @see Lombok#Lombok()
  * @author Frederic Delorme
  *
  */
+@Document(collection = "posts")
 @Data
-@ToString(includeFieldNames=true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Post {
 
 	@Id
@@ -57,4 +63,5 @@ public class Post {
 	private PublicationState state;
 
 	private Map<String, Object> metadata;
+
 }

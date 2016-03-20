@@ -95,23 +95,31 @@
 			<artifactId>gson</artifactId>
 		</dependency>
 
-		<!-- JPA + H2 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-		</dependency>
-
 		<!-- Unit testing -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>dbunit</groupId>
+			<artifactId>dbunit</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+		</dependency>
 
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jersey</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -154,27 +162,56 @@
 			<id>prod</id>
 			<build>
 				<plugins>
+					<!-- Generate Javadoc jar package -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
 						<version>2.9.1</version>
+						<configuration>
+							<encoding>utf-8</encoding>
+							<failOnError>false</failOnError>
+							<stylesheet>maven</stylesheet>
+							<fixTags>all</fixTags>
+						</configuration>
+						<executions>
+							<execution>
+								<id>attach-javadocs</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
 					</plugin>
+					<!-- Generate Sources jar package -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-source-plugin</artifactId>
 						<version>2.2.1</version>
+						<configuration>
+							<encoding>utf-8</encoding>
+						</configuration>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
 					</plugin>
+					<!-- Prepare/perform release -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-release-plugin</artifactId>
 						<version>2.5</version>
 					</plugin>
 				</plugins>
-
+				<!-- Embed Front-end built files and copy them to spring-boot public 
+					path -->
 				<resources>
 					<resource>
-						<directory>yo/dist</directory>
-						<targetPath>public</targetPath>
+						<directory>/yo/dist</directory>
+						<targetPath>/</targetPath>
 					</resource>
 				</resources>
 			</build>
@@ -254,7 +291,6 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<dependencies>
-
 				<!-- MongoDB instance manager -->
 				<dependency>
 					<groupId>de.flapdoodle.embed</groupId>

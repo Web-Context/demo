@@ -8,7 +8,7 @@
  * Controller of the dablogApp
  */
 angular.module('dablogApp')
-  .controller('HomeCtrl', ['$scope','PostService','$location',function ($scope, PostService, $location) {
+  .controller('HomeCtrl', ['$scope','PostService',function ($scope, PostService) {
     PostService.query(
 		{},
 		function(response) {

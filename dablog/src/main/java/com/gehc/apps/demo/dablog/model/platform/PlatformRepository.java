@@ -1,12 +1,10 @@
 package com.gehc.apps.demo.dablog.model.platform;
 
-import java.util.List;
-
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.Param;
 
 /**
- * Basic repository for Platform entity.
+ * Basic repository for Post entity.
  * 
  * @author Frederic Delorme
  *
@@ -14,7 +12,7 @@ import org.springframework.data.repository.query.Param;
 public interface PlatformRepository extends MongoRepository<Platform, String> {
 
 	/**
-	 * Retrieve a Platform on its unique Id.
+	 * Retrieve a post on its unique Id.
 	 * 
 	 * @param id
 	 * @return
@@ -22,10 +20,11 @@ public interface PlatformRepository extends MongoRepository<Platform, String> {
 	public Platform findById(@Param("id") String id);
 
 	/**
-	 * Find all {@link Platform} on there code.
+	 * Retrieve Platform on its code.
 	 * 
 	 * @param code
 	 * @return
 	 */
-	public List<Platform> findByCode(@Param("code") String code);
+	public Platform findByCode(@Param("code") String code);
+
 }

@@ -1,0 +1,14 @@
+<nav class="mainMenu">
+	<ul>
+		<li ng-repeat="item in menuItems | orderBy:'priority'" >
+			<a class="{{selectedClass(item.url)}}" href="/#{{item.url}}" title="{{item.tooltip}}" accesskey="{{item.accesskey}}">{{item.label}}</a>
+		</li>
+	</ul>
+</nav>
+<nav class="subMenu" ng-show="type==='game'">
+	<ul>
+		<li ng-repeat="pf in platforms">
+			<a class="{{selectedClass(pf.url)}}" href="#/game/platform/{{pf.code}}" title="{{pf.name}}">{{pf.code}}</a>
+		</li>
+	</ul>
+</nav>

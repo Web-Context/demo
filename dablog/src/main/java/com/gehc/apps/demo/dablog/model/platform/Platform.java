@@ -6,52 +6,59 @@ import java.util.Map;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.ToString;
+import lombok.Lombok;
+import lombok.NoArgsConstructor;
 
 /**
- * <p>This is a class to manage Game Platform on the Blog.</p>
- * <p>Sample JSON document from MongoDb.</p>
- * <pre>{
- *   "name" : "Microsoft Xbox 360",
- *   "accesskey" : "X",
- *   "id" : 1,
- *   "availabilityDate" : "2005-11-22 00:00:00",
- *   "manufacturer" : "Flextronics, Wistron, Celestica, Foxconn",
- *   "createdAt" : "2015-07-01 16:48:23",
- *   "code" : "x360",
- *   "developer" : "Microsoft",
- *   "pictures" : {
- *       "big" : "http://ecx.images-amazon.com/images/I/41God7KwSOL._SL1000_.jpg",
- *      "medium" : "http://ecx.images-amazon.com/images/I/41God7KwSOL._SL500_.jpg",
- *      "small" : "http://ecx.images-amazon.com/images/I/41God7KwSOL._SL250_.jpg"
- *  	}
- *	}</pre>
+ * This is a class to manage game execution platform. here a sample entity from
+ * json mongodb doc.
  * 
+ * @see dataset/template-platform.js
+ * @see Lombok#Lombok()
  * @author Frederic Delorme
  *
  */
+@Document(collection = "platforms")
 @Data
-@ToString(includeFieldNames = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Platform {
-
 	@Id
 	@NotNull
 	private String id;
+
 	@NotNull
-	@Size(min = 2, max = 6)
-	private String code;
-	@Size(min = 2, max = 40)
+	@Size(min = 1, max = 100)
 	private String name;
-	@Size(min = 2, max = 60)
-	private String developer;
-	@Size(min = 2, max = 60)
+	@NotNull
+	private String code;
+
+	@Size(min = 0, max = 100)
 	private String manufacturer;
+	@Size(min = 0, max = 100)
+	private String developer;
+
+	@CreatedDate
 	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
 	private Date createdAt;
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+	private Date availabilityDate;
+
+	@CreatedBy
+	private String createdBy;
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+	private Date publicationAt;
+
 	private Map<String, String> pictures;
 
 }
