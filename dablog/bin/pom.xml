@@ -1,0 +1,267 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>dablog</artifactId>
+	<packaging>jar</packaging>
+
+	<name>DaBlog</name>
+	<description>An Angular Yeoman generated demo application build with Maven.</description>
+
+	<parent>
+		<groupId>com.gehc.apps.demo</groupId>
+		<artifactId>demos-springboot</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<!-- Projects details -->
+	<inceptionYear>2016</inceptionYear>
+	<organization>
+		<name>GE Healthcare DoseWatch</name>
+		<url>http://www3.gehealthcare.com/en/Products/Dose_Management/DoseWatch</url>
+	</organization>
+	<!-- Dev team -->
+	<developers>
+		<developer>
+			<id>McG</id>
+			<name>Frédéric Delorme</name>
+			<email>frederic.delorme@ge.com</email>
+			<organization>GE Healthcare</organization>
+			<organizationUrl>www.gehealthcare.com</organizationUrl>
+			<roles>
+				<role>Software Architect</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<!-- Version System -->
+	<scm>
+		<url>https://github.com/web-context/demo</url>
+		<connection>scm:git:git@github.com:Web-Context/demo.git</connection>
+		<developerConnection>scm:git:git@github.com:Web-Context/demo.git</developerConnection>
+		<tag>dablog-0.0.1</tag>
+	</scm>
+	<!-- Issues tracking tool -->
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/web-context/demo/issues</url>
+	</issueManagement>
+	<!-- Continuous Integration -->
+	<ciManagement>
+		<system>Travis-CI</system>
+		<url>https://travis-ci.org/Web-Context/demo</url>
+	</ciManagement>
+	<!-- Publish artifacts to bintray -->
+	<distributionManagement>
+		<repository>
+			<id>bintray-mcgivrer-maven</id>
+			<name>mcgivrer-maven</name>
+			<url>https://api.bintray.com/maven/mcgivrer/maven/Demo/;publish=1</url>
+		</repository>
+	</distributionManagement>
+
+	<!-- External dependencies -->
+	<dependencies>
+		<!-- Spring Boot -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+
+		<!-- JPA + H2 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+		</dependency>
+
+		<!-- Unit testing -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- Java compilation -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>utf-8</encoding>
+				</configuration>
+			</plugin>
+			<!-- Java archive packaging -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+			</plugin>
+			<!-- Spring-Boot launcher -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<classifier>exec</classifier>
+				</configuration>
+			</plugin>
+		</plugins>
+		<!-- Resources to embedded -->
+		<resources>
+			<!-- Distribution packaging -->
+			<resource>
+				<directory>src/main/resources</directory>
+				<targetPath>./</targetPath>
+			</resource>
+		</resources>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>prod</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.9.1</version>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>2.2.1</version>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-release-plugin</artifactId>
+						<version>2.5</version>
+					</plugin>
+				</plugins>
+
+				<resources>
+					<resource>
+						<directory>yo/dist</directory>
+						<targetPath>public</targetPath>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<profile>
+			<id>frontend</id>
+			<build>
+				<plugins>
+					<!-- FrontEnd compilation and test automation -->
+					<plugin>
+						<groupId>com.github.eirslett</groupId>
+						<artifactId>frontend-maven-plugin</artifactId>
+						<version>0.0.27</version>
+						<configuration>
+							<workingDirectory>yo</workingDirectory>
+						</configuration>
+						<executions>
+							<execution>
+								<id>Install node and npm</id>
+								<phase>generate-resources</phase>
+								<goals>
+									<goal>install-node-and-npm</goal>
+								</goals>
+								<configuration>
+									<nodeVersion>v0.10.29</nodeVersion>
+									<npmVersion>1.4.12</npmVersion>
+								</configuration>
+							</execution>
+							<execution>
+								<id>Get dependencies and install them</id>
+								<phase>generate-resources</phase>
+								<goals>
+									<goal>npm</goal>
+								</goals>
+								<configuration>
+									<arguments>install</arguments>
+								</configuration>
+							</execution>
+							<execution>
+								<id>bower install</id>
+								<goals>
+									<goal>bower</goal>
+								</goals>
+
+								<configuration>
+									<!-- optional: The default argument is actually "install", so unless 
+										you need to run some other bower command, you can remove this whole <configuration> 
+										section. -->
+									<!--arguments>install</arguments -->
+								</configuration>
+							</execution>
+
+							<execution>
+								<id>grunt build</id>
+								<phase>generate-resources</phase>
+								<goals>
+									<goal>grunt</goal>
+								</goals>
+								<configuration>
+									<testArgs>--force</testArgs>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+				<resources>
+					<!-- Frontend package -->
+					<resource>
+						<directory>yo</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<profile>
+			<id>mongodb</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<dependencies>
+
+				<!-- MongoDB instance manager -->
+				<dependency>
+					<groupId>de.flapdoodle.embed</groupId>
+					<artifactId>de.flapdoodle.embed.mongo</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+</project>

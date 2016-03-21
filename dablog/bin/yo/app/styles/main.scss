@@ -7,22 +7,18 @@ html {
   .page {
     font-family: sans-serif;
     header.theme {
-      position: fixed;
-      top:0px;
       margin:0px;
       padding:0px;
-      width:100%;
       box-shadow:0px 4px 8px #333;
-      background-color: rgba(255,255,255,0.8);
       h1{
         margin-left: 40px;
         font-size:36pt;
         font-family: Passion One;
         margin:0px;
         padding:5px 20px;
-        background-color:rgba(0,0,0,0.6);
+        background-color:#000;
         border-radius: 0px 40px 40px 0px;
-        color:rgba(255,255,255,0.6);
+        color:#fff;
       }
       nav {
         ul {
@@ -62,7 +58,7 @@ html {
             color:#999;
           }
           li:before {
-            content:"";
+            content:" ";
           }
           li.right{
             float:right;
@@ -70,44 +66,27 @@ html {
           }
         }
       }
-      div.user {
+      .avatar {
+        top:0px;
         float:right;
-        width:180px;
-        nav.infos {
-          ul {
-            margin:2px;
-            padding:0px;
-            li {
-              list-style: none;
-              margin:0px;
-              padding:0px;
-              a {
-                color:#fff;
-                margin:0px;
-                padding:0px;
-                font-size:9pt;
-                text-decoration: none;
-              }
-            }
-          }
+        margin:10px;
+        width:140px;
+        div.user a{
+          float:left;
+          color:#fff;
+          font-size:9pt;
+          text-align: right;
+          margin:5px;
+          height:24px;
+          width:60px;
+          font-family: cursive;
+          text-decoration: none;
         }
-        .avatar {
-          top:0px;
+        img{
           float:right;
-          /*margin:8px;*/
-          background-image: attr(data-src url);
-          /*padding:8px;*/
-          border-radius:32px;
-          box-shadow:4px -4px 8px #000 inset;
-          z-index: 100;
-        }
-        .avatar img{
-          width:44px;
-          height:44px;
-          margin:4px;
-          border-radius:32px;
-          z-index: -100;
-          border:2px inset #666;
+          width:48px;
+          margin: 0px 8px 0px 8px;
+          border-radius:24px;
         }
       } 
    }
@@ -115,8 +94,7 @@ html {
       display:block;
       overflow-x: hidden; /*for hiding horizontal scroll bar*/
       overflow-y: auto; 
-      margin-top:120px;
-      /*height:700px;*/
+      height:700px;
       section.post{
         article {
           text-align: center;
@@ -174,27 +152,10 @@ html {
           .article {
             margin-left:160px;
             min-height: 390px;
-
             h1,
-            .post-header {
+            .header,
+            .content {
               text-align: justify;
-              div.bandeau {
-                width:100%;
-                background-image: attr(data-src) url;
-                background-repeat: no-repeat;
-                background-position: middle;
-                content:" ";
-              }
-            }
-            .post-content {
-              text-align: justify;
-              div.bandeau {
-                width:60%;
-                background-image: attr(data-src) url;
-                background-repeat: no-repeat;
-                background-position: middle;
-                content:" ";
-              }
             } 
             h1,h2,h3{
               font-family: Comfortaa;

@@ -40,27 +40,6 @@ angular
         controller: 'PostSearchCtrl',
         controllerAs: 'postSearchFilter'
       })
-      .when('/tag/:type/:tag', {
-        templateUrl: 'views/search-results.html',
-        controller: 'TagSearchCtrl',
-        controllerAs: 'tagSearchFilter'
-      })  
-      .when('/platform/:type/:platform', {
-          templateUrl: 'views/search-results.html',
-          controller: 'PlatformSearchCtrl',
-          controllerAs: 'platformSearchFilter'
-        })
-      .when('/platform/:type/:platform/:tag', {
-          templateUrl: 'views/search-results.html',
-          controller: 'SearchCtrl',
-          controllerAs: 'searchFilter'
-        })
-      .when('/admin/user', {
-        templateUrl: 'views/admin/user-list.html',
-        controller: 'UserCtrl',
-        controllerAs: 'userList'
-      })
-
       .otherwise({
         redirectTo: '/'
       });

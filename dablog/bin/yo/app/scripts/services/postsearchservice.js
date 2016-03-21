@@ -1,16 +1,16 @@
 'use strict';
 
 angular.module('dablogApp')
-.factory('TagSearchService',['$resource',function($resource) {
+.factory('PostSearchService',['$resource',function($resource) {
     return $resource(
-        '/api/posts/search/findByTypeAndTagsIgnoreCase?type=:type&tag=:tag',
+        '/api/posts/search/findByTypeAndTitleIgnoreCase?type=:type&title=:title',
         {
             type : '@type',
-            tag : '@tag'
+            title : '@title'
         }, {
-            'findByTag' : {
+            'findByTitleLike' : {
               method : 'GET',
-              action : 'findByTypeAndTagsIgnoreCase',
+              action : 'findByTypeAndTitleIgnoreCase',
               transformResponse : function(data) {
                   return angular.fromJson(data);
               }

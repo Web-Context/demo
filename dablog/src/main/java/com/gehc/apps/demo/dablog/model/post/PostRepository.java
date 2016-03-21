@@ -59,6 +59,17 @@ public interface PostRepository extends MongoRepository<Post, String> {
 	public List<Post> findByTypeAndTagsIgnoreCase(@Param("type") String type, @Param("tag") String tag);
 	
 	/**
+	 * Retrieve posts based on there type and search for a specific tag.
+	 * 
+	 * @param type
+	 * @param tag 
+	 * @return
+	 */
+	@Query("{ 'type':?0, 'metadata.tags':{$in:[?1] }}, 'metadata.platforms':{$in:[?2]}}")
+	public List<Post> findByTypeAndTagsIgnoreCaseAndPlatformIgnoreCase(@Param("type") String type, @Param("tag") String tag, @Param("platform") String platform);
+
+
+	/**
 	 * Retrieve posts based on there type and search for a specific platform.
 	 * 
 	 * @param type
