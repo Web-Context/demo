@@ -4,6 +4,7 @@
 package com.gehc.apps.demo.dablog.model.user;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -40,10 +41,13 @@ public class User {
 	private String password;
 
 	@NotNull
-	private UserRole[] roles;
+	private List<UserRole> roles;
 
 	@Size(min = 4, max = 50)
 	private String firstname;
+
+	@Size(min=0,max=500)
+	private String avatar;
 
 	@Size(min = 4, max = 50)
 	private String lastname;

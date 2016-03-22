@@ -21,7 +21,6 @@ public class DaBlogApp {
 	@Autowired
 	DataBootstrap injector;
 
-
 	public static void main(String[] args) {
 		SpringApplication.run(DaBlogApp.class, args);
 

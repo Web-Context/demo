@@ -37,7 +37,7 @@ import com.gehc.apps.demo.dablog.model.post.PublicationState;
 @SpringApplicationConfiguration(classes = DaBlogApp.class)
 @WebIntegrationTest(randomPort = true)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class DaBlogAppTest {
+public class PostRespositoryTest {
 
 	private static Logger log = Logger.getLogger(DaBlogApp.class);
 
