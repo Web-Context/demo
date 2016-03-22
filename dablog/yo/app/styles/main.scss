@@ -71,9 +71,12 @@ html {
         width:180px;
         nav.infos {
           ul {
-            margin:2px;
+          	text-align:right;
+            margin:10px;
             padding:0px;
+            padding-right:50px;
             li {
+              display:block;
               list-style: none;
               margin:0px;
               padding:0px;
@@ -84,6 +87,10 @@ html {
                 font-size:9pt;
                 text-decoration: none;
               }
+            }
+            li.username a{
+            	color:#bbb;
+            	font-size:12pt;
             }
           }
         }
