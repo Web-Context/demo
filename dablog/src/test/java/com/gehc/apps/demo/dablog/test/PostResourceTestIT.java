@@ -13,11 +13,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.gehc.apps.demo.dablog.DaBlogApp;
 import com.gehc.apps.demo.dablog.model.post.Post;
@@ -33,7 +31,7 @@ import com.gehc.apps.demo.dablog.services.DataSetReader;
 @SpringApplicationConfiguration(classes = DaBlogApp.class)
 @WebIntegrationTest(randomPort = true)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class PostResourceTestIT extends GenericItTest {
+public class PostResourceTestIT{
 
 	@Autowired
 	DataSetReader<Post> postDataReader;

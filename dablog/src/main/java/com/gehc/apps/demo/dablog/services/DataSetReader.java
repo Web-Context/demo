@@ -42,7 +42,7 @@ public class DataSetReader<T> {
 	 * @param dropData
 	 *            will drop all data before importing this dataset.
 	 */
-	@SuppressWarnings({ "serial", "rawtypes" })
+	@SuppressWarnings({ "serial", "rawtypes", "unchecked" })
 	public void importData(String filename, Class<T> entityClazz, boolean ifEmptyOnly, boolean dropData) {
 
 		MongoRepository repo = getRepoForClass(entityClazz);
@@ -67,8 +67,12 @@ public class DataSetReader<T> {
 					repo.insert(item);
 					logger.debug(
 							"insert data: "
-									+ (item!=null?item.toString().trim().substring(0,
-											(item.toString().length() > 100 ? 120 : item.toString().length()) - 1):"unable to toString()")
+									+ (item != null
+											? item.toString().trim()
+													.substring(0,
+															(item.toString().length() > 100 ? 120
+																	: item.toString().length()) - 1)
+											: "unable to toString()")
 									+ "...}");
 				}
 			} catch (Exception e) {
