@@ -8,7 +8,7 @@
  * Controller of the dablogApp
  */
 angular.module('dablogApp')
-  .controller('MenuCtrl', ['$scope','$location',function ($scope,$location) {
+  .controller('MenuCtrl', ['$scope','$location','UserService',function ($scope,$location,UserService) {
     $scope.selectedClass = function(route) {
     	var selected = (route === $location.path()?'selected':'');
         return selected;
@@ -22,15 +22,12 @@ angular.module('dablogApp')
 
 
     $scope.login = function(){
-        $scope.user = {
-            'url':'profile/00117898665765',
-            'username':'McGivrer',
-            'firstname':'Frédéric',
-            'lastname':'Delorme',
-            'email':'frederic.delorme@web-context.com',
-            'avatar':'https://trello-avatars.s3.amazonaws.com/372550260169a4891d0c419fb7af6b87/170.png',
-        };
-
+        UserService.findByUsername({'username':'mcgivrer'},function(data){        
+            if(data._embedded.users[0].avatar==='gravatar'){
+                data._embedded.users[0].avatar=gravatar(data._embedded.users[0].email);
+            }
+            $scope.user = data._embedded.users[0];
+        });
     };
 
     $scope.logout = function(){

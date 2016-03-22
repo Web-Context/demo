@@ -7,9 +7,14 @@ html {
   .page {
     font-family: sans-serif;
     header.theme {
+      position:fixed;
+      display:block;
+      width:100%;
       margin:0px;
       padding:0px;
+      top:0px;
       box-shadow:0px 4px 8px #333;
+      background-color:rgba(255,255,255,0.8);
       h1{
         margin-left: 40px;
         font-size:36pt;
@@ -71,9 +76,12 @@ html {
         width:180px;
         nav.infos {
           ul {
-            margin:2px;
+            text-align:right;
+            margin:10px;
             padding:0px;
+            padding-right:50px;
             li {
+              display:block;
               list-style: none;
               margin:0px;
               padding:0px;
@@ -84,6 +92,10 @@ html {
                 font-size:9pt;
                 text-decoration: none;
               }
+            }
+            li.username a{
+              color:#bbb;
+              font-size:12pt;
             }
           }
         }
@@ -97,11 +109,19 @@ html {
           border-radius:32px;
         }
       } 
-   }
+    }
+    header.fixed {
+      position:fixed;
+      top:0px;
+      left:0px;
+      width:100%;
+      background-color: rgba(255,255,255,0.9);
+    }
     .content {
       display:block;
       overflow-x: hidden; /*for hiding horizontal scroll bar*/
-      overflow-y: auto; 
+      overflow-y: auto;
+      margin-top:120px;
       /*height:700px;*/
       section.post{
         article {
@@ -164,24 +184,24 @@ html {
             h1,
             .post-header {
               text-align: justify;
-              img.bandeau {
-                width:100%;
-                height:120px;
-                background:url(attr(src));
-                background-repeat: no-repeat;
-                background-position: middle;
-                content:" ";
+              div.bandeau {
+                background-color:#999;
+                background-image: attr(data-src url); 
+                width:100%; 
+                height:120px; 
+                margin:0px 10px;
+                background-position:center;
               }
             }
             .post-content {
               text-align: justify;
-              img.bandeau {
-                width:80%;
-                height:120px;
-                background:url(attr(src));
-                background-repeat: no-repeat;
-                background-position: middle;
-                content:" ";
+              div.bandeau {
+                background-color:#999;
+                background-image: attr(data-src url);
+                width:100%; 
+                height:120px; 
+                margin:0px 10px;
+                background-position:center;
               }
             } 
             h1,h2,h3{
@@ -195,7 +215,7 @@ html {
       }
       section.posts {
         text-align: center;
-        margin:24px 64px;
+        margin:24px 64px 0px 64px;
         max-width: 900px;
         min-width: 400px;
         article.post {
@@ -232,13 +252,16 @@ html {
               font-size:10pt;
             }
           }
-          .cover{
+          img.cover{
             width:80px;
             float:right;
             margin-top: 84px;
             margin-left:20px;
             margin-bottom:5px;
             box-shadow: 4px 4px 8px #000;
+          }
+          img.cover:hover{
+            transition: rotate(3deg) .2s ease-in-out;
           }
           .createdAt {
             float:left;
@@ -305,6 +328,9 @@ html {
         }
       }
       padding-bottom:60px;
+    }
+    section.posts .post:last-child .header{
+      min-height:200px;
     }
     footer {
       position:fixed;

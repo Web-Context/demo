@@ -74,7 +74,7 @@ function gravatar(email, options) {
         e[0] = add32(n, e[0]);
         e[1] = add32(r, e[1]);
         e[2] = add32(i, e[2]);
-        e[3] = add32(s, e[3])
+        e[3] = add32(s, e[3]);
     }
 
     function cmn(e, t, n, r, i, s) {
@@ -99,7 +99,7 @@ function gravatar(email, options) {
     }
 
     function md51(e) {
-        txt = "";
+        var txt = "";
         var t = e.length,
             n = [1732584193, -271733879, -1732584194, 271733878],
             r;

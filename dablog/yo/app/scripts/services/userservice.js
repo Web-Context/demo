@@ -9,7 +9,7 @@
  */
  angular.module('dablogApp')
  .factory('UserService', ['$resource',function ($resource) {
-    return $resource('/api/users/:username', {
+    return $resource('/api/users/?username=:username', {
         username : '@username'
     }, {
         'query' : {
@@ -32,6 +32,15 @@
             transformRequest : function(data) {
                 return angular.toJson(data);
             }
+        },
+        'findByUsername' : {
+            method : 'GET',
+            action : 'findByUsername',
+            params: {username:'@username'},
+            isArray: false,
+            transformResponse : function(data) {
+                return angular.fromJson(data);
+            }  
         }
     });
  } ]);
