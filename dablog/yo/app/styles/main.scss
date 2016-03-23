@@ -6,15 +6,31 @@ html {
   }
   .page {
     font-family: sans-serif;
-    header.theme {
+    z-index: 0;
+    .layerbg{
       position:fixed;
       display:block;
       width:100%;
       margin:0px;
       padding:0px;
       top:0px;
+      height:110px;
+      z-index: 100;
+      filter:blur(10px);
+      background-image: url(../images/blur.svg#blur);
+      background-position: center middle;
+    }
+    header.theme {
+      position:fixed;
+      display:block;
+      top:0px;
+      width:100%;
+      height:110px;
+      margin:0px;
+      padding:0px;
       box-shadow:0px 4px 8px #333;
-      background-color:rgba(255,255,255,0.8);
+      background-color:rgba(255,255,255,0.6);
+      z-index:110;
       h1{
         margin-left: 40px;
         font-size:36pt;
@@ -122,8 +138,10 @@ html {
       overflow-x: hidden; /*for hiding horizontal scroll bar*/
       overflow-y: auto;
       margin-top:120px;
-      /*height:700px;*/
+      z-index: 80;
+      text-align:center;
       section.post{
+        z-index: 130;
         article {
           text-align: center;
           margin:20px;
@@ -215,20 +233,17 @@ html {
       }
       section.posts {
         text-align: center;
-        margin:24px 64px 0px 64px;
+        margin:24px 16px 0px 16px;
         max-width: 900px;
         min-width: 400px;
         article.post {
           .article {
-            min-height:250px;
-            left:80px;
-            border:0px;
-            margin:0px;
-            padding:0px;
-            padding-left:48px;
-            margin-left:32px;
-            margin-right:90px;
-            border-left:2px dotted #000;
+            min-height: 250px;
+            padding-left: 10%;
+            padding-right: 15%;
+            margin-left: 32px;
+            margin-right: 5%;
+            border-left: 2px dotted #000;
             text-align: justify;
             a {
               text-decoration: none;
