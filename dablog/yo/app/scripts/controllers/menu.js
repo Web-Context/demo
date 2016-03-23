@@ -9,8 +9,10 @@
  */
 angular.module('dablogApp')
   .controller('MenuCtrl', ['$scope','$location','UserService',function ($scope,$location,UserService) {
+    
+  $scope.loginDisplay=true;
     $scope.selectedClass = function(route) {
-    	var selected = (route === $location.path()?'selected':'');
+        var selected = (route === $location.path()?'selected':'');
         return selected;
     };
 
@@ -21,7 +23,7 @@ angular.module('dablogApp')
     ];
 
     $scope.showLogin = function(){
-        $scope.loginDisplay=true;
+        $scope.loginDisplay=false;
     };
 
     $scope.login = function(){
