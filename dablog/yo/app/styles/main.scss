@@ -3,6 +3,7 @@ html {
   body{
   	margin:0px;
   	padding:0px;
+    background-image: url(https://git-scm.com/images/bg/body.jpg);
   }
   .page {
     font-family: sans-serif;
@@ -504,5 +505,103 @@ ul.platforms {
   h6{
     background-color:red;
     color:pink;    
+  }
+}
+.hidden {
+  display:none;
+}
+.show {
+  display:block;
+}
+.clear{
+  clear:both;
+}
+.modal {
+  position:fixed;
+  top:180px;
+  left: 33%;
+  width:33%;
+  min-height:250px;
+  max-height:500px;
+  min-width:400px;
+  max-width:700px;
+  border:1px solid #666;
+  border-radius: 4px 4px 2px 2px;
+  background-color:#fff;
+  box-shadow: 8px 8px 16px #666;
+  h2 {
+    margin:0px;
+    padding:4px 8px;
+    font-size:12pt;
+    font-weight: bold;
+    background-color: #bbb;
+    color:#fff;
+    text-shadow: 2px 2px 2px #000;
+  border-radius: 4px 4px 2px 2px;
+    font-family: serif;
+    border-bottom:1px solid #666;
+    span {
+      float:right;
+      text-align: center;
+      vertical-align: middle;
+      font-size:16px;
+      font-family: sans-serif;
+      border-radius: 4px;
+      width:16px;
+      height:16px;
+      padding: 0px;
+      border:2px solid #666;
+      background-color:#bbb;
+      color:#333;
+      text-shadow:none;
+    }
+  }
+  section{
+    width:100%;
+    text-align: center;
+    min-height:100px;
+    ul {
+      list-style: none;
+      margin:8px;
+      padding:0px;
+      li {
+        padding:0px;
+        margin:8px;
+        input {
+          border:1px inset #666;
+          border-radius:4px;
+          padding:2px 4px ;
+          font-size:12pt;
+        }
+      }
+    }
+  }
+
+  footer{
+    position: absolute;
+    bottom:16px;
+    width: 100%;
+    height:32px;
+    .actions{
+      text-align:right;
+      margin:0px;
+      padding: 10px;
+      background-color:#eee;
+      button{
+        border:1px inset #666;
+        border-radius: 4px;
+        min-width:60px;
+        height:24px;
+        font-size:10pt;
+      }
+      button:hover {
+        border:1px outset #ddd;
+        color:#333;
+      }
+      .default {
+        background-color:#efe;
+        border:1px inset #898;
+      }
+    }
   }
 }

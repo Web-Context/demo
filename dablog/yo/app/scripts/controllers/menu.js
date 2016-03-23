@@ -20,6 +20,9 @@ angular.module('dablogApp')
         {'url':'/posts/game','label':'Video Game','tooltip':'How to feed my Console','accesskey':'G','priority':3},
     ];
 
+    $scope.showLogin = function(){
+        $scope.loginDisplay=true;
+    };
 
     $scope.login = function(){
         UserService.findByUsername({'username':'mcgivrer'},function(data){        

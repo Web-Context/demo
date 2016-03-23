@@ -6,7 +6,7 @@
 			<li ng-if="user" class="username"><a href="#/{{user.url}}">{{user.firstname}} {{user.lastname}}</a></li>
 			<li ng-if="user"><a href="#/profile/logout" ng-click="logout();">Logout</a></li>
 			<li ng-if="user"><a href="#/profile/prefs" ng-click="preferences()">Preferences</a></li>
-			<li ng-if="!user"><a href="#/profile/login" ng-click="login();">Login</a></li>
+			<li ng-if="!user"><a ng-click="showLogin();">Login</a></li>
 			<li ng-if="!user"><a href="#/profile/register" ng-click="register();">Register</a></li>
 		</ul>
 	</nav>
