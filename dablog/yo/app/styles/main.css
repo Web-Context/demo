@@ -1,13 +1,34 @@
 @import url(https://fonts.googleapis.com/css?family=Passion+One:400,700,900|Comfortaa|Special+Elite|Overlock:400,700,900);
 html body {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+  background-image: url(https://git-scm.com/images/bg/body.jpg); }
 html .page {
-  font-family: sans-serif; }
-  html .page header.theme {
+  font-family: sans-serif;
+  z-index: 0; }
+  html .page .layerbg {
+    position: fixed;
+    display: block;
+    width: 100%;
     margin: 0px;
     padding: 0px;
-    box-shadow: 0px 4px 8px #333; }
+    top: 0px;
+    height: 110px;
+    z-index: 100;
+    filter: blur(10px);
+    background-image: url(../images/blur.svg#blur);
+    background-position: center middle; }
+  html .page header.theme {
+    position: fixed;
+    display: block;
+    top: 0px;
+    width: 100%;
+    height: 110px;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0px 4px 8px #333;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 110; }
     html .page header.theme h1 {
       margin-left: 40px;
       font-size: 36pt;
@@ -54,9 +75,12 @@ html .page {
       float: right;
       width: 180px; }
       html .page header.theme div.user nav.infos ul {
-        margin: 2px;
-        padding: 0px; }
+        text-align: right;
+        margin: 10px;
+        padding: 0px;
+        padding-right: 50px; }
         html .page header.theme div.user nav.infos ul li {
+          display: block;
           list-style: none;
           margin: 0px;
           padding: 0px; }
@@ -66,6 +90,9 @@ html .page {
             padding: 0px;
             font-size: 9pt;
             text-decoration: none; }
+        html .page header.theme div.user nav.infos ul li.username a {
+          color: #bbb;
+          font-size: 12pt; }
       html .page header.theme div.user .avatar {
         top: 0px;
         float: right;
@@ -86,96 +113,93 @@ html .page {
     /*for hiding horizontal scroll bar*/
     overflow-y: auto;
     margin-top: 120px;
-    /*height:700px;*/
+    z-index: 80;
+    text-align: center;
     padding-bottom: 60px; }
-    html .page .content section.post article {
-      text-align: center;
-      margin: 20px;
-      max-width: 900px;
-      min-height: 550px; }
-      html .page .content section.post article .info {
-        float: left;
-        text-align: left;
-        width: 150px;
-        margin: 0px;
-        font-size: 10pt;
-        margin-right: 10px;
-        margin-bottom: 10px; }
-        html .page .content section.post article .info img.cover {
-          display: block;
+    html .page .content section.post {
+      z-index: 130; }
+      html .page .content section.post article {
+        text-align: center;
+        margin: 20px;
+        max-width: 900px;
+        min-height: 550px; }
+        html .page .content section.post article .info {
           float: left;
-          width: 140px;
-          margin-bottom: 20px;
-          box-shadow: 2px 2px 5px #333; }
-        html .page .content section.post article .info img.cover:hover {
-          --webkit-transition: transform .8s ease-in-out;
-          transition: transform .8s ease-in-out; }
-        html .page .content section.post article .info ul {
-          background-color: #eee;
-          float: left;
-          display: block;
-          list-style: none;
-          margin: 10px 0px 0px 0px;
-          padding: 10px;
-          width: 120px; }
-          html .page .content section.post article .info ul li {
-            margin: 0px;
-            padding: 4px 8px; }
-            html .page .content section.post article .info ul li em {
-              display: block; }
-            html .page .content section.post article .info ul li .score {
-              text-align: center;
-              /* vertical-align: middle; */
-              width: 42px;
-              height: 42px;
-              padding: 4px;
+          text-align: left;
+          width: 150px;
+          margin: 0px;
+          font-size: 10pt;
+          margin-right: 10px;
+          margin-bottom: 10px; }
+          html .page .content section.post article .info img.cover {
+            display: block;
+            float: left;
+            width: 140px;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 5px #333; }
+          html .page .content section.post article .info ul {
+            background-color: #eee;
+            float: left;
+            display: block;
+            list-style: none;
+            margin: 10px 0px 0px 0px;
+            padding: 10px;
+            width: 120px; }
+            html .page .content section.post article .info ul li {
               margin: 0px;
-              margin-left: 0px;
-              border: 0px;
-              font-size: 36px;
-              font-family: Passion One;
-              color: #fff;
-              background: #666;
-              text-shadow: -1px -1px 2px #333; }
-      html .page .content section.post article .article {
-        margin-left: 160px;
-        min-height: 390px; }
-        html .page .content section.post article .article h1,
-        html .page .content section.post article .article .post-header {
-          text-align: justify; }
-          html .page .content section.post article .article h1 img.bandeau,
-          html .page .content section.post article .article .post-header img.bandeau {
-            width: 100%;
-            height: 120px;
-            background: url(attr(src));
-            background-repeat: no-repeat;
-            background-position: middle;
-            content: " "; }
-        html .page .content section.post article .article .post-content {
-          text-align: justify; }
-          html .page .content section.post article .article .post-content img.bandeau {
-            width: 80%;
-            height: 120px;
-            background: url(attr(src));
-            background-repeat: no-repeat;
-            background-position: middle;
-            content: " "; }
-        html .page .content section.post article .article h1, html .page .content section.post article .article h2, html .page .content section.post article .article h3 {
-          font-family: Comfortaa; }
+              padding: 4px 8px; }
+              html .page .content section.post article .info ul li em {
+                display: block; }
+              html .page .content section.post article .info ul li .score {
+                text-align: center;
+                /* vertical-align: middle; */
+                width: 42px;
+                height: 42px;
+                padding: 4px;
+                margin: 0px;
+                margin-left: 0px;
+                border: 0px;
+                font-size: 36px;
+                font-family: Passion One;
+                color: #fff;
+                background: #666;
+                text-shadow: -1px -1px 2px #333; }
+        html .page .content section.post article .article {
+          margin-left: 160px;
+          min-height: 390px; }
+          html .page .content section.post article .article h1,
+          html .page .content section.post article .article .post-header {
+            text-align: justify; }
+            html .page .content section.post article .article h1 div.bandeau,
+            html .page .content section.post article .article .post-header div.bandeau {
+              background-color: #999;
+              background-image: attr(data-src url);
+              width: 100%;
+              height: 120px;
+              margin: 0px 10px;
+              background-position: center; }
+          html .page .content section.post article .article .post-content {
+            text-align: justify; }
+            html .page .content section.post article .article .post-content div.bandeau {
+              background-color: #999;
+              background-image: attr(data-src url);
+              width: 100%;
+              height: 120px;
+              margin: 0px 10px;
+              background-position: center; }
+          html .page .content section.post article .article h1, html .page .content section.post article .article h2, html .page .content section.post article .article h3 {
+            font-family: Comfortaa; }
     html .page .content section.posts {
       text-align: center;
-      margin: 24px 64px;
+      margin: 24px 16px 0px 16px;
       max-width: 900px;
       min-width: 400px; }
       html .page .content section.posts article.post .article {
         min-height: 250px;
-        left: 80px;
-        border: 0px;
-        margin: 0px;
-        padding: 0px;
-        padding-left: 48px;
+        padding-left: 10%;
+        padding-right: 15%;
         margin-left: 32px;
-        margin-right: 90px;
+        margin-right: 5%;
         border-left: 2px dotted #000;
         text-align: justify; }
         html .page .content section.posts article.post .article a {
@@ -195,13 +219,15 @@ html .page {
           padding: 10px;
           font-family: sans-serif;
           font-size: 10pt; }
-      html .page .content section.posts article.post .cover {
+      html .page .content section.posts article.post img.cover {
         width: 80px;
         float: right;
         margin-top: 84px;
         margin-left: 20px;
         margin-bottom: 5px;
         box-shadow: 4px 4px 8px #000; }
+      html .page .content section.posts article.post img.cover:hover {
+        transition: rotate(3deg) 0.2s ease-in-out; }
       html .page .content section.posts article.post .createdAt {
         float: left;
         border-radius: 32px;
@@ -251,6 +277,8 @@ html .page {
         background-color: #088; }
       html .page .content section.posts article.post .post:last-child {
         border-color: linear-gradient(black, white); }
+  html .page section.posts .post:last-child .header {
+    min-height: 200px; }
   html .page footer {
     position: fixed;
     display: block;
@@ -377,5 +405,91 @@ ul.platforms {
   .minus h6 {
     background-color: red;
     color: pink; }
+
+.hidden {
+  display: none; }
+
+.show {
+  display: block; }
+
+.clear {
+  clear: both; }
+
+.modal {
+  position: fixed;
+  top: 180px;
+  left: 33%;
+  width: 33%;
+  min-height: 250px;
+  max-height: 500px;
+  min-width: 400px;
+  max-width: 700px;
+  border: 1px solid #666;
+  border-radius: 4px 4px 2px 2px;
+  background-color: #fff;
+  box-shadow: 8px 8px 16px #666; }
+  .modal h2 {
+    margin: 0px;
+    padding: 4px 8px;
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: #bbb;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    border-radius: 4px 4px 2px 2px;
+    font-family: serif;
+    border-bottom: 1px solid #666; }
+    .modal h2 span {
+      float: right;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 16px;
+      font-family: sans-serif;
+      border-radius: 4px;
+      width: 16px;
+      height: 16px;
+      padding: 0px;
+      border: 2px solid #666;
+      background-color: #bbb;
+      color: #333;
+      text-shadow: none; }
+  .modal section {
+    width: 100%;
+    text-align: center;
+    min-height: 100px; }
+    .modal section ul {
+      list-style: none;
+      margin: 8px;
+      padding: 0px; }
+      .modal section ul li {
+        padding: 0px;
+        margin: 8px; }
+        .modal section ul li input {
+          border: 1px inset #666;
+          border-radius: 4px;
+          padding: 2px 4px;
+          font-size: 12pt; }
+  .modal footer {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+    height: 32px; }
+    .modal footer .actions {
+      text-align: right;
+      margin: 0px;
+      padding: 10px;
+      background-color: #eee; }
+      .modal footer .actions button {
+        border: 1px inset #666;
+        border-radius: 4px;
+        min-width: 60px;
+        height: 24px;
+        font-size: 10pt; }
+      .modal footer .actions button:hover {
+        border: 1px outset #ddd;
+        color: #333; }
+      .modal footer .actions .default {
+        background-color: #efe;
+        border: 1px inset #898; }
 
 /*# sourceMappingURL=main.css.map */

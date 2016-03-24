@@ -2,12 +2,8 @@
 /node_modules
 /dist
 /.tmp
-/.sass-cache
+/**/.sass-cache
 /bower_components
 /.settings
 .classpath
 .project
-<<<<<<< HEAD
-=======
-
->>>>>>> split-template-rendering-post

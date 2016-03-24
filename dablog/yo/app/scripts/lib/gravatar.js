@@ -1,5 +1,3 @@
-'use strict';
-
 function gravatar(email, options) {
     // using md5() from here: http://www.myersdaily.org/joseph/javascript/md5-text.html
     function md5cycle(e, t) {

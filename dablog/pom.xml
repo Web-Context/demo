@@ -108,7 +108,7 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>dbunit</groupId>
+			<groupId>org.dbunit</groupId>
 			<artifactId>dbunit</artifactId>
 			<version>2.2</version>
 			<scope>test</scope>
@@ -249,6 +249,7 @@
 							<workingDirectory>yo</workingDirectory>
 						</configuration>
 						<executions>
+
 							<execution>
 								<id>Install node and npm</id>
 								<phase>generate-resources</phase>
@@ -260,6 +261,7 @@
 									<npmVersion>1.4.12</npmVersion>
 								</configuration>
 							</execution>
+
 							<execution>
 								<id>Get dependencies and install them</id>
 								<phase>generate-resources</phase>
@@ -270,6 +272,7 @@
 									<arguments>install</arguments>
 								</configuration>
 							</execution>
+
 							<execution>
 								<id>bower install</id>
 								<goals>
@@ -280,7 +283,7 @@
 									<!-- optional: The default argument is actually "install", so unless 
 										you need to run some other bower command, you can remove this whole <configuration> 
 										section. -->
-									<!--arguments>install</arguments -->
+									<arguments>install</arguments>
 								</configuration>
 							</execution>
 
@@ -292,8 +295,10 @@
 								</goals>
 								<configuration>
 									<testArgs>--force</testArgs>
+									<args>--force</args>
 								</configuration>
 							</execution>
+
 						</executions>
 					</plugin>
 				</plugins>
