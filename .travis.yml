@@ -8,5 +8,4 @@ install:
 jdk:
   - oraclejdk8
 script:
-  - mvn clean install -Pmongodb,prod
-
+  - mvn clean install -Pmongodb,prod,frontend
