@@ -7,19 +7,6 @@ html {
   .page {
     font-family: sans-serif;
     z-index: 0;
-    .layerbg{
-      position:fixed;
-      display:block;
-      width:100%;
-      margin:0px;
-      padding:0px;
-      top:0px;
-      height:110px;
-      z-index: 100;
-      filter:blur(10px);
-      background-image: url(../images/blur.svg#blur);
-      background-position: center middle;
-    }
     header.theme {
       position:fixed;
       display:block;
@@ -54,13 +41,11 @@ html {
               display:block;
               margin:0px;
               padding:5px 10px;
-
             }
             a.selected {
               background-color:#000;
               color:#999;           
             }
-
             input.search {
               margin:10px;
               padding:2px;
@@ -198,7 +183,6 @@ html {
           .article {
             margin-left:160px;
             min-height: 390px;
-
             h1,
             .post-header {
               text-align: justify;
@@ -466,7 +450,6 @@ ul.platforms {
     content:"";
   }
 }
-
 .balance {
   display:block;
   width: 100%;

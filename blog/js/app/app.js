@@ -1,6 +1,6 @@
 'use strict';
 
-var app=angular.module('demo',[
+var app=angular.module('dablog',[
     'ngRoute',
     'ngSanitize'
   ]);
@@ -26,6 +26,16 @@ app.config(function ($routeProvider) {
         templateUrl: 'views/post-list.html',
         controller: 'PostFilterCtrl',
         controllerAs: 'postFilter'
+      })
+      .when('/tags/:tag', {
+        templateUrl: 'views/post-list.html',
+        controller: 'TagFilterCtrl',
+        controllerAs: 'tagFilter'
+      })
+      .when('/platform/:platform', {
+        templateUrl: 'views/post-list.html',
+        controller: 'PlatformFilterCtrl',
+        controllerAs: 'platformFilter'
       })
       .otherwise({
         redirectTo: '/'

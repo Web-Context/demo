@@ -1,0 +1,28 @@
+[
+	{ 
+		"username":"admin",
+		"password":"nimda",
+		"roles":["ADMINISTRATOR","PUBLISHER","USER"],
+		"firstname":"Admin",
+		"lastname":"Istrator",
+		"email":"admin@web-context.com",
+		"createdAt":"2016/03/13 00:00:00",
+		"active":true,
+		"lastConnection":"2016/03/13 00:00:10",
+		"avatar": "gravatar",
+		"connectionAttemptCount":0
+	},
+	{ 
+		"username":"mcgivrer",
+		"password":"mcgivrer",
+		"roles":["ADMINISTRATOR"],
+		"firstname":"Frédéric",
+		"lastname":"Delorme",
+		"email":"frederic.delorme@web-context.com",
+		"createdAt":"2016/03/13 00:00:00",
+		"active":true,
+		"lastConnection":"2016/03/13 00:00:10",
+		"avatar": "gravatar",
+		"connectionAttemptCount":0
+	}
+]

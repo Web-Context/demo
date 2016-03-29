@@ -22,7 +22,7 @@ angular.module('dablogApp')
 
 
     $scope.login = function(){
-        UserService.findByUsername({'username':'mcgivrer'},function(data){        
+        UserService.findByUsername({'username':'mcgivrer'},function(data){
             if(data._embedded.users[0].avatar==='gravatar'){
                 data._embedded.users[0].avatar=gravatar(data._embedded.users[0].email);
             }

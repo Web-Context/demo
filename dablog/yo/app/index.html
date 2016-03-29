@@ -20,13 +20,7 @@
     <header id="header" class="theme" ng-controller="MenuCtrl">
       <div ng-include="'/views/user.html'"></div>
       <h1>DaBlog</h1>
-      <nav class="mainMenu">
-        <ul>
-          <li ng-repeat="item in menuItems | orderBy:'priority'" >
-            <a class="{{selectedClass(item.url)}}" href="/#{{item.url}}" title="{{item.tooltip}}" accesskey="{{item.accesskey}}">{{item.label}}</a>
-          </li>
-        </ul>
-      </nav>
+      <div ng-include="'/views/main-menu.html'"></div>
     </header><!-- /header -->
     <!-- content -->
     <div class="content">

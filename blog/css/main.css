@@ -1,141 +1,204 @@
 @import url(https://fonts.googleapis.com/css?family=Passion+One:400,700,900|Comfortaa|Special+Elite|Overlock:400,700,900);
-html {
+html body {
   margin: 0px;
   padding: 0px; }
-  html .page {
-    font-family: sans-serif; }
-    html .page header.theme {
+html .page {
+  font-family: sans-serif;
+  z-index: 0; }
+  html .page .layerbg {
+    position: fixed;
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    height: 110px;
+    z-index: 100;
+    filter: blur(10px);
+    background-image: url(../images/blur.svg#blur);
+    background-position: center middle; }
+  html .page header.theme {
+    position: fixed;
+    display: block;
+    top: 0px;
+    width: 100%;
+    height: 110px;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0px 4px 8px #333;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 110; }
+    html .page header.theme h1 {
+      margin-left: 40px;
+      font-size: 36pt;
+      font-family: Passion One;
       margin: 0px;
-      padding: 0px;
-      border-bottom: 1px solid #000; }
-      html .page header.theme h1 {
-        margin-left: 40px;
-        font-size: 36pt;
-        font-family: Passion One;
-        margin: 0px;
-        padding: 5px 20px;
-        background-color: #000;
-        border-radius: 0px 40px 40px 0px;
-        color: #fff; }
-      html .page header.theme nav ul {
-        list-style: none;
-        margin: 0px;
-        padding: 5px 10px; }
-        html .page header.theme nav ul li {
-          display: inline-block;
-          margin: 5px; }
-          html .page header.theme nav ul li a {
-            text-decoration: none;
-            display: block;
-            margin: 0px;
-            padding: 5px 10px; }
-          html .page header.theme nav ul li input.search {
-            margin: 10px;
-            padding: 2px;
-            margin-right: 0px;
-            font-family: Passion One; }
-          html .page header.theme nav ul li button {
-            margin: 10px;
-            margin-top: 11px;
-            padding: 2px;
-            margin-left: 0px; }
-        html .page header.theme nav ul li:hover a {
+      padding: 5px 20px;
+      background-color: #000;
+      border-radius: 0px 40px 40px 0px;
+      color: #fff; }
+    html .page header.theme nav ul {
+      list-style: none;
+      margin: 0px;
+      padding: 5px 10px; }
+      html .page header.theme nav ul li {
+        display: inline-block;
+        margin: 5px; }
+        html .page header.theme nav ul li a {
+          text-decoration: none;
+          display: block;
+          margin: 0px;
+          padding: 5px 10px; }
+        html .page header.theme nav ul li a.selected {
           background-color: #000;
           color: #999; }
-        html .page header.theme nav ul li:before {
-          content: " "; }
-        html .page header.theme nav ul li.right {
-          float: right;
-          margin-bottom: 10px; }
-      html .page header.theme .avatar {
-        top: 0px;
+        html .page header.theme nav ul li input.search {
+          margin: 10px;
+          padding: 2px;
+          margin-right: 0px;
+          font-family: Passion One; }
+        html .page header.theme nav ul li button {
+          margin: 10px;
+          margin-top: 11px;
+          padding: 2px;
+          margin-left: 0px; }
+      html .page header.theme nav ul li:hover a {
+        background-color: #666;
+        color: #999; }
+      html .page header.theme nav ul li:before {
+        content: ""; }
+      html .page header.theme nav ul li.right {
         float: right;
-        margin: 10px;
-        width: 140px; }
-        html .page header.theme .avatar div.user a {
-          float: left;
-          color: #fff;
-          font-size: 9pt;
-          text-align: right;
-          margin: 5px;
-          height: 24px;
-          width: 60px;
-          font-family: cursive;
-          text-decoration: none; }
-        html .page header.theme .avatar img {
-          float: right;
-          width: 48px;
-          margin: 0px 8px 0px 8px;
-          border-radius: 24px; }
-    html .page .content section.post article {
-      text-align: center;
-      margin: 20px;
-      max-width: 900px;
-      min-height: 550px; }
-      html .page .content section.post article .info {
-        float: left;
-        text-align: left;
-        width: 150px;
-        margin: 0px;
-        font-size: 10pt;
-        margin-right: 10px;
         margin-bottom: 10px; }
-        html .page .content section.post article .info img.cover {
-          display: block;
-          float: left;
-          width: 140px;
-          margin-bottom: 20px;
-          box-shadow: 2px 2px 5px #333; }
-        html .page .content section.post article .info ul {
-          background-color: #eee;
-          float: left;
+    html .page header.theme div.user {
+      float: right;
+      width: 180px; }
+      html .page header.theme div.user nav.infos ul {
+        text-align: right;
+        margin: 10px;
+        padding: 0px;
+        padding-right: 50px; }
+        html .page header.theme div.user nav.infos ul li {
           display: block;
           list-style: none;
-          margin: 10px 0px 0px 0px;
-          padding: 10px;
-          width: 120px; }
-          html .page .content section.post article .info ul li {
+          margin: 0px;
+          padding: 0px; }
+          html .page header.theme div.user nav.infos ul li a {
+            color: #fff;
             margin: 0px;
-            padding: 4px 8px; }
-            html .page .content section.post article .info ul li em {
-              display: block; }
-            html .page .content section.post article .info ul li .score {
-              text-align: center;
-              /* vertical-align: middle; */
-              width: 42px;
-              height: 42px;
-              padding: 4px;
+            padding: 0px;
+            font-size: 9pt;
+            text-decoration: none; }
+        html .page header.theme div.user nav.infos ul li.username a {
+          color: #bbb;
+          font-size: 12pt; }
+      html .page header.theme div.user .avatar {
+        top: 0px;
+        float: right;
+        width: 48px;
+        height: 48px;
+        margin: 8px;
+        /*padding:8px;*/
+        border-radius: 32px; }
+  html .page header.fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); }
+  html .page .content {
+    display: block;
+    overflow-x: hidden;
+    /*for hiding horizontal scroll bar*/
+    overflow-y: auto;
+    margin-top: 120px;
+    z-index: 80;
+    text-align: center;
+    padding-bottom: 60px; }
+    html .page .content section.post {
+      z-index: 130; }
+      html .page .content section.post article {
+        text-align: center;
+        margin: 20px;
+        max-width: 900px;
+        min-height: 550px; }
+        html .page .content section.post article .info {
+          float: left;
+          text-align: left;
+          width: 150px;
+          margin: 0px;
+          font-size: 10pt;
+          margin-right: 10px;
+          margin-bottom: 10px; }
+          html .page .content section.post article .info img.cover {
+            display: block;
+            float: left;
+            width: 140px;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 5px #333; }
+          html .page .content section.post article .info ul {
+            background-color: #eee;
+            float: left;
+            display: block;
+            list-style: none;
+            margin: 10px 0px 0px 0px;
+            padding: 10px;
+            width: 120px; }
+            html .page .content section.post article .info ul li {
               margin: 0px;
-              margin-left: 0px;
-              border: 0px;
-              font-size: 36px;
-              font-family: Passion One;
-              color: #fff;
-              background: #666;
-              text-shadow: -1px -1px 2px #333; }
-      html .page .content section.post article .article {
-        margin-left: 160px;
-        min-height: 390px; }
-        html .page .content section.post article .article h1,
-        html .page .content section.post article .article .header,
-        html .page .content section.post article .article .content {
-          text-align: justify; }
-        html .page .content section.post article .article h1, html .page .content section.post article .article h2, html .page .content section.post article .article h3 {
-          font-family: Comfortaa; }
+              padding: 4px 8px; }
+              html .page .content section.post article .info ul li em {
+                display: block; }
+              html .page .content section.post article .info ul li .score {
+                text-align: center;
+                /* vertical-align: middle; */
+                width: 42px;
+                height: 42px;
+                padding: 4px;
+                margin: 0px;
+                margin-left: 0px;
+                border: 0px;
+                font-size: 36px;
+                font-family: Passion One;
+                color: #fff;
+                background: #666;
+                text-shadow: -1px -1px 2px #333; }
+        html .page .content section.post article .article {
+          margin-left: 160px;
+          min-height: 390px; }
+          html .page .content section.post article .article h1,
+          html .page .content section.post article .article .post-header {
+            text-align: justify; }
+            html .page .content section.post article .article h1 div.bandeau,
+            html .page .content section.post article .article .post-header div.bandeau {
+              background-color: #999;
+              background-image: attr(data-src url);
+              width: 100%;
+              height: 120px;
+              margin: 0px 10px;
+              background-position: center; }
+          html .page .content section.post article .article .post-content {
+            text-align: justify; }
+            html .page .content section.post article .article .post-content div.bandeau {
+              background-color: #999;
+              background-image: attr(data-src url);
+              width: 100%;
+              height: 120px;
+              margin: 0px 10px;
+              background-position: center; }
+          html .page .content section.post article .article h1, html .page .content section.post article .article h2, html .page .content section.post article .article h3 {
+            font-family: Comfortaa; }
     html .page .content section.posts {
       text-align: center;
-      margin: 24px 64px;
+      margin: 24px 16px 0px 16px;
       max-width: 900px;
       min-width: 400px; }
       html .page .content section.posts article.post .article {
         min-height: 250px;
-        left: 80px;
-        border: 0px;
-        margin: 0px;
-        padding: 0px;
-        padding-left: 48px;
+        padding-left: 10%;
+        padding-right: 15%;
         margin-left: 32px;
-        margin-right: 90px;
+        margin-right: 5%;
         border-left: 2px dotted #000;
         text-align: justify; }
         html .page .content section.posts article.post .article a {
@@ -155,13 +218,15 @@ html {
           padding: 10px;
           font-family: sans-serif;
           font-size: 10pt; }
-      html .page .content section.posts article.post .cover {
+      html .page .content section.posts article.post img.cover {
         width: 80px;
         float: right;
         margin-top: 84px;
         margin-left: 20px;
         margin-bottom: 5px;
         box-shadow: 4px 4px 8px #000; }
+      html .page .content section.posts article.post img.cover:hover {
+        transition: rotate(3deg) 0.2s ease-in-out; }
       html .page .content section.posts article.post .createdAt {
         float: left;
         border-radius: 32px;
@@ -211,45 +276,55 @@ html {
         background-color: #088; }
       html .page .content section.posts article.post .post:last-child {
         border-color: linear-gradient(black, white); }
-    html .page footer {
-      margin-top: 0px;
-      padding: 20px;
-      border-top: 1px dotted #000;
-      text-align: right; }
-      html .page footer .logo {
-        float: left; }
-  html .pegi {
-    padding: 20px 120px;
-    width: 48px;
-    height: 48px;
-    background-size: 48px;
-    background-repeat: no-repeat; }
-  html .pegi_bad_language {
-    background-image: url("http://www.pegi.info/fr/img/descriptors/bad_language.gif"); }
-  html .pegi_discrimination {
-    background-image: url("http://www.pegi.info/fr/img/descriptors/discrimination.gif"); }
-  html .pegi_drugs {
-    background-image: url("http://www.pegi.info/fr/img/descriptors/drugs.gif"); }
-  html .pegi_fear {
-    background-image: url("http://www.pegi.info/fr/img/descriptors/fear.gif"); }
-  html .pegi_gambling {
-    background-image: url("http://www.pegi.info/fr/img/descriptors/gambling.gif"); }
-  html .pegi_online {
-    background-image: url("http://www.pegi.info/fr/img/descriptors/violence.gif"); }
-  html .pegi_violence {
-    background-image: url("http://www.pegi.info/fr/img/descriptors/online.gif"); }
-  html .pegi_sex {
-    background-image: url("http://www.pegi.info/fr/img/descriptors/sex.gif"); }
-  html .pegi_3 {
-    background-image: url("http://www.pegi.info/fr/index/id/75/media/img/320.gif"); }
-  html .pegi_7 {
-    background-image: url("http://www.pegi.info/fr/index/id/75/media/img/321.gif"); }
-  html .pegi_12 {
-    background-image: url("http://www.pegi.info/fr/index/id/75/media/img/322.gif"); }
-  html .pegi_16 {
-    background-image: url("http://www.pegi.info/fr/index/id/75/media/img/323.gif"); }
-  html .pegi_18 {
-    background-image: url("http://www.pegi.info/fr/index/id/75/media/img/324.gif"); }
+  html .page section.posts .post:last-child .header {
+    min-height: 200px; }
+  html .page footer {
+    position: fixed;
+    display: block;
+    width: 100%;
+    bottom: 0px;
+    background-color: #fff;
+    margin-top: 0px;
+    padding: 10px;
+    font-size: 8pt;
+    box-shadow: 0px -4px 16px #ddd;
+    text-align: right; }
+    html .page footer .logo {
+      float: left; }
+    html .page footer p {
+      padding-right: 5em; }
+html .pegi {
+  padding: 20px 120px;
+  width: 48px;
+  height: 48px;
+  background-size: 48px;
+  background-repeat: no-repeat; }
+html .pegi_bad_language {
+  background-image: url("http://www.pegi.info/fr/img/descriptors/bad_language.gif"); }
+html .pegi_discrimination {
+  background-image: url("http://www.pegi.info/fr/img/descriptors/discrimination.gif"); }
+html .pegi_drugs {
+  background-image: url("http://www.pegi.info/fr/img/descriptors/drugs.gif"); }
+html .pegi_fear {
+  background-image: url("http://www.pegi.info/fr/img/descriptors/fear.gif"); }
+html .pegi_gambling {
+  background-image: url("http://www.pegi.info/fr/img/descriptors/gambling.gif"); }
+html .pegi_online {
+  background-image: url("http://www.pegi.info/fr/img/descriptors/violence.gif"); }
+html .pegi_violence {
+  background-image: url("http://www.pegi.info/fr/img/descriptors/online.gif"); }
+html .pegi_sex {
+  background-image: url("http://www.pegi.info/fr/img/descriptors/sex.gif"); }
+html .pegi_3 {
+  background-image: url("http://www.pegi.info/fr/index/id/75/media/img/320.gif"); }
+html .pegi_7 {
+  background-image: url("http://www.pegi.info/fr/index/id/75/media/img/321.gif"); }
+html .pegi_12 {
+  background-image: url("http://www.pegi.info/fr/index/id/75/media/img/322.gif"); }
+html .pegi_16 {
+  background-image: url("http://www.pegi.info/fr/index/id/75/media/img/323.gif"); }
+html .pegi_18 {
+  background-image: url("http://www.pegi.info/fr/index/id/75/media/img/324.gif"); }
 
 ul.tags {
   list-style: none;
