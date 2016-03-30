@@ -10,7 +10,7 @@
 angular.module('dablogApp')
   .controller('MenuCtrl', ['$scope','$location','UserService',function ($scope,$location,UserService) {
     
-  $scope.loginDisplay=true;
+  $scope.loginDisplay=false;
     $scope.selectedClass = function(route) {
         var selected = (route === $location.path()?'selected':'');
         return selected;
@@ -22,12 +22,15 @@ angular.module('dablogApp')
         {'url':'/posts/game','label':'Video Game','tooltip':'How to feed my Console','accesskey':'G','priority':3},
     ];
 
+
+
+
     $scope.showLogin = function(){
-        $scope.loginDisplay=false;
+        $scope.loginDisplay=true;
     };
 
     $scope.login = function(){
-        UserService.findByUsername({'username':'mcgivrer'},function(data){        
+        UserService.findByUsername({'username':$scope.user.username},function(data){        
             if(data._embedded.users[0].avatar==='gravatar'){
                 data._embedded.users[0].avatar=gravatar(data._embedded.users[0].email);
             }

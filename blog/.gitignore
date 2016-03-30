@@ -1,10 +1,9 @@
-/css/.sass-cache
-/css/*.map
-/target
+/node
+/node_modules
+/dist
+/.tmp
+/**/.sass-cache
+/bower_components
 /.settings
-/.project
-/.classpath
-<<<<<<< HEAD
-/bin/
-=======
->>>>>>> 42265dbe6016728a24c19ad69fc2a6138ffc6de6
+.classpath
+.project

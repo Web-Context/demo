@@ -163,6 +163,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+	                <fork>true</fork>
 					<classifier>exec</classifier>
 				</configuration>
 			</plugin>
@@ -231,7 +232,7 @@
 				<resources>
 					<resource>
 						<directory>${project.basedir}/yo/dist</directory>
-						<targetPath>${project.build.directory}/classes/</targetPath>
+						<targetPath>${project.build.directory}/classes/public</targetPath>
 					</resource>
 				</resources>
 			</build>
@@ -294,8 +295,8 @@
 									<goal>grunt</goal>
 								</goals>
 								<configuration>
-									<testArgs>--force</testArgs>
-									<args>--force</args>
+									<arguments>build</arguments>
+									<frontend.grunt.arguments>--force</frontend.grunt.arguments>
 								</configuration>
 							</execution>
 
