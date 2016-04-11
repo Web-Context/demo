@@ -28,19 +28,20 @@
 		<developer>
 			<id>McG</id>
 			<name>Frédéric Delorme</name>
-			<email>frederic.delorme@ge.com</email>
-			<organization>GE Healthcare</organization>
-			<organizationUrl>www.gehealthcare.com</organizationUrl>
+			<email>frederic.delorme@gmail.com</email>
+			<organization>Web-Context</organization>
+			<organizationUrl>http://web-ocntext.github.io</organizationUrl>
 			<roles>
 				<role>Software Architect</role>
+				<role>Developper</role>
 			</roles>
 		</developer>
 	</developers>
 
 	<inceptionYear>2016</inceptionYear>
 	<organization>
-		<name>GE Healthcare DoseWatch</name>
-		<url>http://www3.gehealthcare.com/en/Products/Dose_Management/DoseWatch</url>
+		<name>Web-Context</name>
+		<url>http://web-context.github.io</url>
 	</organization>
 	<scm>
 		<url>https://github.com/web-context/demo</url>
