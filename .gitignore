@@ -2,4 +2,4 @@
 /.settings
 /**/*.log
 /**/bin
-
+/node_modules

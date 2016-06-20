@@ -10,7 +10,9 @@
 angular.module('dablogApp')
   .controller('MenuCtrl', ['$scope','$location','UserService',function ($scope,$location,UserService) {
     
-  $scope.loginDisplay=false;
+    $scope.user= {};
+
+
     $scope.selectedClass = function(route) {
         var selected = (route === $location.path()?'selected':'');
         return selected;
@@ -22,31 +24,44 @@ angular.module('dablogApp')
         {'url':'/posts/game','label':'Video Game','tooltip':'How to feed my Console','accesskey':'G','priority':3},
     ];
 
+    $scope.open = function (size) {
 
-
-
-    $scope.showLogin = function(){
-        $scope.loginDisplay=true;
-    };
-
-    $scope.login = function(){
-        UserService.findByUsername({'username':$scope.user.username},function(data){        
-            if(data._embedded.users[0].avatar==='gravatar'){
-                data._embedded.users[0].avatar=gravatar(data._embedded.users[0].email);
+        var modalInstance = $uibModal.open({
+          animation: $scope.animationsEnabled,
+          templateUrl: 'loginForm.html',
+          controller: 'ModalInstanceCtrl',
+          size: size,
+          resolve: {
+            items: function () {
+              return $scope.items;
             }
-            $scope.user = data._embedded.users[0];
+          }
         });
-    };
 
-    $scope.logout = function(){
-        $scope.user=null;
-    };
-
-    $scope.preferences = function(){
-        alert("display preference dialog !");
-    };
-    $scope.register = function(){
-        alert("display register dialog !");
-    };
+        modalInstance.result.then(function (selectedItem) {
+          $scope.selected = selectedItem;
+        }, function () {
+          $log.info('Modal dismissed at: ' + new Date());
+        });
+      };
 
   }]);
+
+// Please note that $uibModalInstance represents a modal window (instance) dependency.
+// It is not the same as the $uibModal service used above.
+
+angular.module('dablogApp').controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+
+  $scope.items = items;
+  $scope.selected = {
+    item: $scope.items[0]
+  };
+
+  $scope.ok = function () {
+    $uibModalInstance.close($scope.selected.item);
+  };
+
+  $scope.cancel = function () {
+    $uibModalInstance.dismiss('cancel');
+  };
+});

@@ -1,19 +1,16 @@
-<div id="login-form" class="modal" style="width:300px; height:240px" ng-show="loginDisplay" ng-controller="MenuCtrl"> 
-	<form ng-submit="login()">
-	<header><h2>Login<span>x</span></h2></header>
-	<section>
+ <script type="text/ng-template" id="loginForm.html">
+    <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body">
 		<p>Please, enter your creadentials :</p>
 		<ul>
 			<li><input type="text" ng-bind="user.username" name="username" placeholder="username"></li>
 			<li><input type="password" ng-bind="user.password" name="password" placeholder="password"></li>
 		</ul>
-	</section>
-	<footer>
-		<div class="actions">
-			<button type="button" class="cancel" id="bt-cancel"  accesskey="C" ng-click="cancel();">Cancel</button>
-			<button type="submit" class="default" id="bt-ok" accesskey="L" ng-click="login();">Login</button>
-		</div>
-		<div class="clear"></div>
-	</footer>
-	</form>
-</div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>

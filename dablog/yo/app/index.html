@@ -31,7 +31,10 @@
     <!-- content -->
     <div class="content">
       <ng-view></ng-view>
-    </div>  
+    </div>
+
+    <ng-include="'views/login-form.html'"></ng-include>
+
     <!-- /content -->
     <!-- footer -->
     <footer id="footer" class="theme">
@@ -49,7 +52,6 @@
    ga('create', 'UA-XXXXX-X');
    ga('send', 'pageview');
  </script>
- <ng-include src="'views/login-form.html'"></ng-include>
  <!-- build:js(.) scripts/vendor.js -->
  <!-- bower:js -->
  <script src="bower_components/angular/angular.js"></script>
