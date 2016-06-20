@@ -8,7 +8,7 @@
  * Controller of the dablogApp
  */
 angular.module('dablogApp')
-  .controller('MenuCtrl', ['$scope','$location','UserService',function ($scope,$location,UserService) {
+  .controller('MenuCtrl', ['$scope','$location','UserService','$uibModal',function ($scope,$location,UserService,$uibModal) {
     
     $scope.user= {};
 
@@ -51,11 +51,6 @@ angular.module('dablogApp')
 // It is not the same as the $uibModal service used above.
 
 angular.module('dablogApp').controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
-
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
 
   $scope.ok = function () {
     $uibModalInstance.close($scope.selected.item);
