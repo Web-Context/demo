@@ -1,6 +1,5 @@
 # Demo SpringBoot+AngularJS
 
-[![DockUnit (linux) Build status](http://dockunit.io/svg/Web-Context/demo?master)](https://dockunit.io/projects/Web-Context/demo "DockUnit (linux) Build status")
 [![AppVeyor (win32) Build status](https://ci.appveyor.com/api/projects/status/vxbccc1t9ceadhi9)](https://ci.appveyor.com/project/Web-Context/demo "AppVeyor (win32) Build status")
 [![Travis-CI (linux) Build Status](https://travis-ci.org/Web-Context/demo.png?branch=master)](https://travis-ci.org/Web-Context/demo "Travis-CI (linux) Build Status")
 
